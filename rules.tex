@@ -1,0 +1,28 @@
+% rules.tex
+% Khai báo các gói cần thiết và thiết lập định dạng
+
+% Hỗ trợ tiếng Việt và font chữ cho XeLaTeX
+\usepackage{fontspec}
+\setmainfont{Times New Roman}
+
+\usepackage{polyglossia}
+\setdefaultlanguage{vietnamese}
+
+% Căn lề chuẩn (thường dùng cho luận văn/báo cáo)
+\usepackage[a4paper, left=3cm, right=2cm, top=2cm, bottom=2cm]{geometry}
+
+% Dãn dòng (Bình thường hay để 1.5 hoặc 1.2 tùy quy định)
+\usepackage{setspace}
+\setstretch{1.3} % Dãn dòng vừa phải cho font 13pt
+
+% Hỗ trợ chèn hình ảnh và màu sắc
+\usepackage{graphicx}
+\usepackage{xcolor}
+
+% Hỗ trợ liên kết trong văn bản
+\usepackage[hidelinks]{hyperref}
+
+% Lưu ý về cỡ chữ 13pt:
+% Trong LaTeX, cỡ chữ mặc định cho toàn tài liệu thường được cấu hình ở lệnh \documentclass
+% Để có cỡ chữ 13pt chuẩn nhất, bên file chính (ví dụ main.tex) bạn nên dùng:
+% \documentclass[13pt, a4paper]{extarticle} hoặc \documentclass[13pt, a4paper]{extreport}
