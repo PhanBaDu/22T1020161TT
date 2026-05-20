@@ -1,0 +1,416 @@
+\documentclass[12pt, a4paper]{article}
+
+% Nạp các cấu hình định dạng từ file rules.tex
+\input{rules}
+
+\begin{document}
+
+% ======================================
+% TRANG BÌA
+% ======================================
+\begin{titlepage}
+    \newgeometry{left=2.5cm, right=2cm, top=2cm, bottom=2cm}
+    \begin{tikzpicture}[overlay, remember picture]
+        \draw [line width=2pt] ([shift={(2cm,-2cm)}]current page.north west) rectangle ([shift={(-1.5cm,2cm)}]current page.south east);
+        \draw [line width=0.5pt] ([shift={(2.1cm,-2.1cm)}]current page.north west) rectangle ([shift={(-1.6cm,2.1cm)}]current page.south east);
+    \end{tikzpicture}
+    
+    \begin{center}
+        \textbf{\large TRƯỜNG ĐẠI HỌC KHOA HỌC HUẾ} \\
+        \textbf{\large KHOA CÔNG NGHỆ THÔNG TIN} \\
+        \vspace{0.1cm} \textbf{*** \vspace{0.1cm}} \\
+        \vspace{0.5cm}
+        \includegraphics[width=0.25\textwidth]{logo.png} \\
+        
+        \vspace{1cm}
+        {\fontsize{18pt}{22pt}\selectfont \textbf{BÁO CÁO THỰC TẬP TỐT NGHIỆP}} \\
+        \vspace{0.8cm}
+        {\fontsize{14pt}{18pt}\selectfont \textbf{BÁO CÁO TIẾN ĐỘ THỰC TẬP NGÀY 20/05/2026}}\\
+        \vspace{1cm}
+        
+        \textbf{CƠ QUAN THỰC TẬP:} \\
+        \vspace{0.2cm}
+        {\Large \textbf{CÔNG TY FAA VIỆT NAM}} \\
+    \end{center}
+    
+    \vspace{0.8cm}
+    
+    \begin{center}
+        \normalsize
+        \renewcommand{\arraystretch}{1.2}
+        \begin{tabular}{l l}
+            \textbf{GIẢNG VIÊN HƯỚNG DẪN} & \textbf{: HOÀNG NGUYỄN TUẤN MINH} \\
+            \textbf{SINH VIÊN THỰC HIỆN}  & \textbf{: NGUYỄN THỊ HUYỀN} \\
+            \textbf{MÃ SINH VIÊN}         & \textbf{: 22T1020161} \\
+            \textbf{TÊN LỚP HỌC PHẦN}     & \textbf{: THỰC TẬP TỐT NGHIỆP - NHÓM 21} \\
+            \textbf{MÃ LỚP HỌC PHẦN}      & \textbf{: 2025-2026.2.TIN4014.021} \\
+        \end{tabular}
+    \end{center}
+    
+    \vfill
+    \begin{center}
+        \textbf{HUẾ, THÁNG 5/2026}
+    \end{center}
+    \restoregeometry
+\end{titlepage}
+
+\newpage
+
+% ======================================
+% LỜI CẢM ƠN
+% ======================================
+\section*{LỜI CẢM ƠN}
+\addcontentsline{toc}{section}{LỜI CẢM ƠN}
+Trong thời gian thực tập tại \textbf{Công ty FAA Việt Nam}, em đã có cơ hội quý báu được trải nghiệm môi trường làm việc thực tế, trau dồi các kỹ năng nghề nghiệp và áp dụng những kiến thức chuyên ngành vào các dự án phần mềm chuyên nghiệp. 
+
+Lời đầu tiên, em xin cảm ơn ban giám hiệu \textbf{Trường Đại học Khoa học Huế} và toàn thể thầy cô Khoa Công nghệ Thông tin đã trang bị cho em kiến thức vững chắc. Đặc biệt, em xin gửi lời tri ân sâu sắc tới thầy \textbf{Hoàng Nguyễn Tuấn Minh} vì sự hướng dẫn vô cùng tận tâm trong đợt làm báo cáo này. Đồng thời, em xin gửi lời cảm ơn tới đội ngũ chuyên nghiệp tại \textbf{FAA Việt Nam} đã nhiệt tình định hướng, chỉ dạy thực chiến quy trình phần mềm giúp em ngày một hoàn thiện bản thân hơn.
+
+\newpage
+% ======================================
+% MỤC LỤC
+% ======================================
+\renewcommand{\contentsname}{MỤC LỤC}
+\tableofcontents
+\newpage
+
+% ======================================
+% NỘI DUNG CHÍNH YẾU CỦA BÁO CÁO
+% ======================================
+
+\section{THÔNG TIN CHUNG}
+\begin{itemize}
+    \item \textbf{Họ tên sinh viên:} Nguyễn Thị Huyền
+    \item \textbf{Mã sinh viên:} 22T1020161
+    \item \textbf{Lớp học phần:} Thực tập tốt nghiệp - Nhóm 21
+    \item \textbf{Khoa:} Công nghệ Thông tin - Trường Đại học Khoa học Huế
+    \item \textbf{Đơn vị thực tập:} CÔNG TY FAA VIỆT NAM
+    \item \textbf{Thời gian thực tập:} Từ 09/03/2026 đến nay
+\end{itemize}
+
+\section{MỤC TIÊU THỰC TẬP}
+\subsection{Mục tiêu tổng quát}
+Mục tiêu hàng đầu của em trong học kỳ thực tập này không chỉ đơn thuần là để hoàn thành tín chỉ bắt buộc của nhà trường, mà quan trọng hơn hết là cơ hội quý báu để được học tập và cọ xát trực tiếp với môi trường làm việc thực chiến tại một doanh nghiệp công nghệ. 
+
+Em mong muốn thông qua đợt thực tập này, bản thân có thể thoát khỏi tư duy làm ra những sản phẩm phần mềm mang tính chất "đồ án sinh viên" - vốn dĩ thường nhỏ lẻ, ít người tính đến những trường hợp rủi ro hoặc bận tâm tới hiệu suất thiết bị. Thay vào đó, em khao khát được vận dụng những lý thuyết vững chắc về lập trình đã được thầy cô truyền đạt trên bục giảng vào công đoạn trực tiếp xây dựng một dự án có tính thương mại, có thật và đang phục vụ công chúng. Qua quá trình đó, em hy vọng sẽ tích lũy được một lượng kinh nghiệm đáng kể, tạo đà tâm lý vững vàng để tự tin bước chân vào ngành công nghiệp phần mềm sau khi tốt nghiệp.
+
+\subsection{Mục tiêu cụ thể}
+Để hiện thực hóa được định hướng tổng quát ở trên, em đã tự vạch ra cho bản thân các mục tiêu rất rõ ràng theo từng phương diện chuyên môn và kỹ năng:
+
+\begin{itemize}
+    \item \textbf{Cọ xát trực diện với dự án thực tế:} 
+    Em đặt mục tiêu phải được tiếp xúc, tìm hiểu kiến trúc và trực tiếp gõ những dòng code đóng góp vào một sản phẩm phần mềm đang thực sự hoạt động trên thị trường, thay vì chỉ ngồi sao chép lại các bài tập mô phỏng. Việc được nhúng tay vào luồng mã nguồn lớn, được giao xử lý những bài toán khó phức tạp sẽ giúp em chạm được đến bản chất cốt lõi của việc làm nghề.
+
+    \item \textbf{Hoàn thiện kỹ năng làm việc nhóm thực thụ:} 
+    Trên giảng đường, việc chia nhóm thường diễn ra khá đơn giản và đôi khi mạnh ai nấy code. Bước ra doanh nghiệp, em muốn làm quen và tiến tới phối hợp công việc trơn tru với các anh chị lập trình viên đi trước. Em muốn nắm vững quy trình phát triển linh hoạt (Agile/Scrum), từ khâu nhận tác vụ, cho đến cách quản lý luân chuyển mã nguồn nhóm qua Git (như việc rẽ nhánh Branching, trộn mã nguồn Merging) sao cho không bao giờ gây hỏng hóc hoặc phá vỡ file chung của cả tập thể.
+
+    \item \textbf{Trau dồi và nâng cấp năng lực chuyên môn:} 
+    Bản thân em chủ đích muốn nâng cao năng lực lập trình trên nền tảng ứng dụng di động (cụ thể là công nghệ Flutter). Em mong sẽ được rèn luyện quy trình chủ động tư duy giải pháp, sau đó báo cáo quy trình đó để các anh Mentor uốn nắn, sửa chữa triệt để ngay tận gốc các lỗi sai logic thường gặp. Bên cạnh đó, em muốn cập nhật liên tục các xu hướng công cụ hỗ trợ lập trình mới nhất để tốc độ làm việc luôn được tối ưu.
+
+    \item \textbf{Trải nghiệm môi trường văn hóa công sở:} 
+    Bước ra khỏi vùng an toàn, em vô cùng coi trọng cơ hội được trải nghiệm sống trong kỷ luật của một văn phòng làm việc thực sự. Đó là lúc em học cách đối diện với áp lực vòng lặp công việc, học cách tôn trọng deadline dự án và hiểu rõ mức độ nghiêm ngặt cần thiết trong từng khâu kiểm thử phần mềm trước khi được phép giao nộp sản phẩm cho người khác sử dụng.
+\end{itemize}
+
+\section{TỔNG QUAN CÔNG VIỆC ĐƯỢC GIAO}
+\begin{itemize}
+    \item \textbf{Vị trí công tác:} Thực tập sinh Lập trình Ứng dụng Di động (Flutter).
+    \item \textbf{Nhiệm vụ chính:} 
+    \begin{itemize}
+        \item Khảo sát luồng chạy và cấu trúc dự án \textit{Cleaner Guru} và ứng dụng theo dõi sức khỏe tập luyện \textit{Push Up}.
+        \item Lập trình tính năng tự động đếm số lượng hít đất dựa trên cảm biến tiệm cận của điện thoại di động cho dự án \textit{Push Up}.
+        \item Xây dựng tính năng đọc thư viện ảnh của thiết bị, cài cắm thuật toán phân tích điểm ảnh để gom nhóm các bức ảnh rác, ảnh chụp liên tiếp cho dự án \textit{Cleaner Guru}.
+        \item Cùng với Mentor tiến hành tối ưu hóa giao diện người dùng, giải quyết vấn đề đơ lag khi cuộn màn hình hiển thị hàng ngàn bức ảnh.
+    \end{itemize}
+    \item \textbf{Công cụ \& Kỹ năng áp dụng:} Ngôn ngữ Dart (Flutter), cảm biến tiệm cận thiết bị, Version control Git, kiến trúc quản lý trạng thái luồng (State Management), AI IDE (Cursor).
+\end{itemize}
+
+\section{BÁO CÁO TIẾN ĐỘ THEO TIMELINE}
+\subsection[Giai đoạn 1: Làm quen quy trình làm việc và công cụ (Từ 09/03/2026 đến 05/04/2026)]{Giai đoạn 1: Làm quen quy trình làm việc và công cụ \\(Từ 09/03/2026 $\rightarrow$ 05/04/2026)}
+\subsubsection{Công việc đã thực hiện}
+Giai đoạn đầu tiên của đợt thực tập là quá trình Onboarding (Hòa nhập môi trường) và điều chỉnh lại những kỹ năng còn hổng:
+\begin{itemize}
+    \item \textbf{1. Quản lý mã nguồn với Git:} 
+    Em được hướng dẫn từ bỏ thói quen đẩy code trực tiếp lên nhánh chính (master) như hồi làm trên trường. Thay vào đó là thao tác tạo nhánh riêng (branching), commit thường xuyên với lời chú thích (Commit Message) theo chuẩn. Em bắt đầu tiếp xúc với việc xử lý xung đột code (Merge Conflict) và cách tạo Pull Request để Mentor duyệt trước khi code được đem đi dùng chung.
+    
+    \item \textbf{2. Ứng dụng AI vào lập trình (Vibe Coding):} 
+    Công ty trang bị công cụ Cursor IDE và hướng dẫn cách làm việc với công nghệ AI (Vibe Coding) cực kỳ hiện đại. Thay vì copy-paste mù quáng, em học cách dóng bối cảnh (context) cho AI để nó nắm được kiến trúc thư mục dự án. Nhờ vậy, AI hỗ trợ sinh ra các đoạn code khung (boilerplate) chuẩn xác, viết test tự động, hoặc giải thích rất dễ hiểu các hàm do các lập trình viên cũ viết.
+    
+    \item \textbf{3. Kiến trúc tối ưu giao diện cơ bản:}
+    Được dự các buổi Tech-sync (trao đổi kỹ thuật nội bộ) của team để hiểu cách các thao tác đồ hoạ tiêu thụ bộ nhớ RAM, học được kinh nghiệm là phải tính toán độ nặng của layout trước khi thực sự vẽ nó ra khối lệnh.
+\end{itemize}
+
+\subsubsection{Kết quả hoàn thiện}
+\begin{itemize}
+    \item Làm quen thành công với nhịp điệu của team, thao tác kiểm soát Git khá mượt mà, không còn lo gây vỡ dự án chung.
+    \item Tốc độ viết code khung tăng lên đáng kể, giảm thời gian gõ hàm lặp đi lặp lại nhờ biết kiểm soát AI đúng cách.
+\end{itemize}
+
+\subsection[Giai đoạn 2: Trực tiếp xây dựng module dự án Cleaner Guru và Push Up (Từ 06/04/2026 đến 04/05/2026)]{Giai đoạn 2: Trực tiếp xây dựng module dự án Cleaner Guru và Push Up \\(Từ 06/04/2026 $\rightarrow$ 04/05/2026)}
+\subsubsection{Công việc cụ thể}
+\begin{itemize}
+    \item \textbf{1. Phát triển dự án Cleaner Guru - Thuật toán dHash và tối ưu bộ nhớ:}
+    \begin{itemize}
+        \item \textit{Thuật toán dHash tìm ảnh trùng lặp:} Do việc dựa dẫm vào siêu dữ liệu (metadata) thiếu sự chính xác, em đã tìm hiểu và ứng dụng thuật toán hàm băm \textbf{dHash (Difference Hash)}. Quá trình diễn ra gồm: Thu nhỏ dung lượng bức ảnh lại, dùng ma trận màu xám để tính toán khoảng cách (Hamming Distance). Từ phép toán này, app hoàn toàn tự phát hiện ra những góc ảnh cực kì giống nhau hoặc chụp nháy liên tục.
+        \item \textit{Khắc phục lỗi tràn RAM:} Khi quét số lượng ảnh lớn thật tế, app lập tức văng màn hình do tràn bộ nhớ (Out of Memory). Em đã cấu trúc \textbf{Method Channel} gọi lệnh trực tiếp xuống hệ điều hành iOS (Native core) để yêu cầu chỉ gửi ảnh nén rất nhỏ (\textit{Thumbnails}) lên cho Flutter xử lý thay vì ảnh gốc 4K nặng trịch, giúp dung lượng RAM tiêu thụ giảm từ 1.5GB xuống dưới 150MB.
+        \item \textit{Tối ưu hiệu năng cuộn bằng Isolate:} Thuật toán phân tích dHash tuy nhận diện đúng nhưng làm màn hình bị khựng vài giây. Em đã tách riêng khâu tính toán này ném vào \textbf{Isolate} (một luồng phụ chạy ngầm độc lập), giúp danh sách hình ảnh trơn tru tuyệt đối.
+    \end{itemize}
+    
+    \item \textbf{2. Phát triển dự án Push Up - Lập trình cảm biến đếm hít đất tự động:}
+    \begin{itemize}
+        \item \textit{Lập trình cảm biến tiệm cận (Proximity Sensor):} Để đếm số lần hít đất của người dùng một cách tự động, em đã tích hợp gói thư viện cảm biến tiệm cận thiết bị, bắt sự kiện thay đổi khoảng cách khi người dùng hạ thấp ngực xuống gần màn hình điện thoại.
+        \item \textit{Thuật toán khử nhiễu tín hiệu (Debouncing \& Stream Filtering):} Tránh tình trạng cảm biến đếm sai lệch do cử động rung lắc nhẹ hoặc sự thay đổi ánh sáng xung quanh, em đã tự viết thuật toán lọc nhiễu tín hiệu Stream, đảm bảo mỗi rep chống đẩy chỉ được ghi nhận một lần duy nhất khi khoảng cách giảm xuống dưới ngưỡng (threshold) quy định và khôi phục về trạng thái ban đầu.
+        \item \textit{Tích hợp phản hồi xúc giác (Haptic Feedback) và hiệu ứng âm thanh:} Nhằm nâng cao trải nghiệm người dùng, em đã lập trình các phản hồi xúc giác rung nhẹ (\textit{HapticFeedback.lightImpact}) phối hợp cùng âm thanh thông báo chúc mừng Cupertino mỗi khi người dùng hoàn thành một rep tập luyện thành công.
+    \end{itemize}
+\end{itemize}
+
+\subsubsection{Kết quả đạt được}
+\begin{itemize}
+    \item Hoàn thành xuất sắc tính năng phân loại ảnh lặp nâng cao cho dự án \textbf{Cleaner Guru} và bộ đếm hít đất tiệm cận chính xác cao cho dự án \textbf{Push Up}, chạy hoàn toàn cục bộ, bảo mật và cực kỳ nhẹ trên môi trường thiết bị kiểm thử.
+    \item Các module lập trình cấu trúc mạch lạc, vượt qua các đợt kiểm thử QA nội bộ và được hợp nhất mã nguồn vào nhánh phát triển chính của team.
+\end{itemize}
+
+\subsection[Giai đoạn 3: Nghiên cứu và phát triển ứng dụng PDF Converter \& Scanner (Từ 05/05/2026 đến 20/05/2026)]{Giai đoạn 3: Nghiên cứu và phát triển ứng dụng PDF Converter \& Scanner \\(Từ 05/05/2026 $\rightarrow$ 20/05/2026)}
+\subsubsection{Công việc cụ thể}
+\begin{itemize}
+    \item \textbf{1. Xây dựng bộ luồng nhập liệu đa dạng nguồn (Multi-source Input Pipeline):}
+    Em trực tiếp thiết kế và lập trình giao diện Cupertino cho phép người dùng chọn tệp từ nhiều nguồn khác nhau: iCloud Drive, Gallery điện thoại, chụp ảnh trực tiếp từ Camera (qua thư viện \textit{flutter\_doc\_scanner}), và đặc biệt là cơ chế tải tệp từ liên kết URL (sử dụng đối tượng \textit{HttpClient} với cấu hình timeout 15 giây và giới hạn kích thước tải tối đa 20MB để bảo vệ thiết bị, sau đó sử dụng thư viện \textit{image} để giải mã và kiểm tra tính hợp lệ ngoại tuyến trước khi đưa vào hàng đợi xử lý).
+
+    \item \textbf{2. Xây dựng lõi chuyển đổi PDF ngoại tuyến tối ưu hóa tài nguyên (Offline PDF Engine):}
+    Để chuyển đổi danh sách ảnh đầu vào thành tài liệu PDF mà không gây treo màn hình (UI thread lag), em đã áp dụng phương pháp lập trình đa luồng thông qua hàm \textbf{compute} để đẩy toàn bộ quá trình nén và dựng tài liệu PDF chạy trên một luồng nền độc lập (\textit{Isolate}). Đồng thời, em tối ưu dung lượng tệp PDF bằng cách xây dựng thuật toán tự động nén kích thước cạnh dài của ảnh (thu nhỏ từ 1200px đến 2480px tùy thuộc cấu hình chất lượng nén của người dùng) và mã hóa lại sang chuẩn JPEG có mức nén chất lượng dao động linh hoạt từ 55\% đến 92\%. Khâu này giúp tệp xuất ra luôn nhẹ nhưng vẫn giữ được độ sắc nét của văn bản.
+
+    \item \textbf{3. Lập trình bộ hiệu chỉnh phối cảnh và bộ lọc tài liệu quét thông minh:}
+    Hỗ trợ chức năng nhận diện tài liệu tự động qua máy ảnh với các tùy chọn bật tắt đèn Flash, thay đổi bộ lọc camera. Sau khi chụp, em đã xây dựng màn hình điều chỉnh góc nghiêng và cắt hình phối cảnh (\textit{Perspective Crop}) sử dụng bộ 4 đỉnh tròn tương tác giúp người dùng căn chỉnh mép tài liệu thủ công trên nền gỗ hay môi trường phức tạp. Tài liệu cắt xong được xử lý qua các bộ lọc chất lượng cao: \textit{Black \& White, Grayscale, Color, Photo} để biến ảnh chụp thực tế thành trang quét sắc nét.
+
+    \item \textbf{4. Nghiên cứu giải pháp trích xuất văn bản và tự dựng cấu trúc tài liệu Word (DOCX/DOC engine):}
+    Em nghiên cứu và triển khai lớp tiện ích \textbf{PdfDocxService} để thực hiện trích xuất dữ liệu chữ từ PDF thông qua \textit{MethodChannel} của nền tảng iOS, kết hợp viết hàm giải mã phân tách khối nhị phân FlateDecode bằng Dart để dự phòng offline. Đối với tài liệu DOCX độ chính xác cao (High Fidelity) chuyển đổi từ ảnh, thay vì sử dụng API online, em đã trực tiếp viết code xây dựng cấu trúc lưu trữ nén của tệp Word (ZIP file) hoàn toàn thủ công bằng thư viện \textit{archive}, định dạng chi tiết cấu trúc XML của Office Open XML (OOXML) bao gồm các tệp cấu hình bắt buộc: \textit{[Content\_Types].xml}, \textit{\_rels/.rels}, \textit{word/document.xml}, \textit{word/styles.xml}, và \textit{word/\_rels/document.xml.rels}. Đồng thời, em trực tiếp nhúng dữ liệu ảnh nhị phân vào thư mục \textit{word/media} và ánh xạ hiển thị thông qua cặp thẻ \textit{<w:drawing>} của chuẩn Microsoft Word.
+
+    \item \textbf{5. Triển khai phân hệ quản lý và đóng dấu chữ ký tay số (Digital Signature Management):}
+    Em lập trình phân hệ chữ ký hoàn toàn cục bộ. Giao diện vẽ chữ ký tay trực quan hoạt động trên màn hình xoay ngang (\textit{Draw Signature Canvas}) hỗ trợ chọn màu mực linh hoạt (Đỏ, Xanh, Đen), tăng giảm độ dày nét vẽ qua slider, và nút xóa nhanh canvas. Các chữ ký sau khi vẽ có thể được lưu trữ vào bộ danh sách chữ ký thông minh để tái sử dụng nhanh chóng. Khi người dùng đóng chữ ký lên trang PDF, em xây dựng cơ chế tương tác kéo thả linh hoạt, cho phép phóng to, thu nhỏ, xoay chữ ký tự do hoặc xóa chữ ký trực quan thông qua các widget xử lý cử chỉ phức tạp.
+
+    \item \textbf{6. Tích hợp bộ chỉnh sửa ảnh nâng cao và tối ưu hóa trải nghiệm tiến trình chuyển đổi:}
+    Em tích hợp sâu bộ công cụ chỉnh sửa hình ảnh toàn diện (\textit{pro\_image\_editor}) hỗ trợ người dùng trước khi chuyển đổi bao gồm: \textit{Transform} (xoay tự do, phản chiếu), \textit{Filter} (áp bộ lọc nghệ thuật), \textit{Adjust} (căn chỉnh độ tương phản, độ sáng), và \textit{Magic} (tối ưu thông minh). Để tránh treo ứng dụng khi đang dựng tài liệu nặng, em đã cải tiến màn hình theo dõi với biểu tượng vòng quay phần trăm trực quan (\textit{Circular Progress \% Indicator}) kèm thông điệp động "Optimizing PDF..." tăng tính tương tác sinh động cho người dùng.
+
+    \item \textbf{7. Thiết lập hệ thống lưu trữ lịch sử chuyển đổi bằng Isar Database và đa dạng hóa định dạng xuất:}
+    Em cấu hình cơ sở dữ liệu NoSQL cục bộ \textbf{Isar DB} để quản lý toàn bộ lịch sử chuyển đổi, lưu trữ đầy đủ các thông tin: ảnh thu nhỏ (thumbnail), tên tệp, định dạng nguồn $\rightarrow$ đích, số lượng trang và ngày giờ chuyển đổi. Định dạng tệp mục tiêu được mở rộng đa dạng, đáp ứng hầu hết mọi nhu cầu văn phòng từ \textit{.pdf, .doc, .docx, .jpg, .png, .epub, .txt, .xls, .xlsx, .mobi, đến .ppt}.
+\end{itemize}
+
+\subsubsection{Kết quả đạt được}
+\begin{itemize}
+    \item Hoàn thành xuất sắc toàn bộ hệ thống tính năng chuyển đổi đa định dạng, quét tài liệu, ký tay và biên tập tài liệu ngoại tuyến cho ứng dụng \textbf{PDF Converter \& Scanner} chạy hoàn hảo trên thiết bị của người dùng, đảm bảo tính bảo mật và trải nghiệm mượt mà.
+    \item Ứng dụng tích hợp đa ngôn ngữ (Tiếng Việt, Anh, Nhật, Pháp, Đức, Ý, Tây Ban Nha, Hàn) và hỗ trợ hoàn hảo chế độ Sáng/Tối (Light/Dark Mode), tăng tính cạnh tranh toàn cầu cho sản phẩm.
+    \item Kiến trúc dự án tuân thủ nghiêm ngặt mô hình Clean Architecture (Data, Domain, Presentation) kết hợp quản lý trạng thái bằng \textit{flutter\_bloc}, giúp mã nguồn sạch sẽ, dễ mở rộng và kiểm thử độc lập.
+\end{itemize}
+
+\section{TỰ ĐÁNH GIÁ VÀ BÀI HỌC KINH NGHIỆM}
+\subsection{Điểm mạnh}
+\begin{itemize}
+    \item Rất tích cực đón nhận cách làm việc mới (Git quy chuẩn, Vibe coding) với tinh thần cầu tiến nhanh chóng.
+    \item Có sự chủ động nghiên cứu sâu về cấu trúc cấu tạo tệp tin của Microsoft Office (định dạng OOXML nhị phân nén) để giải quyết bài toán chuyển đổi dữ liệu offline chất lượng cao.
+    \item Áp dụng thuần thục kỹ thuật xử lý đa luồng (Isolates/compute) để tối ưu hóa hiệu năng ứng dụng, ngăn chặn triệt để hiện tượng giật lag UI khi xử lý tệp tin dung lượng lớn hay khi hiển thị vòng tiến trình động.
+    \item Thiết kế và lập trình thành công hệ thống chữ ký tay và tương tác kéo thả, xoay chữ ký có độ phức tạp cao hoàn toàn mượt mà.
+\end{itemize}
+\subsection{Điểm yếu}
+\begin{itemize}
+    \item Giải thuật trích xuất văn bản tự viết bằng Dart thuần tuy chạy offline tốt nhưng độ chính xác chưa thể sánh bằng các thư viện OCR chuyên sâu sử dụng học máy, hiện tại mới chỉ trích xuất tốt định dạng văn bản gốc chưa mã hóa phức tạp.
+    \item Cần tối ưu thêm hiệu năng hiển thị của thư viện Isar DB khi số lượng bản ghi lịch sử lên đến hàng nghìn tệp.
+\end{itemize}
+
+\section{KẾT QUẢ TỔNG THỂ VÀ ĐỊNH HƯỚNG}
+\begin{itemize}
+    \item \textbf{Kinh nghiệm đúc kết được:} Hiểu sâu sắc sự khác biệt giữa bài tập lớn trên trường và ứng dụng thực tế thương mại. Ứng dụng thực tế đòi hỏi sự chuẩn chỉ về mặt luồng hoạt động ngoại tuyến, bảo vệ dữ liệu người dùng, tối ưu hóa bộ nhớ thiết bị, giao diện người dùng Cupertino có độ thẩm mỹ cao đồng bộ và trải nghiệm người dùng hoàn hảo.
+    \item \textbf{Báo cáo kết quả trực tiếp:} Hoàn thiện xong hai sản phẩm chính yếu: Module dọn dẹp ảnh cho \textit{Cleaner Guru} và bộ khung chuyển đổi đa định dạng ngoại tuyến, quét tài liệu, ký tay cho \textit{PDF Converter \& Scanner} rất đáng tự hào ở mốc tiến độ ngày 20/05 này.
+    \item \textbf{Định hướng tháng kế tiếp:} Tiếp tục phối hợp với đội ngũ QA để tối ưu, kiểm thử hộp đen toàn bộ các trường hợp chuyển đổi của ứng dụng \textit{PDF Converter \& Scanner}, nghiên cứu tích hợp các giải pháp trí tuệ nhân tạo (OCR Machine Learning) để nâng cao độ chính xác trích xuất chữ viết tay và văn bản phức tạp trực tuyến và ngoại tuyến, chuẩn bị sẵn sàng cho kế hoạch phát hành sản phẩm chính thức lên App Store.
+\end{itemize}
+
+\section*{PHỤ LỤC: HÌNH ẢNH MINH HỌA GIAO DIỆN ỨNG DỤNG}
+\addcontentsline{toc}{section}{PHỤ LỤC: HÌNH ẢNH MINH HỌA GIAO DIỆN ỨNG DỤNG}
+Dưới đây là toàn bộ hình ảnh giao diện thực tế ghi nhận kết quả phát triển các ứng dụng di động trong suốt giai đoạn thực tập tính đến ngày 20/05/2026:
+
+\subsection*{Phần 1: Dự án Cleaner Guru (Giai đoạn 2)}
+Ứng dụng dọn dẹp ảnh trùng lặp thông minh, giải phóng dung lượng bộ nhớ thiết bị iOS:
+
+\subsubsection*{1.1. Màn hình Onboarding}
+\begin{figure}[htbp]
+    \centering
+    \begin{minipage}{0.45\textwidth}
+        \centering
+        \includegraphics[height=9.5cm]{cleanerguru/IMG_6851.PNG}
+        \caption{Onboarding: Giới thiệu tính năng phân tích bộ nhớ lưu trữ.}
+        \label{fig:cleaner_onb_storage}
+    \end{minipage}
+    \hfill
+    \begin{minipage}{0.45\textwidth}
+        \centering
+        \includegraphics[height=9.5cm]{cleanerguru/IMG_6850.PNG}
+        \caption{Onboarding: Giới thiệu tính năng gom nhóm ảnh tương đồng.}
+        \label{fig:cleaner_onb_similar}
+    \end{minipage}
+\end{figure}
+
+\begin{figure}[htbp]
+    \centering
+    \begin{minipage}{0.45\textwidth}
+        \centering
+        \includegraphics[height=9.5cm]{cleanerguru/IMG_6854.PNG}
+        \caption{Onboarding: Giới thiệu tính năng Memory Boost (giải phóng RAM).}
+        \label{fig:cleaner_onb_ram}
+    \end{minipage}
+    \hfill
+    \begin{minipage}{0.45\textwidth}
+        \centering
+        \includegraphics[height=9.5cm]{cleanerguru/IMG_6853.PNG}
+        \caption{Onboarding: Giới thiệu tính năng Battery Boost (tối ưu pin).}
+        \label{fig:cleaner_onb_battery}
+    \end{minipage}
+\end{figure}
+
+\newpage
+\subsubsection*{1.2. Màn hình Tính năng Chính}
+\begin{figure}[htbp]
+    \centering
+    \begin{minipage}{0.45\textwidth}
+        \centering
+        \includegraphics[height=9.5cm]{cleanerguru/IMG_6863.PNG}
+        \caption{Màn hình chính Clean Up: phân loại ảnh giống nhau, video, live photo và screenshots theo dung lượng.}
+        \label{fig:cleaner_home}
+    \end{minipage}
+    \hfill
+    \begin{minipage}{0.45\textwidth}
+        \centering
+        \includegraphics[height=9.5cm]{cleanerguru/IMG_6868.PNG}
+        \caption{Giao diện Swipe Photos: đánh giá từng ảnh và chọn giữ lại hoặc xóa (Keep/Delete).}
+        \label{fig:cleaner_review}
+    \end{minipage}
+\end{figure}
+
+\begin{figure}[htbp]
+    \centering
+    \begin{minipage}{0.45\textwidth}
+        \centering
+        \includegraphics[height=9.5cm]{cleanerguru/IMG_6865.PNG}
+        \caption{Màn hình dọn dẹp video dung lượng lớn (197 videos -- 13.1 GB).}
+        \label{fig:cleaner_videos}
+    \end{minipage}
+    \hfill
+    \begin{minipage}{0.45\textwidth}
+        \centering
+        \includegraphics[height=9.5cm]{cleanerguru/IMG_6866.PNG}
+        \caption{Màn hình xóa hàng loạt ảnh chụp màn hình trùng lặp (29 screenshots -- 35 MB).}
+        \label{fig:cleaner_screenshots}
+    \end{minipage}
+\end{figure}
+
+\newpage
+\subsection*{Phần 2: Dự án Push Up (Giai đoạn 2)}
+Ứng dụng hỗ trợ theo dõi sức khỏe và tự động đếm số lần hít đất sử dụng cảm biến tiệm cận:
+
+\begin{figure}[htbp]
+    \centering
+    \begin{minipage}{0.45\textwidth}
+        \centering
+        \includegraphics[height=9.5cm]{push_up/IMG_6870.PNG}
+        \caption{Màn hình chính thống kê tập luyện (Dashboard).}
+        \label{fig:pushup_dash}
+    \end{minipage}
+    \hfill
+    \begin{minipage}{0.45\textwidth}
+        \centering
+        \includegraphics[height=9.5cm]{push_up/IMG_6876.PNG}
+        \caption{Giao diện cấu hình và đồng bộ Health Sync.}
+        \label{fig:pushup_settings}
+    \end{minipage}
+\end{figure}
+
+\newpage
+\begin{figure}[htbp]
+    \centering
+    \begin{minipage}{0.45\textwidth}
+        \centering
+        \includegraphics[height=9.5cm]{push_up/IMG_6871.PNG}
+        \caption{Giao diện buổi tập hít đất (Start Workout).}
+        \label{fig:pushup_work}
+    \end{minipage}
+    \hfill
+    \begin{minipage}{0.45\textwidth}
+        \centering
+        \includegraphics[height=9.5cm]{push_up/IMG_6875.PNG}
+        \caption{Thẻ báo cáo chia sẻ buổi tập (Workout Report).}
+        \label{fig:pushup_report}
+    \end{minipage}
+\end{figure}
+
+\newpage
+\begin{figure}[htbp]
+    \centering
+    \begin{minipage}{0.45\textwidth}
+        \centering
+        \includegraphics[height=9.5cm]{push_up/IMG_6874.PNG}
+        \caption{Giao diện quản lý lịch sử các buổi tập (History).}
+        \label{fig:pushup_history}
+    \end{minipage}
+    \hfill
+    \begin{minipage}{0.45\textwidth}
+        \centering
+        \includegraphics[height=9.5cm]{push_up/IMG_6873.PNG}
+        \caption{Dashboard ghi nhận hít đất thành công đầu tiên.}
+        \label{fig:pushup_success}
+    \end{minipage}
+\end{figure}
+
+\newpage
+\subsection*{Phần 3: Dự án PDF Converter \& Scanner (Giai đoạn 3)}
+Ứng dụng quét tài liệu chuyên nghiệp và chuyển đổi đa định dạng ngoại tuyến:
+
+\begin{figure}[htbp]
+    \centering
+    \begin{minipage}{0.45\textwidth}
+        \centering
+        \includegraphics[height=9.5cm]{features/IMG_7584.PNG}
+        \caption{Giao diện lựa chọn nguồn nhập liệu đa dạng.}
+        \label{fig:pdf_input}
+    \end{minipage}
+    \hfill
+    \begin{minipage}{0.45\textwidth}
+        \centering
+        \includegraphics[height=9.5cm]{features/IMG_7581.PNG}
+        \caption{Tính năng cắt hiệu chỉnh phối cảnh (Perspective Crop).}
+        \label{fig:pdf_crop}
+    \end{minipage}
+\end{figure}
+
+\newpage
+\begin{figure}[htbp]
+    \centering
+    \begin{minipage}{0.45\textwidth}
+        \centering
+        \includegraphics[height=9.5cm]{features/IMG_7591.PNG}
+        \caption{Đóng dấu chữ ký tay số và hỗ trợ cử chỉ tự do.}
+        \label{fig:pdf_signature}
+    \end{minipage}
+    \hfill
+    \begin{minipage}{0.45\textwidth}
+        \centering
+        \includegraphics[height=9.5cm]{features/IMG_7592.PNG}
+        \caption{Tích hợp sâu trình chỉnh ảnh nâng cao pro\_image\_editor.}
+        \label{fig:pdf_editor}
+    \end{minipage}
+\end{figure}
+
+\newpage
+\begin{figure}[htbp]
+    \centering
+    \begin{minipage}{0.45\textwidth}
+        \centering
+        \includegraphics[height=9.5cm]{features/IMG_7577.PNG}
+        \caption{Quản lý lịch sử chuyển đổi (History) bằng Isar DB.}
+        \label{fig:pdf_history}
+    \end{minipage}
+    \hfill
+    \begin{minipage}{0.45\textwidth}
+        \centering
+        \includegraphics[height=9.5cm]{features/IMG_7595.PNG}
+        \caption{Danh sách các định dạng tệp tin đích hỗ trợ chuyển đổi.}
+        \label{fig:pdf_formats}
+    \end{minipage}
+\end{figure}
+
+\end{document}

@@ -1,6 +1,6 @@
 # Fdb version 4
-["pdflatex"] 1776674608.41231 "/Users/phanbadu/Desktop/workspaces/Work/22T1020161/main.tex" "main.pdf" "main" 1776674608.46445 2
-  "/Users/phanbadu/Desktop/workspaces/Work/22T1020161/main.tex" 1776674608.06027 15790 0abde2d2e90658e29c55ae858f708179 ""
+["pdflatex"] 1779244899.17613 "/Users/phanbadu/Desktop/workspaces/Work/22T1020161/main.tex" "main.pdf" "main" 1779244899.22641 2
+  "/Users/phanbadu/Desktop/workspaces/Work/22T1020161/main.tex" 1779244898.63099 24305 7df44d03c3d3de04fb7e9d57a07cde26 ""
   "/usr/local/texlive/2026basic/texmf-dist/fonts/tfm/public/cm/cmr12.tfm" 1136768653 1288 655e228510b4c2a1abe905c368440826 ""
   "/usr/local/texlive/2026basic/texmf-dist/tex/generic/bigintcalc/bigintcalc.sty" 1576625341 40635 c40361e206be584d448876bba8a64a3b ""
   "/usr/local/texlive/2026basic/texmf-dist/tex/generic/bitset/bitset.sty" 1576016050 33961 6b5c75130e435b2bfdb9f480a09a39f9 ""
@@ -60,11 +60,11 @@
   "/usr/local/texlive/2026basic/texmf-dist/web2c/texmf.cnf" 1770478701 43630 e9fa012910491fe5ae08a72c3c2997a7 ""
   "/usr/local/texlive/2026basic/texmf-var/web2c/pdftex/pdflatex.fmt" 1775796936 2966193 467204c91c5ab63c5b96c76d53d36590 ""
   "/usr/local/texlive/2026basic/texmf.cnf" 1772405582 628 bbc09d6d38872d53c11bb48dc9b14e88 ""
-  "logo.png" 1776670199.59999 7013 b96cecd867322a573052758cd2ace96c ""
+  "logo.png" 1779243731.21171 7013 b96cecd867322a573052758cd2ace96c ""
   "main.aux" 0 -1 0 "pdflatex"
-  "main.tex" 1776674608.06027 15790 0abde2d2e90658e29c55ae858f708179 ""
+  "main.tex" 1779244898.63099 24305 7df44d03c3d3de04fb7e9d57a07cde26 ""
   "main.toc" 0 -1 0 ""
-  "rules.tex" 1776674487.19817 1064 c9f8d93c971f30f3ddfa462bdef9e153 ""
+  "rules.tex" 1779243731.21446 1064 c9f8d93c971f30f3ddfa462bdef9e153 ""
   (generated)
   "main.aux"
   "main.log"

@@ -171,14 +171,27 @@ Giai đoạn đầu tiên của đợt thực tập là quá trình Onboarding (
     \item \textbf{2. Xây dựng lõi chuyển đổi PDF ngoại tuyến tối ưu hóa tài nguyên (Offline PDF Engine):}
     Để chuyển đổi danh sách ảnh đầu vào thành tài liệu PDF mà không gây treo màn hình (UI thread lag), em đã áp dụng phương pháp lập trình đa luồng thông qua hàm \textbf{compute} để đẩy toàn bộ quá trình nén và dựng tài liệu PDF chạy trên một luồng nền độc lập (\textit{Isolate}). Đồng thời, em tối ưu dung lượng tệp PDF bằng cách xây dựng thuật toán tự động nén kích thước cạnh dài của ảnh (thu nhỏ từ 1200px đến 2480px tùy thuộc cấu hình chất lượng nén của người dùng) và mã hóa lại sang chuẩn JPEG có mức nén chất lượng dao động linh hoạt từ 55\% đến 92\%. Khâu này giúp tệp xuất ra luôn nhẹ nhưng vẫn giữ được độ sắc nét của văn bản.
 
-    \item \textbf{3. Nghiên cứu giải pháp trích xuất văn bản và tự dựng cấu trúc tài liệu Word (DOCX/DOC engine):}
+    \item \textbf{3. Lập trình bộ hiệu chỉnh phối cảnh và bộ lọc tài liệu quét thông minh:}
+    Hỗ trợ chức năng nhận diện tài liệu tự động qua máy ảnh với các tùy chọn bật tắt đèn Flash, thay đổi bộ lọc camera. Sau khi chụp, em đã xây dựng màn hình điều chỉnh góc nghiêng và cắt hình phối cảnh (\textit{Perspective Crop}) sử dụng bộ 4 đỉnh tròn tương tác giúp người dùng căn chỉnh mép tài liệu thủ công trên nền gỗ hay môi trường phức tạp. Tài liệu cắt xong được xử lý qua các bộ lọc chất lượng cao: \textit{Black \& White, Grayscale, Color, Photo} để biến ảnh chụp thực tế thành trang quét sắc nét.
+
+    \item \textbf{4. Nghiên cứu giải pháp trích xuất văn bản và tự dựng cấu trúc tài liệu Word (DOCX/DOC engine):}
     Em nghiên cứu và triển khai lớp tiện ích \textbf{PdfDocxService} để thực hiện trích xuất dữ liệu chữ từ PDF thông qua \textit{MethodChannel} của nền tảng iOS, kết hợp viết hàm giải mã phân tách khối nhị phân FlateDecode bằng Dart để dự phòng offline. Đối với tài liệu DOCX độ chính xác cao (High Fidelity) chuyển đổi từ ảnh, thay vì sử dụng API online, em đã trực tiếp viết code xây dựng cấu trúc lưu trữ nén của tệp Word (ZIP file) hoàn toàn thủ công bằng thư viện \textit{archive}, định dạng chi tiết cấu trúc XML của Office Open XML (OOXML) bao gồm các tệp cấu hình bắt buộc: \textit{[Content\_Types].xml}, \textit{\_rels/.rels}, \textit{word/document.xml}, \textit{word/styles.xml}, và \textit{word/\_rels/document.xml.rels}. Đồng thời, em trực tiếp nhúng dữ liệu ảnh nhị phân vào thư mục \textit{word/media} và ánh xạ hiển thị thông qua cặp thẻ \textit{<w:drawing>} của chuẩn Microsoft Word.
+
+    \item \textbf{5. Triển khai phân hệ quản lý và đóng dấu chữ ký tay số (Digital Signature Management):}
+    Em lập trình phân hệ chữ ký hoàn toàn cục bộ. Giao diện vẽ chữ ký tay trực quan hoạt động trên màn hình xoay ngang (\textit{Draw Signature Canvas}) hỗ trợ chọn màu mực linh hoạt (Đỏ, Xanh, Đen), tăng giảm độ dày nét vẽ qua slider, và nút xóa nhanh canvas. Các chữ ký sau khi vẽ có thể được lưu trữ vào bộ danh sách chữ ký thông minh để tái sử dụng nhanh chóng. Khi người dùng đóng chữ ký lên trang PDF, em xây dựng cơ chế tương tác kéo thả linh hoạt, cho phép phóng to, thu nhỏ, xoay chữ ký tự do hoặc xóa chữ ký trực quan thông qua các widget xử lý cử chỉ phức tạp.
+
+    \item \textbf{6. Tích hợp bộ chỉnh sửa ảnh nâng cao và tối ưu hóa trải nghiệm tiến trình chuyển đổi:}
+    Em tích hợp sâu bộ công cụ chỉnh sửa hình ảnh toàn diện (\textit{pro\_image\_editor}) hỗ trợ người dùng trước khi chuyển đổi bao gồm: \textit{Transform} (xoay tự do, phản chiếu), \textit{Filter} (áp bộ lọc nghệ thuật), \textit{Adjust} (căn chỉnh độ tương phản, độ sáng), và \textit{Magic} (tối ưu thông minh). Để tránh treo ứng dụng khi đang dựng tài liệu nặng, em đã cải tiến màn hình theo dõi với biểu tượng vòng quay phần trăm trực quan (\textit{Circular Progress \% Indicator}) kèm thông điệp động "Optimizing PDF..." tăng tính tương tác sinh động cho người dùng.
+
+    \item \textbf{7. Thiết lập hệ thống lưu trữ lịch sử chuyển đổi bằng Isar Database và đa dạng hóa định dạng xuất:}
+    Em cấu hình cơ sở dữ liệu NoSQL cục bộ \textbf{Isar DB} để quản lý toàn bộ lịch sử chuyển đổi, lưu trữ đầy đủ các thông tin: ảnh thu nhỏ (thumbnail), tên tệp, định dạng nguồn $\rightarrow$ đích, số lượng trang và ngày giờ chuyển đổi. Định dạng tệp mục tiêu được mở rộng đa dạng, đáp ứng hầu hết mọi nhu cầu văn phòng từ \textit{.pdf, .doc, .docx, .jpg, .png, .epub, .txt, .xls, .xlsx, .mobi, đến .ppt}.
 \end{itemize}
 
 \subsubsection{Kết quả đạt được}
 \begin{itemize}
-    \item Hoàn thành bộ khung tính năng chuyển đổi đa năng của ứng dụng \textbf{PDF Converter \& Scanner} chạy hoàn toàn cục bộ trên thiết bị của người dùng, đảm bảo tính bảo mật tối đa và tốc độ chuyển đổi nhanh.
-    \item Kiến trúc dự án được phân tách rõ ràng theo mô hình Clean Architecture (Data, Domain, Presentation) kết hợp quản lý trạng thái bằng \textit{flutter\_bloc}, giúp dễ bảo trì và dễ tích hợp tính năng mới.
+    \item Hoàn thành xuất sắc toàn bộ hệ thống tính năng chuyển đổi đa định dạng, quét tài liệu, ký tay và biên tập tài liệu ngoại tuyến cho ứng dụng \textbf{PDF Converter \& Scanner} chạy hoàn hảo trên thiết bị của người dùng, đảm bảo tính bảo mật và trải nghiệm mượt mà.
+    \item Ứng dụng tích hợp đa ngôn ngữ (Tiếng Việt, Anh, Nhật, Pháp, Đức, Ý, Tây Ban Nha, Hàn) và hỗ trợ hoàn hảo chế độ Sáng/Tối (Light/Dark Mode), tăng tính cạnh tranh toàn cầu cho sản phẩm.
+    \item Kiến trúc dự án tuân thủ nghiêm ngặt mô hình Clean Architecture (Data, Domain, Presentation) kết hợp quản lý trạng thái bằng \textit{flutter\_bloc}, giúp mã nguồn sạch sẽ, dễ mở rộng và kiểm thử độc lập.
 \end{itemize}
 
 \section{TỰ ĐÁNH GIÁ VÀ BÀI HỌC KINH NGHIỆM}
@@ -186,19 +199,20 @@ Giai đoạn đầu tiên của đợt thực tập là quá trình Onboarding (
 \begin{itemize}
     \item Rất tích cực đón nhận cách làm việc mới (Git quy chuẩn, Vibe coding) với tinh thần cầu tiến nhanh chóng.
     \item Có sự chủ động nghiên cứu sâu về cấu trúc cấu tạo tệp tin của Microsoft Office (định dạng OOXML nhị phân nén) để giải quyết bài toán chuyển đổi dữ liệu offline chất lượng cao.
-    \item Áp dụng thuần thục kỹ thuật xử lý đa luồng (Isolates/compute) để tối ưu hóa hiệu năng ứng dụng, ngăn chặn triệt để hiện tượng giật lag UI khi xử lý tệp tin dung lượng lớn.
+    \item Áp dụng thuần thục kỹ thuật xử lý đa luồng (Isolates/compute) để tối ưu hóa hiệu năng ứng dụng, ngăn chặn triệt để hiện tượng giật lag UI khi xử lý tệp tin dung lượng lớn hay khi hiển thị vòng tiến trình động.
+    \item Thiết kế và lập trình thành công hệ thống chữ ký tay và tương tác kéo thả, xoay chữ ký có độ phức tạp cao hoàn toàn mượt mà.
 \end{itemize}
 \subsection{Điểm yếu}
 \begin{itemize}
-    \item Giải thuật trích xuất văn bản tự viết bằng Dart thuần tuy chạy offline tốt nhưng độ chính xác chưa thể sánh bằng các thư viện OCR chuyên sâu, hiện tại mới chỉ trích xuất tốt định dạng văn bản gốc chưa mã hóa phức tạp.
-    \item Cần cải tiến thêm giao diện xử lý khi đang trong quá trình chuyển đổi (Progress loading UI) để người dùng có trải nghiệm tương tác trực quan tốt hơn.
+    \item Giải thuật trích xuất văn bản tự viết bằng Dart thuần tuy chạy offline tốt nhưng độ chính xác chưa thể sánh bằng các thư viện OCR chuyên sâu sử dụng học máy, hiện tại mới chỉ trích xuất tốt định dạng văn bản gốc chưa mã hóa phức tạp.
+    \item Cần tối ưu thêm hiệu năng hiển thị của thư viện Isar DB khi số lượng bản ghi lịch sử lên đến hàng nghìn tệp.
 \end{itemize}
 
 \section{KẾT QUẢ TỔNG THỂ VÀ ĐỊNH HƯỚNG}
 \begin{itemize}
-    \item \textbf{Kinh nghiệm đúc kết được:} Hiểu sâu sắc sự khác biệt giữa bài tập lớn trên trường và ứng dụng thực tế thương mại. Ứng dụng thực tế đòi hỏi sự chuẩn chỉ về mặt luồng hoạt động ngoại tuyến, bảo vệ dữ liệu người dùng, tối ưu hóa bộ nhớ thiết bị và giao diện người dùng Cupertino đồng bộ cao.
-    \item \textbf{Báo cáo kết quả trực tiếp:} Hoàn thiện xong hai sản phẩm chính yếu: Module dọn dẹp ảnh cho \textit{Cleaner Guru} và bộ khung chuyển đổi đa định dạng ngoại tuyến cho \textit{PDF Converter \& Scanner} rất đáng tự hào ở mốc tiến độ ngày 20/05 này.
-    \item \textbf{Định hướng tháng kế tiếp:} Tiếp tục phát triển phần giao diện chỉnh sửa ảnh nâng cao (\textit{pro\_image\_editor}), tính năng ký số tài liệu bằng tay (\textit{hand\_signature}), và thiết lập cơ sở dữ liệu lưu lịch sử chuyển đổi bằng công nghệ \textit{Isar}, tiến tới hoàn thành toàn bộ sản phẩm để phục vụ đợt phát hành sắp tới.
+    \item \textbf{Kinh nghiệm đúc kết được:} Hiểu sâu sắc sự khác biệt giữa bài tập lớn trên trường và ứng dụng thực tế thương mại. Ứng dụng thực tế đòi hỏi sự chuẩn chỉ về mặt luồng hoạt động ngoại tuyến, bảo vệ dữ liệu người dùng, tối ưu hóa bộ nhớ thiết bị, giao diện người dùng Cupertino có độ thẩm mỹ cao đồng bộ và trải nghiệm người dùng hoàn hảo.
+    \item \textbf{Báo cáo kết quả trực tiếp:} Hoàn thiện xong hai sản phẩm chính yếu: Module dọn dẹp ảnh cho \textit{Cleaner Guru} và bộ khung chuyển đổi đa định dạng ngoại tuyến, quét tài liệu, ký tay cho \textit{PDF Converter \& Scanner} rất đáng tự hào ở mốc tiến độ ngày 20/05 này.
+    \item \textbf{Định hướng tháng kế tiếp:} Tiếp tục phối hợp với đội ngũ QA để tối ưu, kiểm thử hộp đen toàn bộ các trường hợp chuyển đổi của ứng dụng \textit{PDF Converter \& Scanner}, nghiên cứu tích hợp các giải pháp trí tuệ nhân tạo (OCR Machine Learning) để nâng cao độ chính xác trích xuất chữ viết tay và văn bản phức tạp trực tuyến và ngoại tuyến, chuẩn bị sẵn sàng cho kế hoạch phát hành sản phẩm chính thức lên App Store.
 \end{itemize}
 
 \end{document}
