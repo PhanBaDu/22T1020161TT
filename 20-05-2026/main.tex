@@ -213,7 +213,6 @@ Giai đoạn đầu tiên của đợt thực tập là quá trình Onboarding (
     \item Giải thuật trích xuất văn bản tự viết bằng Dart thuần tuy chạy offline tốt nhưng độ chính xác chưa thể sánh bằng các thư viện OCR chuyên sâu sử dụng học máy, hiện tại mới chỉ trích xuất tốt định dạng văn bản gốc chưa mã hóa phức tạp.
     \item Cần tối ưu thêm hiệu năng hiển thị của thư viện Isar DB khi số lượng bản ghi lịch sử lên đến hàng nghìn tệp.
 \end{itemize}
-
 \section{KẾT QUẢ TỔNG THỂ VÀ ĐỊNH HƯỚNG}
 \begin{itemize}
     \item \textbf{Kinh nghiệm đúc kết được:} Hiểu sâu sắc sự khác biệt giữa bài tập lớn trên trường và ứng dụng thực tế thương mại. Ứng dụng thực tế đòi hỏi sự chuẩn chỉ về mặt luồng hoạt động ngoại tuyến, bảo vệ dữ liệu người dùng, tối ưu hóa bộ nhớ thiết bị, giao diện người dùng Cupertino có độ thẩm mỹ cao đồng bộ và trải nghiệm người dùng hoàn hảo.
@@ -356,60 +355,197 @@ Dưới đây là toàn bộ hình ảnh giao diện thực tế ghi nhận kế
     \end{minipage}
 \end{figure}
 
+% ======================================
+% PHẦN 3: PDF CONVERTER & SCANNER
+% ======================================
 \newpage
 \subsection*{Phần 3: Dự án PDF Converter \& Scanner (Giai đoạn 3)}
 Ứng dụng quét tài liệu chuyên nghiệp và chuyển đổi đa định dạng ngoại tuyến:
 
+% --- 3.1 ---
+\subsubsection*{3.1. Màn hình Convert và luồng nhập liệu đa nguồn}
 \begin{figure}[htbp]
     \centering
     \begin{minipage}{0.45\textwidth}
         \centering
-        \includegraphics[height=9.5cm]{features/IMG_7584.PNG}
-        \caption{Giao diện lựa chọn nguồn nhập liệu đa dạng.}
-        \label{fig:pdf_input}
-    \end{minipage}
-    \hfill
-    \begin{minipage}{0.45\textwidth}
-        \centering
-        \includegraphics[height=9.5cm]{features/IMG_7581.PNG}
-        \caption{Tính năng cắt hiệu chỉnh phối cảnh (Perspective Crop).}
-        \label{fig:pdf_crop}
-    \end{minipage}
-\end{figure}
-
-\newpage
-\begin{figure}[htbp]
-    \centering
-    \begin{minipage}{0.45\textwidth}
-        \centering
-        \includegraphics[height=9.5cm]{features/IMG_7591.PNG}
-        \caption{Đóng dấu chữ ký tay số và hỗ trợ cử chỉ tự do.}
-        \label{fig:pdf_signature}
+        \includegraphics[height=9.5cm]{features/IMG_7576.PNG}
+        \caption{Màn hình Convert chính với 5 nguồn nhập liệu: iCloud, Other App, Gallery, Camera, URL Link.}
+        \label{fig:pdf_convert_home}
     \end{minipage}
     \hfill
     \begin{minipage}{0.45\textwidth}
         \centering
         \includegraphics[height=9.5cm]{features/IMG_7592.PNG}
-        \caption{Tích hợp sâu trình chỉnh ảnh nâng cao pro\_image\_editor.}
-        \label{fig:pdf_editor}
+        \caption{Popup ``Enter URL'': nhập liên kết URL để tải và chuyển đổi tài liệu trực tiếp từ Internet.}
+        \label{fig:pdf_url}
     \end{minipage}
 \end{figure}
 
-\newpage
 \begin{figure}[htbp]
     \centering
     \begin{minipage}{0.45\textwidth}
         \centering
-        \includegraphics[height=9.5cm]{features/IMG_7577.PNG}
-        \caption{Quản lý lịch sử chuyển đổi (History) bằng Isar DB.}
-        \label{fig:pdf_history}
+        \includegraphics[height=9.5cm]{features/IMG_7593.PNG}
+        \caption{Màn hình iCloud Picker: chọn file từ iCloud Drive (Gần đây, Được chia sẻ, Duyệt) với thanh tìm kiếm.}
+        \label{fig:pdf_icloud}
     \end{minipage}
     \hfill
     \begin{minipage}{0.45\textwidth}
         \centering
+        \includegraphics[height=9.5cm]{features/IMG_7584.PNG}
+        \caption{Màn hình New Conversion: file đã chọn, định dạng đích .pdf, PDF Settings chất lượng 90\%, nút Convert.}
+        \label{fig:pdf_new_conversion}
+    \end{minipage}
+\end{figure}
+
+% --- 3.2 ---
+\newpage
+\subsubsection*{3.2. Quét tài liệu qua Camera và hiệu chỉnh phối cảnh}
+\begin{figure}[htbp]
+    \centering
+    \begin{minipage}{0.45\textwidth}
+        \centering
+        \includegraphics[height=9.5cm]{features/IMG_7580.PNG}
+        \caption{Giao diện Camera Scanner: quét tài liệu trực tiếp với thanh điều khiển Flash, Filters, Shutter.}
+        \label{fig:pdf_camera}
+    \end{minipage}
+    \hfill
+    \begin{minipage}{0.45\textwidth}
+        \centering
+        \includegraphics[height=9.5cm]{features/IMG_7581.PNG}
+        \caption{Màn hình Perspective Crop: hiệu chỉnh phối cảnh tài liệu với 4 đỉnh tương tác và toolbar Adjust/Filters/Rotate/Delete.}
+        \label{fig:pdf_crop}
+    \end{minipage}
+\end{figure}
+
+\begin{figure}[htbp]
+    \centering
+    \begin{minipage}{0.45\textwidth}
+        \centering
+        \includegraphics[height=9.5cm]{features/IMG_7582.PNG}
+        \caption{Picker chọn bộ lọc tài liệu: Black \& White, Grayscale, Color, Photo để chuẩn hóa ảnh quét.}
+        \label{fig:pdf_filter_picker}
+    \end{minipage}
+    \hfill
+    \begin{minipage}{0.45\textwidth}
+        \centering
+        \includegraphics[height=9.5cm]{features/IMG_7583.PNG}
+        \caption{Kết quả sau khi xoay tài liệu quét sang chế độ ngang (Rotate), sẵn sàng xác nhận lưu.}
+        \label{fig:pdf_rotated}
+    \end{minipage}
+\end{figure}
+
+% --- 3.3 ---
+\newpage
+\subsubsection*{3.3. Bộ chỉnh sửa ảnh nâng cao và chọn định dạng đích}
+\begin{figure}[htbp]
+    \centering
+    \begin{minipage}{0.45\textwidth}
+        \centering
+        \includegraphics[height=9.5cm]{features/IMG_7591.PNG}
+        \caption{Bộ pro\_image\_editor tích hợp sâu với 4 công cụ chỉnh sửa: Transform, Filter, Adjust, Magic.}
+        \label{fig:pdf_pro_editor}
+    \end{minipage}
+    \hfill
+    \begin{minipage}{0.45\textwidth}
+        \centering
+        \includegraphics[height=9.5cm]{features/IMG_7594.PNG}
+        \caption{Màn hình Target extension: chọn định dạng đích .pdf, .doc, .docx, .jpg, .png, .epub, .txt, .xls, .xlsx, .mobi, .ppt.}
+        \label{fig:pdf_target_ext}
+    \end{minipage}
+\end{figure}
+
+\begin{figure}[htbp]
+    \centering
+    \begin{minipage}{0.45\textwidth}
+        \centering
         \includegraphics[height=9.5cm]{features/IMG_7595.PNG}
-        \caption{Danh sách các định dạng tệp tin đích hỗ trợ chuyển đổi.}
-        \label{fig:pdf_formats}
+        \caption{Màn hình Target extension đầy đủ: nhóm Merge Files (.pdf) và toàn bộ định dạng Convert đa dạng.}
+        \label{fig:pdf_formats_full}
+    \end{minipage}
+    \hfill
+    \begin{minipage}{0.45\textwidth}
+        \centering
+        \includegraphics[height=9.5cm]{features/IMG_7585.PNG}
+        \caption{Màn hình ``Creating PDF'': Circular Progress Indicator hiển thị 6\% với thông điệp ``Optimizing PDF...''}
+        \label{fig:pdf_progress}
+    \end{minipage}
+\end{figure}
+
+% --- 3.4 ---
+\newpage
+\subsubsection*{3.4. Xuất tệp PDF và xem trước tài liệu}
+\begin{figure}[htbp]
+    \centering
+    \begin{minipage}{0.45\textwidth}
+        \centering
+        \includegraphics[height=9.5cm]{features/IMG_7586.PNG}
+        \caption{Màn hình ``PDF Exported Successfully'' và iOS Share Sheet: chia sẻ qua AirDrop, Mail, Zalo và ứng dụng khác.}
+        \label{fig:pdf_exported}
+    \end{minipage}
+    \hfill
+    \begin{minipage}{0.45\textwidth}
+        \centering
+        \includegraphics[height=9.5cm]{features/IMG_7587.PNG}
+        \caption{Màn hình xem trước PDF sau chuyển đổi (1 of 1) với nút Sign (Ký chữ ký) và Edit (Chỉnh sửa ảnh).}
+        \label{fig:pdf_preview}
+    \end{minipage}
+\end{figure}
+
+% --- 3.5 ---
+\newpage
+\subsubsection*{3.5. Phân hệ Chữ ký tay số (Digital Signature)}
+\begin{figure}[htbp]
+    \centering
+    \begin{minipage}{0.45\textwidth}
+        \centering
+        \includegraphics[height=9.5cm]{features/IMG_7588.PNG}
+        \caption{Màn hình ``Choose signature'': tạo New signature hoặc chọn lại chữ ký đã lưu (Saved 1, Saved 2).}
+        \label{fig:pdf_choose_sig}
+    \end{minipage}
+    \hfill
+    \begin{minipage}{0.45\textwidth}
+        \centering
+        \includegraphics[height=9.5cm]{features/IMG_7589.PNG}
+        \caption{Canvas vẽ chữ ký tay (Draw Signature) chế độ ngang với bộ chọn màu mực (Đỏ/Xanh/Đen) và slider độ dày nét.}
+        \label{fig:pdf_draw_sig}
+    \end{minipage}
+\end{figure}
+
+\begin{figure}[htbp]
+    \centering
+    \begin{minipage}{0.45\textwidth}
+        \centering
+        \includegraphics[height=9.5cm]{features/IMG_7590.PNG}
+        \caption{Đặt chữ ký tay số lên trang PDF: tương tác kéo thả, xoay tự do, xóa bằng nút đỏ trực quan.}
+        \label{fig:pdf_sign_on_page}
+    \end{minipage}
+    \hfill
+    \begin{minipage}{0.45\textwidth}
+        \centering
+        \includegraphics[height=9.5cm]{features/IMG_7577.PNG}
+        \caption{Màn hình History: lịch sử toàn bộ tài liệu đã chuyển đổi kèm thumbnail, tên tệp, định dạng nguồn$\rightarrow$đích, số trang và ngày giờ (Isar DB).}
+        \label{fig:pdf_history}
+    \end{minipage}
+\end{figure}
+
+% --- 3.6 ---
+\newpage
+\subsubsection*{3.6. Cài đặt ứng dụng và Đa ngôn ngữ}
+\begin{figure}[htbp]
+    \centering
+    \begin{minipage}{0.45\textwidth}
+        \centering
+        \includegraphics[height=9.5cm]{features/IMG_7578.PNG}
+        \caption{Màn hình Settings: tùy chỉnh Dark Mode, Language, FAQ, Terms Of Use, Privacy Policy, Contact Support, Share App.}
+        \label{fig:pdf_settings}
+    \end{minipage}
+    \hfill
+    \begin{minipage}{0.45\textwidth}
+        \centering
+        \includegraphics[height=9.5cm]{features/IMG_7579.PNG}
+        \caption{Màn hình Language: hỗ trợ 8 ngôn ngữ giao diện (English, Tiếng Việt, Japanese, Français, Deutsch, Italiano, Español, Korean).}
+        \label{fig:pdf_language}
     \end{minipage}
 \end{figure}
 
