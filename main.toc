@@ -9,10 +9,13 @@
 \contentsline {subsection}{\numberline {4.1}Giai đoạn 1: Làm quen quy trình làm việc và công cụ (Từ 09/03/2026 đến 05/04/2026)}{5}{subsection.4.1}%
 \contentsline {subsubsection}{\numberline {4.1.1}Công việc đã thực hiện}{5}{subsubsection.4.1.1}%
 \contentsline {subsubsection}{\numberline {4.1.2}Kết quả hoàn thiện}{5}{subsubsection.4.1.2}%
-\contentsline {subsection}{\numberline {4.2}Giai đoạn 2: Trực tiếp xây dựng module dự án Cleaner Guru (Từ 06/04/2026 đến 20/04/2026)}{5}{subsection.4.2}%
+\contentsline {subsection}{\numberline {4.2}Giai đoạn 2: Trực tiếp xây dựng module dự án Cleaner Guru (Từ 06/04/2026 đến 04/05/2026)}{5}{subsection.4.2}%
 \contentsline {subsubsection}{\numberline {4.2.1}Công việc cụ thể}{5}{subsubsection.4.2.1}%
 \contentsline {subsubsection}{\numberline {4.2.2}Kết quả đạt được}{6}{subsubsection.4.2.2}%
-\contentsline {section}{\numberline {5}TỰ ĐÁNH GIÁ VÀ BÀI HỌC KINH NGHIỆM}{6}{section.5}%
-\contentsline {subsection}{\numberline {5.1}Điểm mạnh}{6}{subsection.5.1}%
-\contentsline {subsection}{\numberline {5.2}Điểm yếu}{6}{subsection.5.2}%
-\contentsline {section}{\numberline {6}KẾT QUẢ TỔNG THỂ VÀ ĐỊNH HƯỚNG}{7}{section.6}%
+\contentsline {subsection}{\numberline {4.3}Giai đoạn 3: Nghiên cứu và phát triển ứng dụng PDF Converter \& Scanner (Từ 05/05/2026 đến 20/05/2026)}{6}{subsection.4.3}%
+\contentsline {subsubsection}{\numberline {4.3.1}Công việc cụ thể}{6}{subsubsection.4.3.1}%
+\contentsline {subsubsection}{\numberline {4.3.2}Kết quả đạt được}{7}{subsubsection.4.3.2}%
+\contentsline {section}{\numberline {5}TỰ ĐÁNH GIÁ VÀ BÀI HỌC KINH NGHIỆM}{7}{section.5}%
+\contentsline {subsection}{\numberline {5.1}Điểm mạnh}{7}{subsection.5.1}%
+\contentsline {subsection}{\numberline {5.2}Điểm yếu}{8}{subsection.5.2}%
+\contentsline {section}{\numberline {6}KẾT QUẢ TỔNG THỂ VÀ ĐỊNH HƯỚNG}{8}{section.6}%
