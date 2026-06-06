@@ -115,12 +115,11 @@ Em mong muốn thông qua đợt thực tập này, bản thân có thể thoát
     \item \textbf{Vị trí công tác:} Thực tập sinh Lập trình Ứng dụng Di động (Flutter).
     \item \textbf{Nhiệm vụ chính:} 
     \begin{itemize}
-        \item Khảo sát luồng chạy và cấu trúc dự án \textit{Cleaner Guru} và ứng dụng theo dõi sức khỏe tập luyện \textit{Push Up}.
-        \item Lập trình tính năng tự động đếm số lượng hít đất dựa trên cảm biến tiệm cận của điện thoại di động cho dự án \textit{Push Up}.
-        \item Xây dựng tính năng đọc thư viện ảnh của thiết bị, cài cắm thuật toán phân tích điểm ảnh để gom nhóm các bức ảnh rác, ảnh chụp liên tiếp cho dự án \textit{Cleaner Guru}.
+        \item Khảo sát luồng chạy của ứng dụng \textit{Cleaner Guru} và tập vẽ sơ đồ phân tích cơ bản trước khi nhận việc.
+        \item Xây dựng tính năng đọc thư viện ảnh của thiết bị, cài cắm thuật toán phân tích điểm ảnh để gom nhóm các bức ảnh rác, ảnh chụp liên tiếp.
         \item Cùng với Mentor tiến hành tối ưu hóa giao diện người dùng, giải quyết vấn đề đơ lag khi cuộn màn hình hiển thị hàng ngàn bức ảnh.
     \end{itemize}
-    \item \textbf{Công cụ \& Kỹ năng áp dụng:} Ngôn ngữ Dart (Flutter), cảm biến tiệm cận thiết bị, Version control Git, kiến trúc quản lý trạng thái luồng (State Management), AI IDE (Cursor).
+    \item \textbf{Công cụ \& Kỹ năng áp dụng:} Ngôn ngữ Dart (Flutter), Version control Git, kiến trúc quản lý trạng thái luồng (State Management), AI IDE (Cursor).
 \end{itemize}
 
 \section{BÁO CÁO TIẾN ĐỘ THEO TIMELINE}
@@ -144,28 +143,23 @@ Giai đoạn đầu tiên của đợt thực tập là quá trình Onboarding (
     \item Tốc độ viết code khung tăng lên đáng kể, giảm thời gian gõ hàm lặp đi lặp lại nhờ biết kiểm soát AI đúng cách.
 \end{itemize}
 
-\subsection[Giai đoạn 2: Trực tiếp xây dựng module dự án Cleaner Guru và Push Up (Từ 06/04/2026 đến 04/05/2026)]{Giai đoạn 2: Trực tiếp xây dựng module dự án Cleaner Guru và Push Up \\(Từ 06/04/2026 $\rightarrow$ 04/05/2026)}
+\subsection[Giai đoạn 2: Trực tiếp xây dựng module dự án Cleaner Guru (Từ 06/04/2026 đến 04/05/2026)]{Giai đoạn 2: Trực tiếp xây dựng module dự án Cleaner Guru \\(Từ 06/04/2026 $\rightarrow$ 04/05/2026)}
 \subsubsection{Công việc cụ thể}
 \begin{itemize}
-    \item \textbf{1. Phát triển dự án Cleaner Guru - Thuật toán dHash và tối ưu bộ nhớ:}
-    \begin{itemize}
-        \item \textit{Thuật toán dHash tìm ảnh trùng lặp:} Do việc dựa dẫm vào siêu dữ liệu (metadata) thiếu sự chính xác, em đã tìm hiểu và ứng dụng thuật toán hàm băm \textbf{dHash (Difference Hash)}. Quá trình diễn ra gồm: Thu nhỏ dung lượng bức ảnh lại, dùng ma trận màu xám để tính toán khoảng cách (Hamming Distance). Từ phép toán này, app hoàn toàn tự phát hiện ra những góc ảnh cực kì giống nhau hoặc chụp nháy liên tục.
-        \item \textit{Khắc phục lỗi tràn RAM:} Khi quét số lượng ảnh lớn thật tế, app lập tức văng màn hình do tràn bộ nhớ (Out of Memory). Em đã cấu trúc \textbf{Method Channel} gọi lệnh trực tiếp xuống hệ điều hành iOS (Native core) để yêu cầu chỉ gửi ảnh nén rất nhỏ (\textit{Thumbnails}) lên cho Flutter xử lý thay vì ảnh gốc 4K nặng trịch, giúp dung lượng RAM tiêu thụ giảm từ 1.5GB xuống dưới 150MB.
-        \item \textit{Tối ưu hiệu năng cuộn bằng Isolate:} Thuật toán phân tích dHash tuy nhận diện đúng nhưng làm màn hình bị khựng vài giây. Em đã tách riêng khâu tính toán này ném vào \textbf{Isolate} (một luồng phụ chạy ngầm độc lập), giúp danh sách hình ảnh trơn tru tuyệt đối.
-    \end{itemize}
+    \item \textbf{1. Triển khai thuật toán tìm ảnh trùng lặp (dHash):} 
+    Do việc dựa dẫm vào tên file hay siêu dữ liệu (metadata) thiếu sự chính xác, em đã tìm hiểu và ứng dụng thuật toán hàm băm \textbf{dHash (Difference Hash)}. Quá trình diễn ra gồm: Thu nhỏ dung lượng bức ảnh lại, dùng ma trận màu xám để tính toán khoảng cách (Hamming Distance). Từ phép toán này, app hoàn toàn tự phát hiện ra những góc ảnh cực kì giống nhau hoặc chụp nháy liên tục dù môi trường ánh sáng có lệch đi một tí.
     
-    \item \textbf{2. Phát triển dự án Push Up - Lập trình cảm biến đếm hít đất tự động:}
-    \begin{itemize}
-        \item \textit{Lập trình cảm biến tiệm cận (Proximity Sensor):} Để đếm số lần hít đất của người dùng một cách tự động, em đã tích hợp gói thư viện cảm biến tiệm cận thiết bị, bắt sự kiện thay đổi khoảng cách khi người dùng hạ thấp ngực xuống gần màn hình điện thoại.
-        \item \textit{Thuật toán khử nhiễu tín hiệu (Debouncing \& Stream Filtering):} Tránh tình trạng cảm biến đếm sai lệch do cử động rung lắc nhẹ hoặc sự thay đổi ánh sáng xung quanh, em đã tự viết thuật toán lọc nhiễu tín hiệu Stream, đảm bảo mỗi rep chống đẩy chỉ được ghi nhận một lần duy nhất khi khoảng cách giảm xuống dưới ngưỡng (threshold) quy định và khôi phục về trạng thái ban đầu.
-        \item \textit{Tích hợp phản hồi xúc giác (Haptic Feedback) và hiệu ứng âm thanh:} Nhằm nâng cao trải nghiệm người dùng, em đã lập trình các phản hồi xúc giác rung nhẹ (\textit{HapticFeedback.lightImpact}) phối hợp cùng âm thanh thông báo chúc mừng Cupertino mỗi khi người dùng hoàn thành một rep tập luyện thành công.
-    \end{itemize}
+    \item \textbf{2. Khắc phục lỗi tràn RAM khi load kho dữ liệu gốc:} 
+    Quá trình test nghiệm thu gặp phải sự cố lớn: Khi quét 20.000 files thật, app lập tức văng màn hình trắng vì cạn kiệt RAM (Out of Memory). Dưới sự gợi ý kỹ thuật của Mentor, em đã học cách cấu trúc \textbf{Method Channel} để gọi lệnh trực tiếp xuống hệ điều hành iOS (Native core). Yêu cầu iOS chỉ gửi ảnh nén rất nhỏ (\textit{Thumbnails}) lên cho Flutter xử lý thay vì ảnh gốc 4K nặng trịch. Ngay lập tức, thanh RAM đang quá tải 1.5GB lập tức rơi rụng xuống vòng an toàn dưới 150MB.
+
+    \item \textbf{3. Cải thiện tốc độ cuộn giao diện với Isolate:}
+    Thuật toán phân tích dHash tuy nhận diện đúng hệ số nhưng lại làm màn hình bị khựng vài giây khi tính toán. Vận dụng kiến thức đã rèn luyện, em tách riêng khâu tính toán này ném vào \textbf{Isolate} (một luồng phụ chạy ngầm độc lập). Nhờ đó, thao tác lướt danh sách hình ảnh của người dùng trở nên siêu nhạy mà không vấp một hạt sạn nào.
 \end{itemize}
 
 \subsubsection{Kết quả đạt được}
 \begin{itemize}
-    \item Hoàn thành xuất sắc tính năng phân loại ảnh lặp nâng cao cho dự án \textbf{Cleaner Guru} và bộ đếm hít đất tiệm cận chính xác cao cho dự án \textbf{Push Up}, chạy hoàn toàn cục bộ, bảo mật và cực kỳ nhẹ trên môi trường thiết bị kiểm thử.
-    \item Các module lập trình cấu trúc mạch lạc, vượt qua các đợt kiểm thử QA nội bộ và được hợp nhất mã nguồn vào nhánh phát triển chính của team.
+    \item Tính năng đã bắt chuẩn xác các nhóm ảnh lặp lại, hoạt động vô cùng nhẹ nhàng trên môi trường máy test nội bộ.
+    \item Đoạn code của em đã được phê duyệt an toàn bởi các anh trong nhóm, đủ điều kiện hợp nhất để đón đợt phát hành sắp tới.
 \end{itemize}
 
 \subsection[Giai đoạn 3: Nghiên cứu và phát triển ứng dụng PDF Converter \& Scanner (Từ 05/05/2026 đến 20/05/2026)]{Giai đoạn 3: Nghiên cứu và phát triển ứng dụng PDF Converter \& Scanner \\(Từ 05/05/2026 $\rightarrow$ 20/05/2026)}
@@ -200,6 +194,65 @@ Giai đoạn đầu tiên của đợt thực tập là quá trình Onboarding (
     \item Kiến trúc dự án tuân thủ nghiêm ngặt mô hình Clean Architecture (Data, Domain, Presentation) kết hợp quản lý trạng thái bằng \textit{flutter\_bloc}, giúp mã nguồn sạch sẽ, dễ mở rộng và kiểm thử độc lập.
 \end{itemize}
 
+\begin{figure}[htbp]
+\centering
+\begin{minipage}[b]{0.18\textwidth}
+    \centering
+    \includegraphics[width=\textwidth]{screenshots/1.png}\\
+    \vspace{0.1cm}
+    \scriptsize Chào mừng
+\end{minipage}
+\hfill
+\begin{minipage}[b]{0.18\textwidth}
+    \centering
+    \includegraphics[width=\textwidth]{screenshots/2.png}\\
+    \vspace{0.1cm}
+    \scriptsize Quét tài liệu
+\end{minipage}
+\hfill
+\begin{minipage}[b]{0.18\textwidth}
+    \centering
+    \includegraphics[width=\textwidth]{screenshots/3.png}\\
+    \vspace{0.1cm}
+    \scriptsize Chọn nguồn
+\end{minipage}
+\hfill
+\begin{minipage}[b]{0.18\textwidth}
+    \centering
+    \includegraphics[width=\textwidth]{screenshots/4.png}\\
+    \vspace{0.1cm}
+    \scriptsize Xuất tệp PDF
+\end{minipage}
+\hfill
+\begin{minipage}[b]{0.18\textwidth}
+    \centering
+    \includegraphics[width=\textwidth]{screenshots/5.png}\\
+    \vspace{0.1cm}
+    \scriptsize Lịch sử lưu
+\end{minipage}
+\caption{Giao diện thực tế của ứng dụng PDF Converter \& Scanner trên hệ điều hành iOS}
+\label{fig:pdf_converter_screenshots}
+\end{figure}
+
+\begin{figure}[htbp]
+\centering
+\begin{minipage}[b]{0.45\textwidth}
+    \centering
+    \includegraphics[width=\textwidth]{demo_app_store/1.png}\\
+    \vspace{0.1cm}
+    \scriptsize Giao diện App Store (Chế độ Sáng)
+\end{minipage}
+\hfill
+\begin{minipage}[b]{0.45\textwidth}
+    \centering
+    \includegraphics[width=\textwidth]{demo_app_store/2.png}\\
+    \vspace{0.1cm}
+    \scriptsize Giao diện App Store (Chế độ Tối)
+\end{minipage}
+\caption{Hình ảnh hiển thị thực tế của ứng dụng trên cửa hàng App Store}
+\label{fig:app_store_screenshots}
+\end{figure}
+
 \section{TỰ ĐÁNH GIÁ VÀ BÀI HỌC KINH NGHIỆM}
 \subsection{Điểm mạnh}
 \begin{itemize}
@@ -213,6 +266,7 @@ Giai đoạn đầu tiên của đợt thực tập là quá trình Onboarding (
     \item Giải thuật trích xuất văn bản tự viết bằng Dart thuần tuy chạy offline tốt nhưng độ chính xác chưa thể sánh bằng các thư viện OCR chuyên sâu sử dụng học máy, hiện tại mới chỉ trích xuất tốt định dạng văn bản gốc chưa mã hóa phức tạp.
     \item Cần tối ưu thêm hiệu năng hiển thị của thư viện Isar DB khi số lượng bản ghi lịch sử lên đến hàng nghìn tệp.
 \end{itemize}
+
 \section{KẾT QUẢ TỔNG THỂ VÀ ĐỊNH HƯỚNG}
 \begin{itemize}
     \item \textbf{Kinh nghiệm đúc kết được:} Hiểu sâu sắc sự khác biệt giữa bài tập lớn trên trường và ứng dụng thực tế thương mại. Ứng dụng thực tế đòi hỏi sự chuẩn chỉ về mặt luồng hoạt động ngoại tuyến, bảo vệ dữ liệu người dùng, tối ưu hóa bộ nhớ thiết bị, giao diện người dùng Cupertino có độ thẩm mỹ cao đồng bộ và trải nghiệm người dùng hoàn hảo.
@@ -220,6 +274,7 @@ Giai đoạn đầu tiên của đợt thực tập là quá trình Onboarding (
     \item \textbf{Định hướng tháng kế tiếp:} Tiếp tục phối hợp với đội ngũ QA để tối ưu, kiểm thử hộp đen toàn bộ các trường hợp chuyển đổi của ứng dụng \textit{PDF Converter \& Scanner}, nghiên cứu tích hợp các giải pháp trí tuệ nhân tạo (OCR Machine Learning) để nâng cao độ chính xác trích xuất chữ viết tay và văn bản phức tạp trực tuyến và ngoại tuyến, chuẩn bị sẵn sàng cho kế hoạch phát hành sản phẩm chính thức lên App Store.
 \end{itemize}
 
+\newpage
 \section*{PHỤ LỤC: HÌNH ẢNH MINH HỌA GIAO DIỆN ỨNG DỤNG}
 \addcontentsline{toc}{section}{PHỤ LỤC: HÌNH ẢNH MINH HỌA GIAO DIỆN ỨNG DỤNG}
 Dưới đây là toàn bộ hình ảnh giao diện thực tế ghi nhận kết quả phát triển các ứng dụng di động trong suốt giai đoạn thực tập tính đến ngày 20/05/2026:
@@ -292,78 +347,17 @@ Dưới đây là toàn bộ hình ảnh giao diện thực tế ghi nhận kế
     \hfill
     \begin{minipage}{0.45\textwidth}
         \centering
-        \includegraphics[height=9.5cm]{cleanerguru/IMG_6866.PNG}
+        \includegraphics[height=9.5cm]{cleanerguru/IMG_6868.PNG}
         \caption{Màn hình xóa hàng loạt ảnh chụp màn hình trùng lặp (29 screenshots -- 35 MB).}
         \label{fig:cleaner_screenshots}
     \end{minipage}
 \end{figure}
 
 \newpage
-\subsection*{Phần 2: Dự án Push Up (Giai đoạn 2)}
-Ứng dụng hỗ trợ theo dõi sức khỏe và tự động đếm số lần hít đất sử dụng cảm biến tiệm cận:
-
-\begin{figure}[htbp]
-    \centering
-    \begin{minipage}{0.45\textwidth}
-        \centering
-        \includegraphics[height=9.5cm]{push_up/IMG_6870.PNG}
-        \caption{Màn hình chính thống kê tập luyện (Dashboard).}
-        \label{fig:pushup_dash}
-    \end{minipage}
-    \hfill
-    \begin{minipage}{0.45\textwidth}
-        \centering
-        \includegraphics[height=9.5cm]{push_up/IMG_6876.PNG}
-        \caption{Giao diện cấu hình và đồng bộ Health Sync.}
-        \label{fig:pushup_settings}
-    \end{minipage}
-\end{figure}
-
-\newpage
-\begin{figure}[htbp]
-    \centering
-    \begin{minipage}{0.45\textwidth}
-        \centering
-        \includegraphics[height=9.5cm]{push_up/IMG_6871.PNG}
-        \caption{Giao diện buổi tập hít đất (Start Workout).}
-        \label{fig:pushup_work}
-    \end{minipage}
-    \hfill
-    \begin{minipage}{0.45\textwidth}
-        \centering
-        \includegraphics[height=9.5cm]{push_up/IMG_6875.PNG}
-        \caption{Thẻ báo cáo chia sẻ buổi tập (Workout Report).}
-        \label{fig:pushup_report}
-    \end{minipage}
-\end{figure}
-
-\newpage
-\begin{figure}[htbp]
-    \centering
-    \begin{minipage}{0.45\textwidth}
-        \centering
-        \includegraphics[height=9.5cm]{push_up/IMG_6874.PNG}
-        \caption{Giao diện quản lý lịch sử các buổi tập (History).}
-        \label{fig:pushup_history}
-    \end{minipage}
-    \hfill
-    \begin{minipage}{0.45\textwidth}
-        \centering
-        \includegraphics[height=9.5cm]{push_up/IMG_6873.PNG}
-        \caption{Dashboard ghi nhận hít đất thành công đầu tiên.}
-        \label{fig:pushup_success}
-    \end{minipage}
-\end{figure}
-
-% ======================================
-% PHẦN 3: PDF CONVERTER & SCANNER
-% ======================================
-\newpage
-\subsection*{Phần 3: Dự án PDF Converter \& Scanner (Giai đoạn 3)}
+\subsection*{Phần 2: Dự án PDF Converter \& Scanner (Giai đoạn 3)}
 Ứng dụng quét tài liệu chuyên nghiệp và chuyển đổi đa định dạng ngoại tuyến:
 
-% --- 3.1 ---
-\subsubsection*{3.1. Màn hình Convert và luồng nhập liệu đa nguồn}
+\subsubsection*{2.1. Màn hình Convert và luồng nhập liệu đa nguồn}
 \begin{figure}[htbp]
     \centering
     \begin{minipage}{0.45\textwidth}
@@ -398,9 +392,8 @@ Dưới đây là toàn bộ hình ảnh giao diện thực tế ghi nhận kế
     \end{minipage}
 \end{figure}
 
-% --- 3.2 ---
 \newpage
-\subsubsection*{3.2. Quét tài liệu qua Camera và hiệu chỉnh phối cảnh}
+\subsubsection*{2.2. Quét tài liệu qua Camera và hiệu chỉnh phối cảnh}
 \begin{figure}[htbp]
     \centering
     \begin{minipage}{0.45\textwidth}
@@ -435,9 +428,8 @@ Dưới đây là toàn bộ hình ảnh giao diện thực tế ghi nhận kế
     \end{minipage}
 \end{figure}
 
-% --- 3.3 ---
 \newpage
-\subsubsection*{3.3. Bộ chỉnh sửa ảnh nâng cao và chọn định dạng đích}
+\subsubsection*{2.3. Bộ chỉnh sửa ảnh nâng cao và chọn định dạng đích}
 \begin{figure}[htbp]
     \centering
     \begin{minipage}{0.45\textwidth}
@@ -472,9 +464,8 @@ Dưới đây là toàn bộ hình ảnh giao diện thực tế ghi nhận kế
     \end{minipage}
 \end{figure}
 
-% --- 3.4 ---
 \newpage
-\subsubsection*{3.4. Xuất tệp PDF và xem trước tài liệu}
+\subsubsection*{2.4. Xuất tệp PDF và xem trước tài liệu}
 \begin{figure}[htbp]
     \centering
     \begin{minipage}{0.45\textwidth}
@@ -492,9 +483,8 @@ Dưới đây là toàn bộ hình ảnh giao diện thực tế ghi nhận kế
     \end{minipage}
 \end{figure}
 
-% --- 3.5 ---
 \newpage
-\subsubsection*{3.5. Phân hệ Chữ ký tay số (Digital Signature)}
+\subsubsection*{2.5. Phân hệ Chữ ký tay số (Digital Signature)}
 \begin{figure}[htbp]
     \centering
     \begin{minipage}{0.45\textwidth}
@@ -529,9 +519,8 @@ Dưới đây là toàn bộ hình ảnh giao diện thực tế ghi nhận kế
     \end{minipage}
 \end{figure}
 
-% --- 3.6 ---
 \newpage
-\subsubsection*{3.6. Cài đặt ứng dụng và Đa ngôn ngữ}
+\subsubsection*{2.6. Cài đặt ứng dụng và Đa ngôn ngữ}
 \begin{figure}[htbp]
     \centering
     \begin{minipage}{0.45\textwidth}

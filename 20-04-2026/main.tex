@@ -1,0 +1,184 @@
+\documentclass[12pt, a4paper]{article}
+
+% Nạp các cấu hình định dạng từ file rules.tex
+\input{rules}
+
+\begin{document}
+
+% ======================================
+% TRANG BÌA
+% ======================================
+\begin{titlepage}
+    \newgeometry{left=2.5cm, right=2cm, top=2cm, bottom=2cm}
+    \begin{tikzpicture}[overlay, remember picture]
+        \draw [line width=2pt] ([shift={(2cm,-2cm)}]current page.north west) rectangle ([shift={(-1.5cm,2cm)}]current page.south east);
+        \draw [line width=0.5pt] ([shift={(2.1cm,-2.1cm)}]current page.north west) rectangle ([shift={(-1.6cm,2.1cm)}]current page.south east);
+    \end{tikzpicture}
+    
+    \begin{center}
+        \textbf{\large TRƯỜNG ĐẠI HỌC KHOA HỌC HUẾ} \\
+        \textbf{\large KHOA CÔNG NGHỆ THÔNG TIN} \\
+        \vspace{0.1cm} \textbf{*** \vspace{0.1cm}} \\
+        \vspace{0.5cm}
+        \includegraphics[width=0.25\textwidth]{logo.png} \\
+        
+        \vspace{1cm}
+        {\fontsize{18pt}{22pt}\selectfont \textbf{BÁO CÁO THỰC TẬP TỐT NGHIỆP}} \\
+        \vspace{0.8cm}
+        {\fontsize{14pt}{18pt}\selectfont \textbf{BÁO CÁO TIẾN ĐỘ THỰC TẬP NGÀY 20/04/2026}}\\
+        \vspace{1cm}
+        
+        \textbf{CƠ QUAN THỰC TẬP:} \\
+        \vspace{0.2cm}
+        {\Large \textbf{CÔNG TY FAA VIỆT NAM}} \\
+    \end{center}
+    
+    \vspace{0.8cm}
+    
+    \begin{center}
+        \normalsize
+        \renewcommand{\arraystretch}{1.2}
+        \begin{tabular}{l l}
+            \textbf{GIẢNG VIÊN HƯỚNG DẪN} & \textbf{: HOÀNG NGUYỄN TUẤN MINH} \\
+            \textbf{SINH VIÊN THỰC HIỆN}  & \textbf{: NGUYỄN THỊ HUYỀN} \\
+            \textbf{MÃ SINH VIÊN}         & \textbf{: 22T1020161} \\
+            \textbf{TÊN LỚP HỌC PHẦN}     & \textbf{: THỰC TẬP TỐT NGHIỆP - NHÓM 21} \\
+            \textbf{MÃ LỚP HỌC PHẦN}      & \textbf{: 2025-2026.2.TIN4014.021} \\
+        \end{tabular}
+    \end{center}
+    
+    \vfill
+    \begin{center}
+        \textbf{HUẾ, THÁNG 4/2026}
+    \end{center}
+    \restoregeometry
+\end{titlepage}
+
+\newpage
+
+% ======================================
+% LỜI CẢM ƠN
+% ======================================
+\section*{LỜI CẢM ƠN}
+\addcontentsline{toc}{section}{LỜI CẢM ƠN}
+Trong thời gian thực tập tại \textbf{Công ty FAA Việt Nam}, em đã có cơ hội quý báu được trải nghiệm môi trường làm việc thực tế, trau dồi các kỹ năng nghề nghiệp và áp dụng những kiến thức chuyên ngành vào các dự án phần mềm chuyên nghiệp. 
+
+Lời đầu tiên, em xin cảm ơn ban giám hiệu \textbf{Trường Đại học Khoa học Huế} và toàn thể thầy cô Khoa Công nghệ Thông tin đã trang bị cho em kiến thức vững chắc. Đặc biệt, em xin gửi lời tri ân sâu sắc tới thầy \textbf{Hoàng Nguyễn Tuấn Minh} vì sự hướng dẫn vô cùng tận tâm trong đợt làm báo cáo này. Đồng thời, em xin gửi lời cảm ơn tới đội ngũ chuyên nghiệp tại \textbf{FAA Việt Nam} đã nhiệt tình định hướng, chỉ dạy thực chiến quy trình phần mềm giúp em ngày một hoàn thiện bản thân hơn.
+
+\newpage
+% ======================================
+% MỤC LỤC
+% ======================================
+\renewcommand{\contentsname}{MỤC LỤC}
+\tableofcontents
+\newpage
+
+% ======================================
+% NỘI DUNG CHÍNH YẾU CỦA BÁO CÁO
+% ======================================
+
+\section{THÔNG TIN CHUNG}
+\begin{itemize}
+    \item \textbf{Họ tên sinh viên:} Nguyễn Thị Huyền
+    \item \textbf{Mã sinh viên:} 22T1020161
+    \item \textbf{Lớp học phần:} Thực tập tốt nghiệp - Nhóm 21
+    \item \textbf{Khoa:} Công nghệ Thông tin - Trường Đại học Khoa học Huế
+    \item \textbf{Đơn vị thực tập:} CÔNG TY FAA VIỆT NAM
+    \item \textbf{Thời gian thực tập:} Từ 09/03/2026 đến nay
+\end{itemize}
+
+\section{MỤC TIÊU THỰC TẬP}
+\subsection{Mục tiêu tổng quát}
+Mục tiêu hàng đầu của em trong học kỳ thực tập này không chỉ đơn thuần là để hoàn thành tín chỉ bắt buộc của nhà trường, mà quan trọng hơn hết là cơ hội quý báu để được học tập và cọ xát trực tiếp với môi trường làm việc thực chiến tại một doanh nghiệp công nghệ. 
+
+Em mong muốn thông qua đợt thực tập này, bản thân có thể thoát khỏi tư duy làm ra những sản phẩm phần mềm mang tính chất "đồ án sinh viên" - vốn dĩ thường nhỏ lẻ, ít người tính đến những trường hợp rủi ro hoặc bận tâm tới hiệu suất thiết bị. Thay vào đó, em khao khát được vận dụng những lý thuyết vững chắc về lập trình đã được thầy cô truyền đạt trên bục giảng vào công đoạn trực tiếp xây dựng một dự án có tính thương mại, có thật và đang phục vụ công chúng. Qua quá trình đó, em hy vọng sẽ tích lũy được một lượng kinh nghiệm đáng kể, tạo đà tâm lý vững vàng để tự tin bước chân vào ngành công nghiệp phần mềm sau khi tốt nghiệp.
+
+\subsection{Mục tiêu cụ thể}
+Để hiện thực hóa được định hướng tổng quát ở trên, em đã tự vạch ra cho bản thân các mục tiêu rất rõ ràng theo từng phương diện chuyên môn và kỹ năng:
+
+\begin{itemize}
+    \item \textbf{Cọ xát trực diện với dự án thực tế:} 
+    Em đặt mục tiêu phải được tiếp xúc, tìm hiểu kiến trúc và trực tiếp gõ những dòng code đóng góp vào một sản phẩm phần mềm đang thực sự hoạt động trên thị trường, thay vì chỉ ngồi sao chép lại các bài tập mô phỏng. Việc được nhúng tay vào luồng mã nguồn lớn, được giao xử lý những bài toán khó phức tạp sẽ giúp em chạm được đến bản chất cốt lõi của việc làm nghề.
+
+    \item \textbf{Hoàn thiện kỹ năng làm việc nhóm thực thụ:} 
+    Trên giảng đường, việc chia nhóm thường diễn ra khá đơn giản và đôi khi mạnh ai nấy code. Bước ra doanh nghiệp, em muốn làm quen và tiến tới phối hợp công việc trơn tru với các anh chị lập trình viên đi trước. Em muốn nắm vững quy trình phát triển linh hoạt (Agile/Scrum), từ khâu nhận tác vụ, cho đến cách quản lý luân chuyển mã nguồn nhóm qua Git (như việc rẽ nhánh Branching, trộn mã nguồn Merging) sao cho không bao giờ gây hỏng hóc hoặc phá vỡ file chung của cả tập thể.
+
+    \item \textbf{Trau dồi và nâng cấp năng lực chuyên môn:} 
+    Bản thân em chủ đích muốn nâng cao năng lực lập trình trên nền tảng ứng dụng di động (cụ thể là công nghệ Flutter). Em mong sẽ được rèn luyện quy trình chủ động tư duy giải pháp, sau đó báo cáo quy trình đó để các anh Mentor uốn nắn, sửa chữa triệt để ngay tận gốc các lỗi sai logic thường gặp. Bên cạnh đó, em muốn cập nhật liên tục các xu hướng công cụ hỗ trợ lập trình mới nhất để tốc độ làm việc luôn được tối ưu.
+
+    \item \textbf{Trải nghiệm môi trường văn hóa công sở:} 
+    Bước ra khỏi vùng an toàn, em vô cùng coi trọng cơ hội được trải nghiệm sống trong kỷ luật của một văn phòng làm việc thực sự. Đó là lúc em học cách đối diện với áp lực vòng lặp công việc, học cách tôn trọng deadline dự án và hiểu rõ mức độ nghiêm ngặt cần thiết trong từng khâu kiểm thử phần mềm trước khi được phép giao nộp sản phẩm cho người khác sử dụng.
+\end{itemize}
+
+\section{TỔNG QUAN CÔNG VIỆC ĐƯỢC GIAO}
+\begin{itemize}
+    \item \textbf{Vị trí công tác:} Thực tập sinh Lập trình Ứng dụng Di động (Flutter).
+    \item \textbf{Nhiệm vụ chính:} 
+    \begin{itemize}
+        \item Khảo sát luồng chạy của ứng dụng \textit{Cleaner Guru} và tập vẽ sơ đồ phân tích cơ bản trước khi nhận việc.
+        \item Xây dựng tính năng đọc thư viện ảnh của thiết bị, cài cắm thuật toán phân tích điểm ảnh để gom nhóm các bức ảnh rác, ảnh chụp liên tiếp.
+        \item Cùng với Mentor tiến hành tối ưu hóa giao diện người dùng, giải quyết vấn đề đơ lag khi cuộn màn hình hiển thị hàng ngàn bức ảnh.
+    \end{itemize}
+    \item \textbf{Công cụ \& Kỹ năng áp dụng:} Ngôn ngữ Dart (Flutter), Version control Git, kiến trúc quản lý trạng thái luồng (State Management), AI IDE (Cursor).
+\end{itemize}
+
+\section{BÁO CÁO TIẾN ĐỘ THEO TIMELINE}
+\subsection[Giai đoạn 1: Làm quen quy trình làm việc và công cụ (Từ 09/03/2026 đến 05/04/2026)]{Giai đoạn 1: Làm quen quy trình làm việc và công cụ \\(Từ 09/03/2026 $\rightarrow$ 05/04/2026)}
+\subsubsection{Công việc đã thực hiện}
+Giai đoạn đầu tiên của đợt thực tập là quá trình Onboarding (Hòa nhập môi trường) và điều chỉnh lại những kỹ năng còn hổng:
+\begin{itemize}
+    \item \textbf{1. Quản lý mã nguồn với Git:} 
+    Em được hướng dẫn từ bỏ thói quen đẩy code trực tiếp lên nhánh chính (master) như hồi làm trên trường. Thay vào đó là thao tác tạo nhánh riêng (branching), commit thường xuyên với lời chú thích (Commit Message) theo chuẩn. Em bắt đầu tiếp xúc với việc xử lý xung đột code (Merge Conflict) và cách tạo Pull Request để Mentor duyệt trước khi code được đem đi dùng chung.
+    
+    \item \textbf{2. Ứng dụng AI vào lập trình (Vibe Coding):} 
+    Công ty trang bị công cụ Cursor IDE và hướng dẫn cách làm việc với công nghệ AI (Vibe Coding) cực kỳ hiện đại. Thay vì copy-paste mù quáng, em học cách dóng bối cảnh (context) cho AI để nó nắm được kiến trúc thư mục dự án. Nhờ vậy, AI hỗ trợ sinh ra các đoạn code khung (boilerplate) chuẩn xác, viết test tự động, hoặc giải thích rất dễ hiểu các hàm do các lập trình viên cũ viết.
+    
+    \item \textbf{3. Kiến trúc tối ưu giao diện cơ bản:}
+    Được dự các buổi Tech-sync (trao đổi kỹ thuật nội bộ) của team để hiểu cách các thao tác đồ hoạ tiêu thụ bộ nhớ RAM, học được kinh nghiệm là phải tính toán độ nặng của layout trước khi thực sự vẽ nó ra khối lệnh.
+\end{itemize}
+
+\subsubsection{Kết quả hoàn thiện}
+\begin{itemize}
+    \item Làm quen thành công với nhịp điệu của team, thao tác kiểm soát Git khá mượt mà, không còn lo gây vỡ dự án chung.
+    \item Tốc độ viết code khung tăng lên đáng kể, giảm thời gian gõ hàm lặp đi lặp lại nhờ biết kiểm soát AI đúng cách.
+\end{itemize}
+
+\subsection[Giai đoạn 2: Trực tiếp xây dựng module dự án Cleaner Guru (Từ 06/04/2026 đến 20/04/2026)]{Giai đoạn 2: Trực tiếp xây dựng module dự án Cleaner Guru \\(Từ 06/04/2026 $\rightarrow$ 20/04/2026)}
+\subsubsection{Công việc cụ thể}
+\begin{itemize}
+    \item \textbf{1. Triển khai thuật toán tìm ảnh trùng lặp (dHash):} 
+    Do việc dựa dẫm vào tên file hay siêu dữ liệu (metadata) thiếu sự chính xác, em đã tìm hiểu và ứng dụng thuật toán hàm băm \textbf{dHash (Difference Hash)}. Quá trình diễn ra gồm: Thu nhỏ dung lượng bức ảnh lại, dùng ma trận màu xám để tính toán khoảng cách (Hamming Distance). Từ phép toán này, app hoàn toàn tự phát hiện ra những góc ảnh cực kì giống nhau hoặc chụp nháy liên tục dù môi trường ánh sáng có lệch đi một tí.
+    
+    \item \textbf{2. Khắc phục lỗi tràn RAM khi load kho dữ liệu gốc:} 
+    Quá trình test nghiệm thu gặp phải sự cố lớn: Khi quét 20.000 files thật, app lập tức văng màn hình trắng vì cạn kiệt RAM (Out of Memory). Dưới sự gợi ý kỹ thuật của Mentor, em đã học cách cấu trúc \textbf{Method Channel} để gọi lệnh trực tiếp xuống hệ điều hành iOS (Native core). Yêu cầu iOS chỉ gửi ảnh nén rất nhỏ (\textit{Thumbnails}) lên cho Flutter xử lý thay vì ảnh gốc 4K nặng trịch. Ngay lập tức, thanh RAM đang quá tải 1.5GB lập tức rơi rụng xuống vòng an toàn dưới 150MB.
+
+    \item \textbf{3. Cải thiện tốc độ cuộn giao diện với Isolate:}
+    Thuật toán phân tích dHash tuy nhận diện đúng hệ số nhưng lại làm màn hình bị khựng vài giây khi tính toán. Vận dụng kiến thức đã rèn luyện, em tách riêng khâu tính toán này ném vào \textbf{Isolate} (một luồng phụ chạy ngầm độc lập). Nhờ đó, thao tác lướt danh sách hình ảnh của người dùng trở nên siêu nhạy mà không vấp một hạt sạn nào.
+\end{itemize}
+
+\subsubsection{Kết quả đạt được}
+\begin{itemize}
+    \item Tính năng đã bắt chuẩn xác các nhóm ảnh lặp lại, hoạt động vô cùng nhẹ nhàng trên môi trường máy test nội bộ.
+    \item Đoạn code của em đã được phê duyệt an toàn bởi các anh trong nhóm, đủ điều kiện hợp nhất để đón đợt phát hành sắp tới.
+\end{itemize}
+
+\section{TỰ ĐÁNH GIÁ VÀ BÀI HỌC KINH NGHIỆM}
+\subsection{Điểm mạnh}
+\begin{itemize}
+    \item Rất tích cực đón nhận cách làm việc mới (Git quy chuẩn, Vibe coding) với tinh thần cầu tiến nhanh chóng.
+    \item Có sự kiên trì đọc tài liệu tiếng Anh để học can thiệp Native code, tự tháo gỡ điểm nghẽn tràn RAM.
+\end{itemize}
+\subsection{Điểm yếu}
+\begin{itemize}
+    \item Việc tính hệ số để so sánh độ giống qua dHash đôi khi vẫn chưa chính xác nếu môi trường ảnh nền là ánh sáng rất yếu, cần được tinh chỉnh thêm từ góp ý của R\&D.
+    \item Khả năng tự trình diễn thuật toán qua mô hình sơ đồ chưa nhạy, thói quen cứ lẳng lặng vào gõ code rồi mới đem ra hỏi Mentor vẫn hay tiếp diễn khiến mất định hướng.
+\end{itemize}
+
+\section{KẾT QUẢ TỔNG THỂ VÀ ĐỊNH HƯỚNG}
+\begin{itemize}
+    \item \textbf{Kinh nghiệm đúc kết được:} Thay đổi hoàn toàn góc nhìn thiết kế phần mềm. Không đơn giản là code cho nó chạy để lấy điểm, sản phẩm thật khi xuất xưởng ra số đông buộc phải tôn trọng "sức khỏe" của máy (RAM, CPU, Pin...).
+    \item \textbf{Báo cáo kết quả trực tiếp:} Hoàn thiện xong một module xương sống mang tên dọn dẹp ảnh cho ứng dụng \textit{Cleaner Guru} rất đáng tự hào ở đợt tiến độ ngày 20 này.
+    \item \textbf{Định hướng tháng kế tiếp:} Tiếp tục xử lý giao diện hiển thị phần "Dọn dẹp Danh bạ", tiến xa hơn nữa là bám sát lộ trình trở thành kỹ sư phát triển phần mềm di động chính thức tại môi trường doanh nghiệp.
+\end{itemize}
+
+\end{document}

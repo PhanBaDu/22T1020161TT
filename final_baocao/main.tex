@@ -1,0 +1,680 @@
+\documentclass[12pt, a4paper]{article}
+
+% Nạp các cấu hình định dạng từ file rules.tex
+\input{rules}
+
+\begin{document}
+
+% ======================================
+% TRANG BÌA
+% ======================================
+\begin{titlepage}
+    \newgeometry{left=2.5cm, right=2cm, top=2cm, bottom=2cm}
+    \begin{tikzpicture}[overlay, remember picture]
+        \draw [line width=2pt] ([shift={(2cm,-2cm)}]current page.north west) rectangle ([shift={(-1.5cm,2cm)}]current page.south east);
+        \draw [line width=0.5pt] ([shift={(2.1cm,-2.1cm)}]current page.north west) rectangle ([shift={(-1.6cm,2.1cm)}]current page.south east);
+    \end{tikzpicture}
+    
+    \begin{center}
+        \textbf{\large TRƯỜNG ĐẠI HỌC KHOA HỌC HUẾ} \\
+        \textbf{\large KHOA CÔNG NGHỆ THÔNG TIN} \\
+        \vspace{0.1cm} \textbf{*** \vspace{0.1cm}} \\
+        \vspace{0.5cm}
+        \includegraphics[width=0.25\textwidth]{logo.png} \\
+        
+        \vspace{1.5cm}
+        {\fontsize{20pt}{24pt}\selectfont \textbf{BÁO CÁO THỰC TẬP TỐT NGHIỆP}} \\
+        \vspace{1.5cm}
+        
+        \textbf{CƠ QUAN THỰC TẬP:} \\
+        \vspace{0.2cm}
+        {\Large \textbf{CÔNG TY FAA VIỆT NAM}} \\
+    \end{center}
+    
+    \vspace{1.5cm}
+    
+    \begin{center}
+        \normalsize
+        \renewcommand{\arraystretch}{1.2}
+        \begin{tabular}{l l}
+            \textbf{GIẢNG VIÊN HƯỚNG DẪN} & \textbf{: HOÀNG NGUYỄN TUẤN MINH} \\
+            \textbf{SINH VIÊN THỰC HIỆN}  & \textbf{: NGUYỄN THỊ HUYỀN} \\
+            \textbf{MÃ SINH VIÊN}         & \textbf{: 22T1020161} \\
+            \textbf{TÊN LỚP HỌC PHẦN}     & \textbf{: THỰC TẬP TỐT NGHIỆP - NHÓM 21} \\
+            \textbf{MÃ LỚP HỌC PHẦN}      & \textbf{: 2025-2026.2.TIN4014.021} \\
+        \end{tabular}
+    \end{center}
+    
+    \vfill
+    \begin{center}
+        \textbf{HUẾ, THÁNG 6/2026}
+    \end{center}
+    \restoregeometry
+\end{titlepage}
+
+\newpage
+
+% ======================================
+% LỜI CẢM ƠN
+% ======================================
+\section*{LỜI CẢM ƠN}
+\addcontentsline{toc}{section}{LỜI CẢM ƠN}
+Trong thời gian thực tập tốt nghiệp tại \textbf{Công ty FAA Việt Nam}, em đã có cơ hội vô cùng quý báu được học tập, trải nghiệm môi trường làm việc thực tế và áp dụng những kiến thức chuyên ngành của mình vào phát triển các sản phẩm phần mềm thương mại thực tiễn. 
+
+Lời đầu tiên, em xin bày tỏ lòng biết ơn chân thành nhất tới Ban giám hiệu cùng toàn thể thầy cô tại \textbf{Khoa Công nghệ Thông tin - Trường Đại học Khoa học Huế}, những người đã truyền dạy cho em những kiến thức nền tảng vững chắc làm bệ phóng cho sự nghiệp tương lai. Đặc biệt, em xin gửi lời tri ân sâu sắc nhất tới thầy \textbf{Hoàng Nguyễn Tuấn Minh} đã tận tâm hướng dẫn, định hướng và giúp đỡ em rất nhiều để hoàn thành báo cáo thực tập này.
+
+Đồng thời, em cũng xin gửi lời cảm ơn chân thành đến Ban lãnh đạo công ty cùng toàn thể các anh chị đồng nghiệp tại \textbf{Công ty FAA Việt Nam} đã tạo điều kiện tối đa cho em tham gia vào các dự án lớn, nhiệt tình chỉ dạy các quy trình phát triển và công nghệ lập trình di động Flutter chuyên nghiệp. Những kinh nghiệm thực chiến này chính là hành trang vô giá giúp em vững bước trên con đường sự nghiệp sắp tới.
+
+\newpage
+% ======================================
+% MỤC LỤC
+% ======================================
+\renewcommand{\contentsname}{MỤC LỤC}
+\tableofcontents
+\newpage
+
+% ======================================
+% NỘI DUNG CHÍNH YẾU CỦA BÁO CÁO
+% ======================================
+
+\section{THÔNG TIN CHUNG}
+\begin{itemize}
+    \item \textbf{Họ tên sinh viên:} Nguyễn Thị Huyền
+    \item \textbf{Mã sinh viên:} 22T1020161
+    \item \textbf{Lớp học phần:} Thực tập tốt nghiệp - Nhóm 21
+    \item \textbf{Khoa:} Công nghệ Thông tin - Trường Đại học Khoa học Huế
+    \item \textbf{Đơn vị thực tập:} CÔNG TY FAA VIỆT NAM
+    \item \textbf{Thời gian thực tập:} Từ 09/03/2026 đến nay
+\end{itemize}
+
+\section{MỤC TIÊU THỰC TẬP}
+\subsection{Mục tiêu tổng quát}
+Mục tiêu hàng đầu của em trong học kỳ thực tập này không chỉ đơn thuần là để hoàn thành tín chỉ bắt buộc của nhà trường, mà quan trọng hơn hết là cơ hội quý báu để được học tập và cọ xát trực tiếp với môi trường làm việc thực chiến tại một doanh nghiệp công nghệ. 
+
+Em mong muốn thông qua đợt thực tập này, bản thân có thể thoát khỏi tư duy làm ra những sản phẩm phần mềm mang tính chất "đồ án sinh viên" - vốn dĩ thường nhỏ lẻ, ít người tính đến những trường hợp rủi ro hoặc bận tâm tới hiệu suất thiết bị. Thay vào đó, em khao khát được vận dụng những lý thuyết vững chắc về lập trình đã được thầy cô truyền đạt trên bục giảng vào công đoạn trực tiếp xây dựng một dự án có tính thương mại, có thật và đang phục vụ công chúng. Qua quá trình đó, em hy vọng sẽ tích lũy được một lượng kinh nghiệm đáng kể, tạo đà tâm lý vững vàng để tự tin bước chân vào ngành công nghiệp phần mềm sau khi tốt nghiệp.
+
+\subsection{Mục tiêu cụ thể}
+\begin{itemize}
+    \item \textbf{Cọ xát trực diện với dự án thực tế:} Đóng góp vào mã nguồn sản phẩm đang hoạt động trên thị trường, xử lý bài toán lớn và logic nghiệp vụ thực tế.
+    \item \textbf{Hoàn thiện kỹ năng làm việc nhóm:} Phối hợp làm việc theo quy trình Agile/Scrum, sử dụng Git để quản lý mã nguồn, cộng tác viết mã nguồn thông qua Code Review, rẽ nhánh và giải quyết conflict.
+    \item \textbf{Nâng cấp năng lực lập trình di động:} Làm chủ công nghệ Flutter, hiểu sâu về quản lý trạng thái, tối ưu luồng chạy ngầm (Isolate) và giao tiếp hệ điều hành (Method Channel).
+    \item \textbf{Thích nghi môi trường doanh nghiệp:} Làm quen với kỷ luật văn phòng, tuân thủ deadline, quy trình QA/QC và kiểm thử phần mềm nghiêm ngặt.
+\end{itemize}
+
+\section{TỔNG QUAN CÔNG VIỆC ĐƯỢC GIAO}
+\begin{itemize}
+    \item \textbf{Vị trí công tác:} Thực tập sinh Lập trình Ứng dụng Di động (Flutter).
+    \item \textbf{Nhiệm vụ chính:} 
+    \begin{itemize}
+        \item Nghiên cứu dự án dọn dẹp ảnh \textit{Cleaner Guru}, cài cắm thuật toán băm dHash và tối ưu hóa bộ nhớ RAM qua Native Method Channel.
+        \item Nghiên cứu và phát triển toàn diện lõi chuyển đổi tài liệu ngoại tuyến, bộ trích xuất dữ liệu XML DOCX và chữ ký số tay cho dự án \textit{PDF Converter \& Scanner}.
+    \end{itemize}
+    \item \textbf{Công cụ \& Kỹ năng áp dụng:} Flutter/Dart, Git, SQLite/Isar, OOXML Format, iOS Core Engine, Cursor IDE.
+\end{itemize}
+
+\subsection{Sơ đồ UML Use Case các hệ thống phát triển}
+Để đặc tả rõ các tính năng và vai trò của người dùng đối với các ứng dụng di động được phân công phát triển trong kỳ thực tập, dưới đây là các sơ đồ UML Use Case của hai hệ thống chính:
+
+\begin{figure}[htbp]
+\centering
+\begin{tikzpicture}[
+    uc/.style={draw=blue!70!black, thick, fill=blue!6, ellipse, minimum width=4.6cm, minimum height=1.1cm, align=center, font=\small},
+    actor_line/.style={ultra thick, draw=black!70},
+    link_line/.style={thick, draw=black!70}
+]
+    % Draw Actor (Người dùng)
+    \node (head) [circle, draw=black!80, ultra thick, minimum size=0.5cm] at (0, 0.3) {};
+    \draw [actor_line] (head.south) -- ++(0, -0.6) coordinate (torso);
+    \draw [actor_line] (head.south) ++(0, -0.15) -- ++(-0.35, -0.1);
+    \draw [actor_line] (head.south) ++(0, -0.15) -- ++(0.35, -0.1);
+    \draw [actor_line] (torso) -- ++(-0.25, -0.4);
+    \draw [actor_line] (torso) -- ++(0.25, -0.4);
+    \node (actor_label) [below=0.5cm of torso, font=\bfseries] {Người dùng};
+    
+    \coordinate (actor_link) at (0, 0.15);
+
+    % System boundary
+    \draw[thick, draw=black!80] (1.8, 2.8) rectangle (10.2, -3.2);
+    \node [fill=white, inner sep=4pt, font=\large\bfseries\color{blue!80!black}] at (6.0, 2.8) {Hệ thống Cleaner Guru};
+
+    % Use Cases
+    \node (uc1) [uc] at (6.0, 1.2) {Quét ảnh trùng lặp\\(dHash Algorithm)};
+    \node (uc2) [uc] at (6.0, -0.4) {Dọn dẹp ảnh \& video\\(Giải phóng RAM/ROM)};
+    \node (uc3) [uc] at (6.0, -2.0) {Hiển thị quảng cáo\\(Splash/Interstitial Ads)};
+    
+    % Associations
+    \draw [link_line] (actor_link) -- (uc1.west);
+    \draw [link_line] (actor_link) -- (uc2.west);
+    \draw [link_line] (actor_link) -- (uc3.west);
+\end{tikzpicture}
+\caption{Sơ đồ UML Use Case hệ thống dọn dẹp ảnh thông minh Cleaner Guru}
+\label{fig:cleaner_use_case}
+\end{figure}
+
+\begin{figure}[htbp]
+\centering
+\begin{tikzpicture}[
+    uc/.style={draw=teal!70!black, thick, fill=teal!6, ellipse, minimum width=4.6cm, minimum height=1.1cm, align=center, font=\small},
+    actor_line/.style={ultra thick, draw=black!70},
+    link_line/.style={thick, draw=black!70}
+]
+    % Draw Actor (Người dùng)
+    \node (head) [circle, draw=black!80, ultra thick, minimum size=0.5cm] at (0, 0.3) {};
+    \draw [actor_line] (head.south) -- ++(0, -0.6) coordinate (torso);
+    \draw [actor_line] (head.south) ++(0, -0.15) -- ++(-0.35, -0.1);
+    \draw [actor_line] (head.south) ++(0, -0.15) -- ++(0.35, -0.1);
+    \draw [actor_line] (torso) -- ++(-0.25, -0.4);
+    \draw [actor_line] (torso) -- ++(0.25, -0.4);
+    \node (actor_label) [below=0.5cm of torso, font=\bfseries] {Người dùng};
+    
+    \coordinate (actor_link) at (0, 0.15);
+
+    % System boundary
+    \draw[thick, draw=black!80] (1.8, 4.0) rectangle (10.2, -4.4);
+    \node [fill=white, inner sep=4pt, font=\large\bfseries\color{teal!80!black}] at (6.0, 4.0) {Hệ thống PDF Converter \& Scanner};
+
+    % Use Cases
+    \node (uc1) [uc] at (6.0, 2.4) {Nhập tài liệu đa nguồn\\(iCloud, Camera, URL)};
+    \node (uc2) [uc] at (6.0, 1.0) {Hiệu chỉnh phối cảnh\\\& Áp bộ lọc thông minh};
+    \node (uc3) [uc] at (6.0, -0.4) {Chuyển đổi ngoại tuyến\\(PDF, Word/DOCX OOXML)};
+    \node (uc4) [uc] at (6.0, -1.8) {Đóng dấu chữ ký tay số\\(Vẽ canvas, kéo thả xoay)};
+    \node (uc5) [uc] at (6.0, -3.2) {Quản lý lịch sử cục bộ\\(NoSQL Isar DB)};
+    
+    % Associations
+    \draw [link_line] (actor_link) -- (uc1.west);
+    \draw [link_line] (actor_link) -- (uc2.west);
+    \draw [link_line] (actor_link) -- (uc3.west);
+    \draw [link_line] (actor_link) -- (uc4.west);
+    \draw [link_line] (actor_link) -- (uc5.west);
+\end{tikzpicture}
+\caption{Sơ đồ UML Use Case hệ thống PDF Converter \& Scanner}
+\label{fig:pdf_use_case}
+\end{figure}
+
+\section{BÁO CÁO TIẾN ĐỘ THEO TIMELINE}
+\subsection[Giai đoạn 1: Làm quen quy trình làm việc và công cụ (Từ 09/03/2026 đến 05/04/2026)]{Giai đoạn 1: Làm quen quy trình làm việc và công cụ \\(Từ 09/03/2026 $\rightarrow$ 05/04/2026)}
+\subsubsection{Công việc đã thực hiện}
+Giai đoạn đầu tiên của đợt thực tập là quá trình Onboarding (Hòa nhập môi trường) và điều chỉnh lại những kỹ năng còn hổng:
+\begin{itemize}
+    \item \textbf{1. Quản lý mã nguồn với Git:} 
+    Em được hướng dẫn từ bỏ thói quen đẩy code trực tiếp lên nhánh chính (master) như hồi làm trên trường. Thay vào đó là thao tác tạo nhánh riêng (branching), commit thường xuyên với lời chú thích (Commit Message) theo chuẩn. Em bắt đầu tiếp xúc với việc xử lý xung đột code (Merge Conflict) và cách tạo Pull Request để Mentor duyệt trước khi code được đem đi dùng chung.
+    
+    \item \textbf{2. Ứng dụng AI vào lập trình (Vibe Coding):} 
+    Công ty trang bị công cụ Cursor IDE và hướng dẫn cách làm việc với công nghệ AI (Vibe Coding) cực kỳ hiện đại. Thay vì copy-paste mù quáng, em học cách dóng bối cảnh (context) cho AI để nó nắm được kiến trúc thư mục dự án. Nhờ vậy, AI hỗ trợ sinh ra các đoạn code khung (boilerplate) chuẩn xác, viết test tự động, hoặc giải thích rất dễ hiểu các hàm do các lập trình viên cũ viết.
+    
+    \item \textbf{3. Kiến trúc tối ưu giao diện cơ bản:}
+    Được dự các buổi Tech-sync (trao đổi kỹ thuật nội bộ) của team để hiểu cách các thao tác đồ hoạ tiêu thụ bộ nhớ RAM, học được kinh nghiệm là phải tính toán độ nặng của layout trước khi thực sự vẽ nó ra khối lệnh.
+\end{itemize}
+
+\subsubsection{Kết quả hoàn thiện}
+\begin{itemize}
+    \item Làm quen thành công với nhịp điệu của team, thao tác kiểm soát Git khá mượt mà, không còn lo gây vỡ dự án chung.
+    \item Tốc độ viết code khung tăng lên đáng kể, giảm thời gian gõ hàm lặp đi lặp lại nhờ biết kiểm soát AI đúng cách.
+\end{itemize}
+
+\subsection[Giai đoạn 2: Trực tiếp xây dựng module dự án Cleaner Guru (Từ 06/04/2026 đến 04/05/2026)]{Giai đoạn 2: Trực tiếp xây dựng module dự án Cleaner Guru \\(Từ 06/04/2026 $\rightarrow$ 04/05/2026)}
+\subsubsection{Công việc cụ thể}
+\begin{itemize}
+    \item \textbf{1. Triển khai thuật toán tìm ảnh trùng lặp (dHash):} 
+    Do việc dựa dẫm vào tên file hay siêu dữ liệu (metadata) thiếu sự chính xác, em đã tìm hiểu và ứng dụng thuật toán hàm băm \textbf{dHash (Difference Hash)}. Quá trình diễn ra gồm: Thu nhỏ dung lượng bức ảnh lại, dùng ma trận màu xám để tính toán khoảng cách (Hamming Distance). Từ phép toán này, app hoàn toàn tự phát hiện ra những góc ảnh cực kì giống nhau hoặc chụp nháy liên tục dù môi trường ánh sáng có lệch đi một tí.
+    
+    \item \textbf{2. Khắc phục lỗi tràn RAM khi load kho dữ liệu gốc:} 
+    Quá trình test nghiệm thu gặp phải sự cố lớn: Khi quét 20.000 files thật, app lập tức văng màn hình trắng vì cạn kiệt RAM (Out of Memory). Dưới sự gợi ý kỹ thuật của Mentor, em đã học cách cấu trúc \textbf{Method Channel} để gọi lệnh trực tiếp xuống hệ điều hành iOS (Native core). Yêu cầu iOS chỉ gửi ảnh nén rất nhỏ (\textit{Thumbnails}) lên cho Flutter xử lý thay vì ảnh gốc 4K nặng trịch. Ngay lập tức, thanh RAM đang quá tải 1.5GB lập tức rơi rụng xuống vòng an toàn dưới 150MB.
+
+    \item \textbf{3. Cải thiện tốc độ cuộn giao diện với Isolate:}
+    Thuật toán phân tích dHash tuy nhận diện đúng hệ số nhưng lại làm màn hình bị khựng vài giây khi tính toán. Vận dụng kiến thức đã rèn luyện, em tách riêng khâu tính toán này ném vào \textbf{Isolate} (một luồng phụ chạy ngầm độc lập). Nhờ đó, thao tác lướt danh sách hình ảnh của người dùng trở nên siêu nhạy mà không vấp một hạt sạn nào.
+\end{itemize}
+
+\begin{figure}[htbp]
+\centering
+\begin{tikzpicture}[
+    box/.style={draw, rectangle, rounded corners, fill=blue!5, align=center, minimum height=2.2em, text width=25em, font=\small},
+    arrow/.style={->, >=stealth, thick}
+]
+    \node (step1) [box] {Thư viện ảnh gốc (iOS Native Photo Library)};
+    \node (step2) [box, below of=step1, node distance=1.6cm] {Yêu cầu nén ảnh và chuyển qua Method Channel};
+    \node (step3) [box, below of=step2, node distance=1.6cm] {Flutter UI Thread nhận ảnh Thumbnail (RAM < 150MB)};
+    \node (step4) [box, below of=step3, node distance=1.6cm] {Khởi chạy Isolate (Luồng nền ngầm độc lập)};
+    \node (step5) [box, below of=step4, node distance=1.6cm] {Tính toán mã băm dHash (Difference Hash)};
+    \node (step6) [box, below of=step5, node distance=1.6cm] {So sánh Hamming Distance và gom nhóm ảnh giống nhau};
+    \node (step7) [box, below of=step6, node distance=1.6cm] {Trả kết quả về UI Thread hiển thị danh sách dọn dẹp};
+    
+    \path [arrow] (step1) -- (step2);
+    \path [arrow] (step2) -- (step3);
+    \path [arrow] (step3) -- (step4);
+    \path [arrow] (step4) -- (step5);
+    \path [arrow] (step5) -- (step6);
+    \path [arrow] (step6) -- (step7);
+\end{tikzpicture}
+\caption{Sơ đồ luồng xử lý ảnh trùng lặp tối ưu bộ nhớ qua Isolate và dHash}
+\label{fig:dhash_flow}
+\end{figure}
+
+\subsubsection{Kết quả đạt được}
+\begin{itemize}
+    \item Tính năng đã bắt chuẩn xác các nhóm ảnh lặp lại, hoạt động vô cùng nhẹ nhàng trên môi trường máy test nội bộ.
+    \item Đoạn code của em đã được phê duyệt an toàn bởi các anh trong nhóm, đủ điều kiện hợp nhất để đón đợt phát hành sắp tới.
+\end{itemize}
+
+\subsection[Giai đoạn 3: Nghiên cứu và phát triển ứng dụng PDF Converter \& Scanner (Từ 05/05/2026 đến 20/05/2026)]{Giai đoạn 3: Nghiên cứu và phát triển ứng dụng PDF Converter \& Scanner \\(Từ 05/05/2026 $\rightarrow$ 20/05/2026)}
+\subsubsection{Công việc cụ thể}
+\begin{itemize}
+    \item \textbf{1. Xây dựng bộ luồng nhập liệu đa dạng nguồn (Multi-source Input Pipeline):}
+    Em trực tiếp thiết kế và lập trình giao diện Cupertino cho phép người dùng chọn tệp từ nhiều nguồn khác nhau: iCloud Drive, Gallery điện thoại, chụp ảnh trực tiếp từ Camera (qua thư viện \textit{flutter\_doc\_scanner}), và đặc biệt là cơ chế tải tệp từ liên kết URL (sử dụng đối tượng \textit{HttpClient} với cấu hình timeout 15 giây và giới hạn kích thước tải tối đa 20MB để bảo vệ thiết bị, sau đó sử dụng thư viện \textit{image} để giải mã và kiểm tra tính hợp lệ ngoại tuyến trước khi đưa vào hàng đợi xử lý).
+
+    \item \textbf{2. Xây dựng lõi chuyển đổi PDF ngoại tuyến tối ưu hóa tài nguyên (Offline PDF Engine):}
+    Để chuyển đổi danh sách ảnh đầu vào thành tài liệu PDF mà không gây treo màn hình (UI thread lag), em đã áp dụng phương pháp lập trình đa luồng thông qua hàm \textbf{compute} để đẩy toàn bộ quá trình nén và dựng tài liệu PDF chạy trên một luồng nền độc lập (\textit{Isolate}). Đồng thời, em tối ưu dung lượng tệp PDF bằng cách xây dựng thuật toán tự động nén kích thước cạnh dài của ảnh (thu nhỏ từ 1200px đến 2480px tùy thuộc cấu hình chất lượng nén của người dùng) và mã hóa lại sang chuẩn JPEG có mức nén chất lượng dao động linh hoạt từ 55\% đến 92\%. Khâu này giúp tệp xuất ra luôn nhẹ nhưng vẫn giữ được độ sắc nét của văn bản.
+
+    \item \textbf{3. Lập trình bộ hiệu chỉnh phối cảnh và bộ lọc tài liệu quét thông minh:}
+    Hỗ trợ chức năng nhận diện tài liệu tự động qua máy ảnh với các tùy chọn bật tắt đèn Flash, thay đổi bộ lọc camera. Sau khi chụp, em đã xây dựng màn hình điều chỉnh góc nghiêng và cắt hình phối cảnh (\textit{Perspective Crop}) sử dụng bộ 4 đỉnh tròn tương tác giúp người dùng căn chỉnh mép tài liệu thủ công trên nền gỗ hay môi trường phức tạp. Tài liệu cắt xong được xử lý qua các bộ lọc chất lượng cao: \textit{Black \& White, Grayscale, Color, Photo} để biến ảnh chụp thực tế thành trang quét sắc nét.
+
+    \item \textbf{4. Nghiên cứu giải pháp trích xuất văn bản và tự dựng cấu trúc tài liệu Word (DOCX/DOC engine):}
+    Em nghiên cứu và triển khai lớp tiện ích \textbf{PdfDocxService} để thực hiện trích xuất dữ liệu chữ từ PDF thông qua \textit{MethodChannel} của nền tảng iOS, kết hợp viết hàm giải mã phân tách khối nhị phân FlateDecode bằng Dart để dự phòng offline. Đối với tài liệu DOCX độ chính xác cao (High Fidelity) chuyển đổi từ ảnh, thay vì sử dụng API online, em đã trực tiếp viết code xây dựng cấu trúc lưu trữ nén của tệp Word (ZIP file) hoàn toàn thủ công bằng thư viện \textit{archive}, định dạng chi tiết cấu trúc XML của Office Open XML (OOXML) bao gồm các tệp cấu hình bắt buộc: \textit{[Content\_Types].xml}, \textit{\_rels/.rels}, \textit{word/document.xml}, \textit{word/styles.xml}, và \textit{word/\_rels/document.xml.rels}. Đồng thời, em trực tiếp nhúng dữ liệu ảnh nhị phân vào thư mục \textit{word/media} và ánh xạ hiển thị thông qua cặp thẻ \textit{<w:drawing>} của chuẩn Microsoft Word.
+
+    \item \textbf{5. Triển khai phân hệ quản lý và đóng dấu chữ ký tay số (Digital Signature Management):}
+    Em lập trình phân hệ chữ ký hoàn toàn cục bộ. Giao diện vẽ chữ ký tay trực quan hoạt động trên màn hình xoay ngang (\textit{Draw Signature Canvas}) hỗ trợ chọn màu mực linh hoạt (Đỏ, Xanh, Đen), tăng giảm độ dày nét vẽ qua slider, và nút xóa nhanh canvas. Các chữ ký sau khi vẽ có thể được lưu trữ vào bộ danh sách chữ ký thông minh để tái sử dụng nhanh chóng. Khi người dùng đóng chữ ký lên trang PDF, em xây dựng cơ chế tương tác kéo thả linh hoạt, cho phép phóng to, thu nhỏ, xoay chữ ký tự do hoặc xóa chữ ký trực quan thông qua các widget xử lý cử chỉ phức tạp.
+
+    \item \textbf{6. Tích hợp bộ chỉnh sửa ảnh nâng cao và tối ưu hóa trải nghiệm tiến trình chuyển đổi:}
+    Em tích hợp sâu bộ công cụ chỉnh sửa hình ảnh toàn diện (\textit{pro\_image\_editor}) hỗ trợ người dùng trước khi chuyển đổi bao gồm: \textit{Transform} (xoay tự do, phản chiếu), \textit{Filter} (áp bộ lọc nghệ thuật), \textit{Adjust} (căn chỉnh độ tương phản, độ sáng), và \textit{Magic} (tối ưu thông minh). Để tránh treo ứng dụng khi đang dựng tài liệu nặng, em đã cải tiến màn hình theo dõi với biểu tượng vòng quay phần trăm trực quan (\textit{Circular Progress \% Indicator}) kèm thông điệp động "Optimizing PDF..." tăng tính tương tác sinh động cho người dùng.
+
+    \item \textbf{7. Thiết lập hệ thống lưu trữ lịch sử chuyển đổi bằng Isar Database và đa dạng hóa định dạng xuất:}
+    Em cấu hình cơ sở dữ liệu NoSQL cục bộ \textbf{Isar DB} để quản lý toàn bộ lịch sử chuyển đổi, lưu trữ đầy đủ các thông tin: ảnh thu nhỏ (thumbnail), tên tệp, định dạng nguồn $\rightarrow$ đích, số lượng trang và ngày giờ chuyển đổi. Định dạng tệp mục tiêu được mở rộng đa dạng, đáp ứng hầu hết mọi nhu cầu văn phòng từ \textit{.pdf, .doc, .docx, .jpg, .png, .epub, .txt, .xls, .xlsx, .mobi, đến .ppt}.
+\end{itemize}
+
+\begin{figure}[htbp]
+\centering
+\begin{tikzpicture}[
+    box/.style={draw, rectangle, rounded corners, fill=green!5, align=center, minimum height=2.2em, text width=25em, font=\small},
+    arrow/.style={->, >=stealth, thick}
+]
+    \node (step1) [box] {Nguồn dữ liệu (iCloud, Camera, Gallery, URL)};
+    \node (step2) [box, below of=step1, node distance=1.6cm] {Xử lý hình ảnh (Cắt phối cảnh, bộ lọc Grayscale/Color)};
+    \node (step3) [box, below of=step2, node distance=1.6cm] {Trích xuất văn bản (Offline OCR / MethodChannel iOS)};
+    \node (step4) [box, below of=step3, node distance=1.6cm] {Đẩy tác vụ vào luồng phụ Isolate (compute)};
+    \node (step5) [box, below of=step4, node distance=1.6cm] {Dựng cấu trúc tệp (Nén ảnh \& Xuất PDF/XML OOXML DOCX)};
+    \node (step6) [box, below of=step5, node distance=1.6cm] {Thêm chữ ký số cục bộ (Tương tác kéo thả, canvas vẽ tay)};
+    \node (step7) [box, below of=step6, node distance=1.6cm] {Lưu trữ lịch sử vào Isar DB và lưu tệp xuất ra thiết bị};
+    
+    \path [arrow] (step1) -- (step2);
+    \path [arrow] (step2) -- (step3);
+    \path [arrow] (step3) -- (step4);
+    \path [arrow] (step4) -- (step5);
+    \path [arrow] (step5) -- (step6);
+    \path [arrow] (step6) -- (step7);
+\end{tikzpicture}
+\caption{Sơ đồ kiến trúc chuyển đổi tài liệu ngoại tuyến của PDF Converter}
+\label{fig:pdf_converter_flow}
+\end{figure}
+
+\subsubsection{Kết quả đạt được}
+\begin{itemize}
+    \item Hoàn thành xuất sắc toàn bộ hệ thống tính năng chuyển đổi đa định dạng, quét tài liệu, ký tay và biên tập tài liệu ngoại tuyến cho ứng dụng \textbf{PDF Converter \& Scanner} chạy hoàn hảo trên thiết bị của người dùng, đảm bảo tính bảo mật và trải nghiệm mượt mà.
+    \item Ứng dụng tích hợp đa ngôn ngữ (Tiếng Việt, Anh, Nhật, Pháp, Đức, Ý, Tây Ban Nha, Hàn) và hỗ trợ hoàn hảo chế độ Sáng/Tối (Light/Dark Mode).
+    \item Kiến trúc dự án tuân thủ nghiêm ngặt mô hình Clean Architecture (Data, Domain, Presentation) kết hợp quản lý trạng thái bằng \textit{flutter\_bloc}, giúp mã nguồn sạch sẽ, dễ mở rộng và kiểm thử độc lập.
+\end{itemize}
+
+\begin{figure}[htbp]
+\centering
+\begin{minipage}[b]{0.18\textwidth}
+    \centering
+    \includegraphics[width=\textwidth]{screenshots/1.png}\\
+    \vspace{0.1cm}
+    \scriptsize Chào mừng
+\end{minipage}
+\hfill
+\begin{minipage}[b]{0.18\textwidth}
+    \centering
+    \includegraphics[width=\textwidth]{screenshots/2.png}\\
+    \vspace{0.1cm}
+    \scriptsize Quét tài liệu
+\end{minipage}
+\hfill
+\begin{minipage}[b]{0.18\textwidth}
+    \centering
+    \includegraphics[width=\textwidth]{screenshots/3.png}\\
+    \vspace{0.1cm}
+    \scriptsize Chọn nguồn
+\end{minipage}
+\hfill
+\begin{minipage}[b]{0.18\textwidth}
+    \centering
+    \includegraphics[width=\textwidth]{screenshots/4.png}\\
+    \vspace{0.1cm}
+    \scriptsize Xuất tệp PDF
+\end{minipage}
+\hfill
+\begin{minipage}[b]{0.18\textwidth}
+    \centering
+    \includegraphics[width=\textwidth]{screenshots/5.png}\\
+    \vspace{0.1cm}
+    \scriptsize Lịch sử lưu
+\end{minipage}
+\caption{Giao diện thực tế của ứng dụng PDF Converter \& Scanner trên hệ điều hành iOS}
+\label{fig:pdf_converter_screenshots}
+\end{figure}
+
+
+\subsection[Giai đoạn 4: Hoàn thiện, Kiểm thử và Tối ưu hóa hệ thống (Từ 21/05/2026 đến nay)]{Giai đoạn 4: Hoàn thiện, Kiểm thử và Tối ưu hóa hệ thống \\(Từ 21/05/2026 $\rightarrow$ Nay)}
+\subsubsection{Công việc cụ thể}
+\begin{itemize}
+    \item \textbf{1. Phối hợp với đội ngũ QA/QC để kiểm thử và sửa lỗi tương thích (Bug Fixing):}
+    Em phối hợp chặt chẽ với đội ngũ kiểm thử (tester) để tiến hành kiểm thử hộp đen toàn diện cho ứng dụng PDF Converter \& Scanner. Em trực tiếp khắc phục các lỗi vỡ khung giao diện (UI overflow) trên các thiết bị iPad và các dòng iPhone cũ có màn hình tỉ lệ 16:9, tối ưu hóa kích thước gói cài đặt ứng dụng bằng cách loại bỏ các tài nguyên hình ảnh dư thừa.
+    
+    \item \textbf{2. Tối ưu hóa hiệu năng truy vấn cơ sở dữ liệu Isar DB:}
+    Khi lưu trữ lượng lớn lịch sử chuyển đổi (lên tới hàng ngàn bản ghi), hiệu năng truy vấn của Isar DB bắt đầu có dấu hiệu gián đoạn nhẹ. Em đã tiến hành tạo các chỉ mục (indexes) cho các trường ngày tạo và định dạng tệp, đồng thời viết lại hàm tải lịch sử hỗ trợ phân trang (pagination) với kích thước 20 bản ghi mỗi trang để đảm bảo danh sách luôn tải mượt mà.
+    
+    \item \textbf{3. Cài đặt hệ thống dịch thuật đa ngôn ngữ (Localization) và chế độ tối (Dark Mode):}
+    Để ứng dụng sẵn sàng phát hành toàn cầu, em đã cùng Mentor cấu hình hệ thống dịch thuật cho 8 ngôn ngữ phổ biến thông qua gói flutter\_localizations. Em đồng thời hoàn thiện cấu trúc Theme cho cả chế độ Sáng (Light Mode) và Tối (Dark Mode) chuẩn Cupertino, đảm bảo độ tương phản màu sắc đạt tiêu chuẩn trợ năng.
+\end{itemize}
+\subsubsection{Kết quả đạt được}
+\begin{itemize}
+    \item Ứng dụng PDF Converter \& Scanner đã hoạt động ổn định trên cả iPhone và iPad, trải qua các vòng kiểm thử QA khắt khe với tỉ lệ lỗi cực thấp.
+    \item Giao diện đa ngôn ngữ và chế độ Dark Mode hoạt động mượt mà, giúp nâng cao tính thương mại của sản phẩm.
+\end{itemize}
+
+\begin{figure}[htbp]
+\centering
+\begin{minipage}[b]{0.45\textwidth}
+    \centering
+    \includegraphics[width=\textwidth]{demo_app_store/1.png}\\
+    \vspace{0.1cm}
+    \scriptsize Giao diện App Store (Chế độ Sáng)
+\end{minipage}
+\hfill
+\begin{minipage}[b]{0.45\textwidth}
+    \centering
+    \includegraphics[width=\textwidth]{demo_app_store/2.png}\\
+    \vspace{0.1cm}
+    \scriptsize Giao diện App Store (Chế độ Tối)
+\end{minipage}
+\caption{Hình ảnh hiển thị thực tế của ứng dụng trên cửa hàng App Store}
+\label{fig:app_store_screenshots}
+\end{figure}
+
+
+\section{TỰ ĐÁNH GIÁ VÀ BÀI HỌC KINH NGHIỆM}
+\subsection{Điểm mạnh đạt được}
+\begin{itemize}
+    \item Khả năng tự nghiên cứu và làm chủ các kỹ thuật lập trình Mobile nâng cao như xử lý luồng ngầm (Isolate), giao tiếp nền tảng Native Core.
+    \item Chủ động nghiên cứu cấu trúc định dạng tài liệu Office Open XML (OOXML) phức tạp để xây dựng thành công giải pháp chuyển đổi tệp ngoại tuyến.
+    \item Làm quen và thích nghi nhanh chóng với quy trình làm việc chuẩn nghiệp vụ của doanh nghiệp (Agile/Scrum, Git Flow) và Cursor AI.
+    \item Thiết kế và lập trình thành công hệ thống chữ ký tay và tương tác kéo thả, xoay chữ ký có độ phức tạp cao hoàn toàn mượt mà.
+\end{itemize}
+\subsection{Hạn chế cần cải thiện}
+\begin{itemize}
+    \item Lõi trích xuất văn bản offline viết bằng Dart thuần chưa có độ chính xác tuyệt đối như OCR học máy, mới chỉ hỗ trợ văn bản gốc.
+    \item Khả năng thiết kế hệ thống sơ đồ kiến trúc ứng dụng ban đầu vẫn cần được mài giũa thêm để trao đổi tốt hơn với các Mentor.
+\end{itemize}
+
+\section{KẾT QUẢ TỔNG THỂ VÀ KẾT LUẬN}
+\begin{itemize}
+    \item \textbf{Kết quả thực tập:} Hoàn thành xuất sắc nhiệm vụ phát triển module dọn dẹp ảnh cho ứng dụng \textit{Cleaner Guru} và xây dựng bộ công cụ chuyển đổi tài liệu đa năng ngoại tuyến cho ứng dụng \textit{PDF Converter \& Scanner} chạy mượt mà trên thiết bị di động iOS.
+    \item \textbf{Ý nghĩa học kỳ thực tập:} Kỳ thực tập tốt nghiệp tại FAA Việt Nam đã giúp em thay đổi hoàn toàn tư duy phát triển phần mềm, hiểu rõ quy chuẩn phát triển một sản phẩm thương mại thực tế.
+    \item \textbf{Định hướng nghề nghiệp:} Tiếp tục nghiên cứu sâu về lập trình ứng dụng di động Flutter chuyên sâu, tích hợp thêm các công nghệ xử lý hình ảnh và học máy ngay trên thiết bị di động để tối ưu hóa bảo mật và hiệu suất ứng dụng.
+\end{itemize}
+
+\newpage
+\section*{PHỤ LỤC: HÌNH ẢNH MINH HỌA GIAO DIỆN ỨNG DỤNG}
+\addcontentsline{toc}{section}{PHỤ LỤC: HÌNH ẢNH MINH HỌA GIAO DIỆN ỨNG DỤNG}
+Dưới đây là toàn bộ hình ảnh giao diện thực tế ghi nhận kết quả phát triển các ứng dụng di động trong suốt giai đoạn thực tập tính đến ngày 20/05/2026:
+
+\subsection*{Phần 1: Dự án Cleaner Guru (Giai đoạn 2)}
+Ứng dụng dọn dẹp ảnh trùng lặp thông minh, giải phóng dung lượng bộ nhớ thiết bị iOS:
+
+\subsubsection*{1.1. Màn hình Onboarding}
+\begin{figure}[htbp]
+    \centering
+    \begin{minipage}{0.45\textwidth}
+        \centering
+        \includegraphics[height=9.5cm]{cleanerguru/IMG_6851.PNG}
+        \caption{Onboarding: Giới thiệu tính năng phân tích bộ nhớ lưu trữ.}
+        \label{fig:cleaner_onb_storage}
+    \end{minipage}
+    \hfill
+    \begin{minipage}{0.45\textwidth}
+        \centering
+        \includegraphics[height=9.5cm]{cleanerguru/IMG_6850.PNG}
+        \caption{Onboarding: Giới thiệu tính năng gom nhóm ảnh tương đồng.}
+        \label{fig:cleaner_onb_similar}
+    \end{minipage}
+\end{figure}
+
+\begin{figure}[htbp]
+    \centering
+    \begin{minipage}{0.45\textwidth}
+        \centering
+        \includegraphics[height=9.5cm]{cleanerguru/IMG_6854.PNG}
+        \caption{Onboarding: Giới thiệu tính năng Memory Boost (giải phóng RAM).}
+        \label{fig:cleaner_onb_ram}
+    \end{minipage}
+    \hfill
+    \begin{minipage}{0.45\textwidth}
+        \centering
+        \includegraphics[height=9.5cm]{cleanerguru/IMG_6853.PNG}
+        \caption{Onboarding: Giới thiệu tính năng Battery Boost (tối ưu pin).}
+        \label{fig:cleaner_onb_battery}
+    \end{minipage}
+\end{figure}
+
+\newpage
+\subsubsection*{1.2. Màn hình Tính năng Chính}
+\begin{figure}[htbp]
+    \centering
+    \begin{minipage}{0.45\textwidth}
+        \centering
+        \includegraphics[height=9.5cm]{cleanerguru/IMG_6863.PNG}
+        \caption{Màn hình chính Clean Up: phân loại ảnh giống nhau, video, live photo và screenshots theo dung lượng.}
+        \label{fig:cleaner_home}
+    \end{minipage}
+    \hfill
+    \begin{minipage}{0.45\textwidth}
+        \centering
+        \includegraphics[height=9.5cm]{cleanerguru/IMG_6868.PNG}
+        \caption{Giao diện Swipe Photos: đánh giá từng ảnh và chọn giữ lại hoặc xóa (Keep/Delete).}
+        \label{fig:cleaner_review}
+    \end{minipage}
+\end{figure}
+
+\begin{figure}[htbp]
+    \centering
+    \begin{minipage}{0.45\textwidth}
+        \centering
+        \includegraphics[height=9.5cm]{cleanerguru/IMG_6865.PNG}
+        \caption{Màn hình dọn dẹp video dung lượng lớn (197 videos -- 13.1 GB).}
+        \label{fig:cleaner_videos}
+    \end{minipage}
+    \hfill
+    \begin{minipage}{0.45\textwidth}
+        \centering
+        \includegraphics[height=9.5cm]{cleanerguru/IMG_6866.PNG}
+        \caption{Màn hình xóa hàng loạt ảnh chụp màn hình trùng lặp (29 screenshots -- 35 MB).}
+        \label{fig:cleaner_screenshots}
+    \end{minipage}
+\end{figure}
+
+\newpage
+\subsection*{Phần 2: Dự án PDF Converter \& Scanner (Giai đoạn 3)}
+Ứng dụng quét tài liệu chuyên nghiệp và chuyển đổi đa định dạng ngoại tuyến:
+
+\subsubsection*{2.1. Màn hình Convert và luồng nhập liệu đa nguồn}
+\begin{figure}[htbp]
+    \centering
+    \begin{minipage}{0.45\textwidth}
+        \centering
+        \includegraphics[height=9.5cm]{features/IMG_7576.PNG}
+        \caption{Màn hình Convert chính với 5 nguồn nhập liệu: iCloud, Other App, Gallery, Camera, URL Link.}
+        \label{fig:pdf_convert_home}
+    \end{minipage}
+    \hfill
+    \begin{minipage}{0.45\textwidth}
+        \centering
+        \includegraphics[height=9.5cm]{features/IMG_7592.PNG}
+        \caption{Popup ``Enter URL'': nhập liên kết URL để tải và chuyển đổi tài liệu trực tiếp từ Internet.}
+        \label{fig:pdf_url}
+    \end{minipage}
+\end{figure}
+
+\begin{figure}[htbp]
+    \centering
+    \begin{minipage}{0.45\textwidth}
+        \centering
+        \includegraphics[height=9.5cm]{features/IMG_7593.PNG}
+        \caption{Màn hình iCloud Picker: chọn file từ iCloud Drive (Gần đây, Được chia sẻ, Duyệt) với thanh tìm kiếm.}
+        \label{fig:pdf_icloud}
+    \end{minipage}
+    \hfill
+    \begin{minipage}{0.45\textwidth}
+        \centering
+        \includegraphics[height=9.5cm]{features/IMG_7584.PNG}
+        \caption{Màn hình New Conversion: file đã chọn, định dạng đích .pdf, PDF Settings chất lượng 90\%, nút Convert.}
+        \label{fig:pdf_new_conversion}
+    \end{minipage}
+\end{figure}
+
+\newpage
+\subsubsection*{2.2. Quét tài liệu qua Camera và hiệu chỉnh phối cảnh}
+\begin{figure}[htbp]
+    \centering
+    \begin{minipage}{0.45\textwidth}
+        \centering
+        \includegraphics[height=9.5cm]{features/IMG_7580.PNG}
+        \caption{Giao diện Camera Scanner: quét tài liệu trực tiếp với thanh điều khiển Flash, Filters, Shutter.}
+        \label{fig:pdf_camera}
+    \end{minipage}
+    \hfill
+    \begin{minipage}{0.45\textwidth}
+        \centering
+        \includegraphics[height=9.5cm]{features/IMG_7581.PNG}
+        \caption{Màn hình Perspective Crop: hiệu chỉnh phối cảnh tài liệu với 4 đỉnh tương tác và toolbar Adjust/Filters/Rotate/Delete.}
+        \label{fig:pdf_crop}
+    \end{minipage}
+\end{figure}
+
+\begin{figure}[htbp]
+    \centering
+    \begin{minipage}{0.45\textwidth}
+        \centering
+        \includegraphics[height=9.5cm]{features/IMG_7582.PNG}
+        \caption{Picker chọn bộ lọc tài liệu: Black \& White, Grayscale, Color, Photo để chuẩn hóa ảnh quét.}
+        \label{fig:pdf_filter_picker}
+    \end{minipage}
+    \hfill
+    \begin{minipage}{0.45\textwidth}
+        \centering
+        \includegraphics[height=9.5cm]{features/IMG_7583.PNG}
+        \caption{Kết quả sau khi xoay tài liệu quét sang chế độ ngang (Rotate), sẵn sàng xác nhận lưu.}
+        \label{fig:pdf_rotated}
+    \end{minipage}
+\end{figure}
+
+\newpage
+\subsubsection*{2.3. Bộ chỉnh sửa ảnh nâng cao và chọn định dạng đích}
+\begin{figure}[htbp]
+    \centering
+    \begin{minipage}{0.45\textwidth}
+        \centering
+        \includegraphics[height=9.5cm]{features/IMG_7591.PNG}
+        \caption{Bộ pro\_image\_editor tích hợp sâu với 4 công cụ chỉnh sửa: Transform, Filter, Adjust, Magic.}
+        \label{fig:pdf_pro_editor}
+    \end{minipage}
+    \hfill
+    \begin{minipage}{0.45\textwidth}
+        \centering
+        \includegraphics[height=9.5cm]{features/IMG_7594.PNG}
+        \caption{Màn hình Target extension: chọn định dạng đích .pdf, .doc, .docx, .jpg, .png, .epub, .txt, .xls, .xlsx, .mobi, .ppt.}
+        \label{fig:pdf_target_ext}
+    \end{minipage}
+\end{figure}
+
+\begin{figure}[htbp]
+    \centering
+    \begin{minipage}{0.45\textwidth}
+        \centering
+        \includegraphics[height=9.5cm]{features/IMG_7595.PNG}
+        \caption{Màn hình Target extension đầy đủ: nhóm Merge Files (.pdf) và toàn bộ định dạng Convert đa dạng.}
+        \label{fig:pdf_formats_full}
+    \end{minipage}
+    \hfill
+    \begin{minipage}{0.45\textwidth}
+        \centering
+        \includegraphics[height=9.5cm]{features/IMG_7585.PNG}
+        \caption{Màn hình ``Creating PDF'': Circular Progress Indicator hiển thị 6\% với thông điệp ``Optimizing PDF...''}
+        \label{fig:pdf_progress}
+    \end{minipage}
+\end{figure}
+
+\newpage
+\subsubsection*{2.4. Xuất tệp PDF và xem trước tài liệu}
+\begin{figure}[htbp]
+    \centering
+    \begin{minipage}{0.45\textwidth}
+        \centering
+        \includegraphics[height=9.5cm]{features/IMG_7586.PNG}
+        \caption{Màn hình ``PDF Exported Successfully'' và iOS Share Sheet: chia sẻ qua AirDrop, Mail, Zalo và ứng dụng khác.}
+        \label{fig:pdf_exported}
+    \end{minipage}
+    \hfill
+    \begin{minipage}{0.45\textwidth}
+        \centering
+        \includegraphics[height=9.5cm]{features/IMG_7587.PNG}
+        \caption{Màn hình xem trước PDF sau chuyển đổi (1 of 1) với nút Sign (Ký chữ ký) và Edit (Chỉnh sửa ảnh).}
+        \label{fig:pdf_preview}
+    \end{minipage}
+\end{figure}
+
+\newpage
+\subsubsection*{2.5. Phân hệ Chữ ký tay số (Digital Signature)}
+\begin{figure}[htbp]
+    \centering
+    \begin{minipage}{0.45\textwidth}
+        \centering
+        \includegraphics[height=9.5cm]{features/IMG_7588.PNG}
+        \caption{Màn hình ``Choose signature'': tạo New signature hoặc chọn lại chữ ký đã lưu (Saved 1, Saved 2).}
+        \label{fig:pdf_choose_sig}
+    \end{minipage}
+    \hfill
+    \begin{minipage}{0.45\textwidth}
+        \centering
+        \includegraphics[height=9.5cm]{features/IMG_7589.PNG}
+        \caption{Canvas vẽ chữ ký tay (Draw Signature) chế độ ngang với bộ chọn màu mực (Đỏ/Xanh/Đen) và slider độ dày nét.}
+        \label{fig:pdf_draw_sig}
+    \end{minipage}
+\end{figure}
+
+\begin{figure}[htbp]
+    \centering
+    \begin{minipage}{0.45\textwidth}
+        \centering
+        \includegraphics[height=9.5cm]{features/IMG_7590.PNG}
+        \caption{Đặt chữ ký tay số lên trang PDF: tương tác kéo thả, xoay tự do, xóa bằng nút đỏ trực quan.}
+        \label{fig:pdf_sign_on_page}
+    \end{minipage}
+    \hfill
+    \begin{minipage}{0.45\textwidth}
+        \centering
+        \includegraphics[height=9.5cm]{features/IMG_7577.PNG}
+        \caption{Màn hình History: lịch sử toàn bộ tài liệu đã chuyển đổi kèm thumbnail, tên tệp, định dạng nguồn$\rightarrow$đích, số trang và ngày giờ (Isar DB).}
+        \label{fig:pdf_history}
+    \end{minipage}
+\end{figure}
+
+\newpage
+\subsubsection*{2.6. Cài đặt ứng dụng và Đa ngôn ngữ}
+\begin{figure}[htbp]
+    \centering
+    \begin{minipage}{0.45\textwidth}
+        \centering
+        \includegraphics[height=9.5cm]{features/IMG_7578.PNG}
+        \caption{Màn hình Settings: tùy chỉnh Dark Mode, Language, FAQ, Terms Of Use, Privacy Policy, Contact Support, Share App.}
+        \label{fig:pdf_settings}
+    \end{minipage}
+    \hfill
+    \begin{minipage}{0.45\textwidth}
+        \centering
+        \includegraphics[height=9.5cm]{features/IMG_7579.PNG}
+        \caption{Màn hình Language: hỗ trợ 8 ngôn ngữ giao diện (English, Tiếng Việt, Japanese, Français, Deutsch, Italiano, Español, Korean).}
+        \label{fig:pdf_language}
+    \end{minipage}
+\end{figure}
+
+\end{document}
