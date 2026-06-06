@@ -1,4 +1,4 @@
-This is XeTeX, Version 3.141592653-2.6-0.999998 (TeX Live 2026) (preloaded format=xelatex 2026.6.6)  7 JUN 2026 00:14
+This is XeTeX, Version 3.141592653-2.6-0.999998 (TeX Live 2026) (preloaded format=xelatex 2026.6.6)  7 JUN 2026 00:25
 entering extended mode
  restricted \write18 enabled.
  %&-line parsing enabled.
@@ -782,17 +782,17 @@ n sản phẩm (Từ 01/07/2025 đến 28/02/2026)[] [][]
 
  [2] [3]
 LaTeX Font Info:    External font `cmex10' loaded for size
-(Font)              <14.4> on input line 109.
+(Font)              <14.4> on input line 111.
 LaTeX Font Info:    External font `cmex10' loaded for size
-(Font)              <7> on input line 109.
+(Font)              <7> on input line 111.
 
-Overfull \hbox (14.65628pt too wide) in paragraph at lines 115--116
+Overfull \hbox (14.65628pt too wide) in paragraph at lines 117--118
 []\TU/TimesNewRoman(0)/b/n/12 Quản lý Task với Jira & Trello: \TU/TimesNewRoman
 (0)/m/n/12 Học cách tiếp nhận Ticket, phân tích yêu cầu (Requirement),
  []
 
 [4]
-Overfull \hbox (20.56943pt too wide) in paragraph at lines 129--131
+Overfull \hbox (20.56943pt too wide) in paragraph at lines 131--133
 \TU/TimesNewRoman(0)/m/n/12 Store tại đường dẫn: []$[][][][][] [] [] [] [][][][
 ] [] [][][][][] [] [][][] [] [][] [] [][][] [] [][][][][][][][][][][][][][][][]
 [][][][][][][][][][][][][][][][][][] []
@@ -810,7 +810,7 @@ File: screenshots/4.png Graphic file (type bmp)
 File: screenshots/5.png Graphic file (type bmp)
 <screenshots/5.png>
  [9]
-Overfull \hbox (48.51547pt too wide) in paragraph at lines 334--335
+Overfull \hbox (48.51547pt too wide) in paragraph at lines 336--337
 \TU/TimesNewRoman(0)/m/n/12 App Store tại đường dẫn: []$[][][][][] [] [] [] [][
 ][][] [] [][][][][] [] [][][] [] [][] [] [][][] [] [][][][][][][][][][][][][][]
 [][][][][][][][][][][][][][][][] []
@@ -821,7 +821,7 @@ File: demo_app_store/1.png Graphic file (type bmp)
 File: demo_app_store/2.png Graphic file (type bmp)
 <demo_app_store/2.png>
 [10] [11] [12] [13]
-Overfull \hbox (2.0232pt too wide) in paragraph at lines 397--397
+Overfull \hbox (2.0232pt too wide) in paragraph at lines 399--399
 [][]\TU/TimesNewRoman(0)/b/n/17.28 PHỤ LỤC: HÌNH ẢNH MINH HỌA GIAO DIỆN ỨNG DỤN
 G 
  []
@@ -862,12 +862,12 @@ File: push_up/IMG_6873.PNG Graphic file (type bmp)
 File: features/IMG_7576.PNG Graphic file (type bmp)
 <features/IMG_7576.PNG>
 
-Underfull \hbox (badness 1708) in paragraph at lines 542--542
+Underfull \hbox (badness 1708) in paragraph at lines 544--544
 []\TU/TimesNewRoman(0)/m/n/12 Hình 21: []Màn hình Convert chính với
  []
 
 
-Underfull \hbox (badness 1019) in paragraph at lines 542--542
+Underfull \hbox (badness 1019) in paragraph at lines 544--544
 \TU/TimesNewRoman(0)/m/n/12 5 nguồn nhập liệu: iCloud, Other App,
  []
 
@@ -896,7 +896,7 @@ File: features/IMG_7595.PNG Graphic file (type bmp)
 File: features/IMG_7585.PNG Graphic file (type bmp)
 <features/IMG_7585.PNG>
 
-Underfull \hbox (badness 6316) in paragraph at lines 638--638
+Underfull \hbox (badness 6316) in paragraph at lines 640--640
 []\TU/TimesNewRoman(0)/m/n/12 Hình 32: []Màn hình “Creating PDF”:
  []
 
@@ -904,12 +904,12 @@ Underfull \hbox (badness 6316) in paragraph at lines 638--638
 File: features/IMG_7586.PNG Graphic file (type bmp)
 <features/IMG_7586.PNG>
 
-Underfull \hbox (badness 10000) in paragraph at lines 650--650
+Underfull \hbox (badness 10000) in paragraph at lines 652--652
 []\TU/TimesNewRoman(0)/m/n/12 Hình 33: []Màn hình “PDF Exported
  []
 
 
-Underfull \hbox (badness 1077) in paragraph at lines 650--650
+Underfull \hbox (badness 1077) in paragraph at lines 652--652
 \TU/TimesNewRoman(0)/m/n/12 Successfully” và iOS Share Sheet: chia
  []
 
@@ -921,7 +921,7 @@ File: features/IMG_7588.PNG Graphic file (type bmp)
 File: features/IMG_7589.PNG Graphic file (type bmp)
 <features/IMG_7589.PNG>
 
-Underfull \hbox (badness 1009) in paragraph at lines 676--676
+Underfull \hbox (badness 1009) in paragraph at lines 678--678
 []\TU/TimesNewRoman(0)/m/n/12 Hình 36: []Canvas vẽ chữ ký tay (Draw
  []
 
@@ -933,24 +933,24 @@ File: features/IMG_7577.PNG Graphic file (type bmp)
 File: features/IMG_7578.PNG Graphic file (type bmp)
 <features/IMG_7578.PNG>
 
-Underfull \hbox (badness 1448) in paragraph at lines 705--705
+Underfull \hbox (badness 1448) in paragraph at lines 707--707
 \TU/TimesNewRoman(0)/m/n/12 Mode, Language, FAQ, Terms Of Use,
  []
 
 
-Underfull \hbox (badness 2547) in paragraph at lines 705--705
+Underfull \hbox (badness 2547) in paragraph at lines 707--707
 \TU/TimesNewRoman(0)/m/n/12 Privacy Policy, Contact Support, Share
  []
 
 File: features/IMG_7579.PNG Graphic file (type bmp)
 <features/IMG_7579.PNG>
 
-Underfull \hbox (badness 2961) in paragraph at lines 712--712
+Underfull \hbox (badness 2961) in paragraph at lines 714--714
 []\TU/TimesNewRoman(0)/m/n/12 Hình 40: []Màn hình Language: hỗ trợ
  []
 
 
-Underfull \hbox (badness 2351) in paragraph at lines 712--712
+Underfull \hbox (badness 2351) in paragraph at lines 714--714
 \TU/TimesNewRoman(0)/m/n/12 8 ngôn ngữ giao diện (English, Tiếng
  []
 
@@ -965,15 +965,15 @@ LaTeX2e <2025-11-01>
 L3 programming layer <2026-01-19>
  ***********
 Package rerunfilecheck Info: File `main.out' has not changed.
-(rerunfilecheck)             Checksum: FCD6FB1B692B5D274F0E447FB5DF5E49;9434.
+(rerunfilecheck)             Checksum: A3C05B9B60AF7CFDD2CB5CF0DA5DDFD3;9431.
  ) 
 Here is how much of TeX's memory you used:
  23092 strings out of 469709
  489281 string characters out of 5466024
- 933366 words of memory out of 5000000
+ 933363 words of memory out of 5000000
  51321 multiletter control sequences out of 15000+600000
  631962 words of font info for 82 fonts, out of 8000000 for 9000
  319 hyphenation exceptions out of 8191
- 89i,7n,97p,797b,855s stack positions out of 10000i,1000n,20000p,200000b,200000s
+ 89i,7n,97p,794b,855s stack positions out of 10000i,1000n,20000p,200000b,200000s
 
 Output written on main.pdf (29 pages).

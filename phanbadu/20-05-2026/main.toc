@@ -16,7 +16,7 @@
 \contentsline {subsubsection}{\numberline {3.3.1}Dự án Cleaner Guru - Hệ thống dọn dẹp ảnh thông minh}{6}{subsubsection.3.3.1}%
 \contentsline {subsubsection}{\numberline {3.3.2}Dự án Push Up - Fitness Monitoring AI}{7}{subsubsection.3.3.2}%
 \contentsline {subsection}{\numberline {3.4}Giai đoạn 4: Hỗ trợ làm app PDF Converter, tối ưu Ads và phát hành sản phẩm (Từ 01/05/2026 đến nay)}{8}{subsection.3.4}%
-\contentsline {subsubsection}{\numberline {3.4.1}Dự án PDF Converter \& Scanner (Nhóm phát triển: 3 thành viên - Phan Bá Đủ, Nguyễn Thị Huyền, Phan Thị Kiều Trinh)}{8}{subsubsection.3.4.1}%
+\contentsline {subsubsection}{\numberline {3.4.1}Dự án PDF Converter \& Scanner (Nhóm phát triển: 3 thành viên - Phan Bá Dư, Nguyễn Thị Huyền, Phan Thị Kiều Trinh)}{8}{subsubsection.3.4.1}%
 \contentsline {subsubsection}{\numberline {3.4.2}Dự án Cleaner Guru - Tối ưu hóa doanh thu quảng cáo (Ads Optimization)}{9}{subsubsection.3.4.2}%
 \contentsline {subsubsection}{\numberline {3.4.3}Dự án Ad-Free Blood Pressure App - Phát hành và tối ưu tăng trưởng}{10}{subsubsection.3.4.3}%
 \contentsline {section}{\numberline {4}TỰ ĐÁNH GIÁ VÀ BÀI HỌC KINH NGHIỆM}{10}{section.4}%

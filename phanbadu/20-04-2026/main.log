@@ -1,4 +1,4 @@
-This is XeTeX, Version 3.141592653-2.6-0.999998 (TeX Live 2026) (preloaded format=xelatex 2026.6.6)  7 JUN 2026 00:13
+This is XeTeX, Version 3.141592653-2.6-0.999998 (TeX Live 2026) (preloaded format=xelatex 2026.6.6)  7 JUN 2026 00:24
 entering extended mode
  restricted \write18 enabled.
  %&-line parsing enabled.
@@ -782,11 +782,11 @@ n sản phẩm (Từ 01/07/2025 đến 28/02/2026)[] [][]
 
  [2] [3]
 LaTeX Font Info:    External font `cmex10' loaded for size
-(Font)              <14.4> on input line 112.
+(Font)              <14.4> on input line 114.
 LaTeX Font Info:    External font `cmex10' loaded for size
-(Font)              <7> on input line 112.
+(Font)              <7> on input line 114.
 
-Overfull \hbox (14.65628pt too wide) in paragraph at lines 118--119
+Overfull \hbox (14.65628pt too wide) in paragraph at lines 120--121
 []\TU/TimesNewRoman(0)/b/n/12 Quản lý Task với Jira & Trello: \TU/TimesNewRoman
 (0)/m/n/12 Học cách tiếp nhận Ticket, phân tích yêu cầu (Requirement),
  []

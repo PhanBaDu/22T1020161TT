@@ -1,4 +1,4 @@
-This is XeTeX, Version 3.141592653-2.6-0.999998 (TeX Live 2026) (preloaded format=xelatex 2026.6.6)  7 JUN 2026 00:13
+This is XeTeX, Version 3.141592653-2.6-0.999998 (TeX Live 2026) (preloaded format=xelatex 2026.6.6)  7 JUN 2026 00:24
 entering extended mode
  restricted \write18 enabled.
  %&-line parsing enabled.
@@ -771,7 +771,7 @@ LaTeX Font Info:    External font `cmex10' loaded for size
 ] [1
 
 ] (./main.toc
-Overfull \hbox (3.45401pt too wide) in paragraph at lines 11--11
+Overfull \hbox (3.45401pt too wide) in paragraph at lines 12--12
  [][] [][]\TU/TimesNewRoman(0)/m/n/12 Giai đoạn 2: Trực tiếp tham gia phát triể
 n sản phẩm (Từ 01/07/2025 đến 28/02/2026)[] [][]  
  []
@@ -782,30 +782,24 @@ n sản phẩm (Từ 01/07/2025 đến 28/02/2026)[] [][]
 
  [2]
 LaTeX Font Info:    External font `cmex10' loaded for size
-(Font)              <14.4> on input line 102.
+(Font)              <14.4> on input line 104.
 LaTeX Font Info:    External font `cmex10' loaded for size
-(Font)              <7> on input line 102.
- [3]
-Overfull \hbox (14.65628pt too wide) in paragraph at lines 107--108
-[]\TU/TimesNewRoman(0)/b/n/12 Quản lý Task với Jira & Trello: \TU/TimesNewRoman
-(0)/m/n/12 Học cách tiếp nhận Ticket, phân tích yêu cầu (Requirement),
- []
-
-[4] [5] [6] [7] [8] (./main.aux)
+(Font)              <7> on input line 104.
+ [3] [4] [5] [6] [7] [8] [9] (./main.aux)
  ***********
 LaTeX2e <2025-11-01>
 L3 programming layer <2026-01-19>
  ***********
 Package rerunfilecheck Info: File `main.out' has not changed.
-(rerunfilecheck)             Checksum: 7D395D94476B15C4A9D221C26965A074;7083.
+(rerunfilecheck)             Checksum: 8B85BD12233C1E7EA8BC1C4AE8813A11;7599.
  ) 
 Here is how much of TeX's memory you used:
  22668 strings out of 469709
  478899 string characters out of 5466024
- 923424 words of memory out of 5000000
+ 924948 words of memory out of 5000000
  50945 multiletter control sequences out of 15000+600000
  631946 words of font info for 80 fonts, out of 8000000 for 9000
  319 hyphenation exceptions out of 8191
  89i,7n,97p,769b,855s stack positions out of 10000i,1000n,20000p,200000b,200000s
 
-Output written on main.pdf (9 pages).
+Output written on main.pdf (10 pages).

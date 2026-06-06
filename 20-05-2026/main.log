@@ -1,4 +1,4 @@
-This is XeTeX, Version 3.141592653-2.6-0.999998 (TeX Live 2026) (preloaded format=xelatex 2026.6.6)  7 JUN 2026 00:12
+This is XeTeX, Version 3.141592653-2.6-0.999998 (TeX Live 2026) (preloaded format=xelatex 2026.6.6)  7 JUN 2026 00:23
 entering extended mode
  restricted \write18 enabled.
  %&-line parsing enabled.
@@ -776,23 +776,23 @@ LaTeX Font Info:    External font `cmex10' loaded for size
 
  [2] [3]
 LaTeX Font Info:    External font `cmex10' loaded for size
-(Font)              <14.4> on input line 126.
+(Font)              <14.4> on input line 128.
 LaTeX Font Info:    External font `cmex10' loaded for size
-(Font)              <7> on input line 126.
+(Font)              <7> on input line 128.
  [4] [5] [6]
-Overfull \hbox (23.40042pt too wide) in paragraph at lines 177--179
+Overfull \hbox (23.40042pt too wide) in paragraph at lines 179--181
 []\TU/TimesNewRoman(0)/b/n/12 4. Nghiên cứu giải pháp trích xuất văn bản và tự 
 dựng cấu trúc tài liệu Word (DOCX/DOC
  []
 
 
-Overfull \hbox (18.58206pt too wide) in paragraph at lines 180--182
+Overfull \hbox (18.58206pt too wide) in paragraph at lines 182--184
 []\TU/TimesNewRoman(0)/b/n/12 5. Triển khai phân hệ quản lý và đóng dấu chữ ký 
 tay số (Digital Signature Management):
  []
 
 [7]
-Overfull \hbox (20.46487pt too wide) in paragraph at lines 194--195
+Overfull \hbox (20.46487pt too wide) in paragraph at lines 196--197
 []\TU/TimesNewRoman(0)/m/n/12 Kiến trúc dự án tuân thủ nghiêm ngặt mô hình Clea
 n Architecture (Data, Domain, Presentation)
  []
@@ -812,7 +812,7 @@ File: demo_app_store/1.png Graphic file (type bmp)
 File: demo_app_store/2.png Graphic file (type bmp)
 <demo_app_store/2.png>
 [8] [9] [10]
-Overfull \hbox (2.0232pt too wide) in paragraph at lines 278--278
+Overfull \hbox (2.0232pt too wide) in paragraph at lines 280--280
 [][]\TU/TimesNewRoman(0)/b/n/17.28 PHỤ LỤC: HÌNH ẢNH MINH HỌA GIAO DIỆN ỨNG DỤN
 G 
  []
@@ -831,7 +831,7 @@ File: cleanerguru/IMG_6863.PNG Graphic file (type bmp)
 File: cleanerguru/IMG_6868.PNG Graphic file (type bmp)
 <cleanerguru/IMG_6868.PNG>
 
-Underfull \hbox (badness 1127) in paragraph at lines 334--334
+Underfull \hbox (badness 1127) in paragraph at lines 336--336
 []\TU/TimesNewRoman(0)/m/n/12 Hình 8: []Giao diện Swipe Photos: đánh
  []
 
@@ -843,12 +843,12 @@ File: cleanerguru/IMG_6868.PNG Graphic file (type bmp)
 File: features/IMG_7576.PNG Graphic file (type bmp)
 <features/IMG_7576.PNG>
 
-Underfull \hbox (badness 1810) in paragraph at lines 366--366
+Underfull \hbox (badness 1810) in paragraph at lines 368--368
 []\TU/TimesNewRoman(0)/m/n/12 Hình 11: []Màn hình Convert chính với
  []
 
 
-Underfull \hbox (badness 1019) in paragraph at lines 366--366
+Underfull \hbox (badness 1019) in paragraph at lines 368--368
 \TU/TimesNewRoman(0)/m/n/12 5 nguồn nhập liệu: iCloud, Other App,
  []
 
@@ -877,7 +877,7 @@ File: features/IMG_7595.PNG Graphic file (type bmp)
 File: features/IMG_7585.PNG Graphic file (type bmp)
 <features/IMG_7585.PNG>
 
-Underfull \hbox (badness 6316) in paragraph at lines 462--462
+Underfull \hbox (badness 6316) in paragraph at lines 464--464
 []\TU/TimesNewRoman(0)/m/n/12 Hình 22: []Màn hình “Creating PDF”:
  []
 
@@ -885,12 +885,12 @@ Underfull \hbox (badness 6316) in paragraph at lines 462--462
 File: features/IMG_7586.PNG Graphic file (type bmp)
 <features/IMG_7586.PNG>
 
-Underfull \hbox (badness 10000) in paragraph at lines 474--474
+Underfull \hbox (badness 10000) in paragraph at lines 476--476
 []\TU/TimesNewRoman(0)/m/n/12 Hình 23: []Màn hình “PDF Exported
  []
 
 
-Underfull \hbox (badness 1077) in paragraph at lines 474--474
+Underfull \hbox (badness 1077) in paragraph at lines 476--476
 \TU/TimesNewRoman(0)/m/n/12 Successfully” và iOS Share Sheet: chia
  []
 
@@ -902,7 +902,7 @@ File: features/IMG_7588.PNG Graphic file (type bmp)
 File: features/IMG_7589.PNG Graphic file (type bmp)
 <features/IMG_7589.PNG>
 
-Underfull \hbox (badness 1009) in paragraph at lines 500--500
+Underfull \hbox (badness 1009) in paragraph at lines 502--502
 []\TU/TimesNewRoman(0)/m/n/12 Hình 26: []Canvas vẽ chữ ký tay (Draw
  []
 
@@ -914,24 +914,24 @@ File: features/IMG_7577.PNG Graphic file (type bmp)
 File: features/IMG_7578.PNG Graphic file (type bmp)
 <features/IMG_7578.PNG>
 
-Underfull \hbox (badness 1448) in paragraph at lines 529--529
+Underfull \hbox (badness 1448) in paragraph at lines 531--531
 \TU/TimesNewRoman(0)/m/n/12 Mode, Language, FAQ, Terms Of Use,
  []
 
 
-Underfull \hbox (badness 2547) in paragraph at lines 529--529
+Underfull \hbox (badness 2547) in paragraph at lines 531--531
 \TU/TimesNewRoman(0)/m/n/12 Privacy Policy, Contact Support, Share
  []
 
 File: features/IMG_7579.PNG Graphic file (type bmp)
 <features/IMG_7579.PNG>
 
-Underfull \hbox (badness 2961) in paragraph at lines 536--536
+Underfull \hbox (badness 2961) in paragraph at lines 538--538
 []\TU/TimesNewRoman(0)/m/n/12 Hình 30: []Màn hình Language: hỗ trợ
  []
 
 
-Underfull \hbox (badness 2351) in paragraph at lines 536--536
+Underfull \hbox (badness 2351) in paragraph at lines 538--538
 \TU/TimesNewRoman(0)/m/n/12 8 ngôn ngữ giao diện (English, Tiếng
  []
 

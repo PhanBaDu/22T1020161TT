@@ -38,6 +38,7 @@
         \renewcommand{\arraystretch}{1.2}
         \begin{tabular}{l l}
             \textbf{GIẢNG VIÊN HƯỚNG DẪN} & \textbf{: HOÀNG NGUYỄN TUẤN MINH} \\
+            \textbf{MENTOR HƯỚNG DẪN}     & \textbf{: PHAN BÁ ĐỦ} \\
             \textbf{SINH VIÊN THỰC HIỆN}  & \textbf{: NGUYỄN THỊ HUYỀN} \\
             \textbf{MÃ SINH VIÊN}         & \textbf{: 22T1020161} \\
             \textbf{TÊN LỚP HỌC PHẦN}     & \textbf{: THỰC TẬP TỐT NGHIỆP - NHÓM 21} \\
@@ -84,6 +85,7 @@ Lời đầu tiên, em xin bày tỏ lòng biết ơn chân thành nhất tới 
     \item \textbf{Lớp học phần:} Thực tập tốt nghiệp - Nhóm 21
     \item \textbf{Khoa:} Công nghệ Thông tin - Trường Đại học Khoa học Huế
     \item \textbf{Đơn vị thực tập:} CÔNG TY FAA VIỆT NAM
+    \item \textbf{Cán bộ hướng dẫn tại doanh nghiệp (Mentor):} Phan Bá Đủ
     \item \textbf{Thời gian thực tập:} Từ 09/03/2026 đến nay
 \end{itemize}
 
@@ -194,22 +196,25 @@ Em mong muốn thông qua đợt thực tập này, bản thân có thể thoát
 \section{BÁO CÁO TIẾN ĐỘ THEO TIMELINE}
 \subsection[Giai đoạn 1: Làm quen quy trình làm việc và công cụ (Từ 09/03/2026 đến 05/04/2026)]{Giai đoạn 1: Làm quen quy trình làm việc và công cụ \\(Từ 09/03/2026 $\rightarrow$ 05/04/2026)}
 \subsubsection{Công việc đã thực hiện}
-Giai đoạn đầu tiên của đợt thực tập là quá trình Onboarding (Hòa nhập môi trường) và điều chỉnh lại những kỹ năng còn hổng:
+Dưới sự dẫn dắt trực tiếp của Mentor Phan Bá Đủ, em đã bước vào giai đoạn hòa nhập môi trường doanh nghiệp (Onboarding) và củng cố kiến thức nền tảng:
 \begin{itemize}
-    \item \textbf{1. Quản lý mã nguồn với Git:} 
-    Em được hướng dẫn từ bỏ thói quen đẩy code trực tiếp lên nhánh chính (master) như hồi làm trên trường. Thay vào đó là thao tác tạo nhánh riêng (branching), commit thường xuyên với lời chú thích (Commit Message) theo chuẩn. Em bắt đầu tiếp xúc với việc xử lý xung đột code (Merge Conflict) và cách tạo Pull Request để Mentor duyệt trước khi code được đem đi dùng chung.
+    \item \textbf{1. Tìm hiểu quy trình vận hành và phối hợp dự án:}
+    Em được hướng dẫn chi tiết về quy trình Agile/Scrum đang áp dụng tại công ty. Học cách đọc đặc tả yêu cầu (Software Requirement Specification - SRS), cách phân rã các tính năng lớn thành các task nhỏ (Sub-tasks), ước lượng thời gian hoàn thành (Estimation) và quản lý tiến độ cá nhân thông qua các công cụ chuyên nghiệp như Jira và Trello. Đồng thời, em bắt đầu tham gia các buổi họp bàn giao tiến độ hàng ngày (Daily Stand-up) cùng team phát triển.
     
-    \item \textbf{2. Ứng dụng AI vào lập trình (Vibe Coding):} 
-    Công ty trang bị công cụ Cursor IDE và hướng dẫn cách làm việc với công nghệ AI (Vibe Coding) cực kỳ hiện đại. Thay vì copy-paste mù quáng, em học cách dóng bối cảnh (context) cho AI để nó nắm được kiến trúc thư mục dự án. Nhờ vậy, AI hỗ trợ sinh ra các đoạn code khung (boilerplate) chuẩn xác, viết test tự động, hoặc giải thích rất dễ hiểu các hàm do các lập trình viên cũ viết.
+    \item \textbf{2. Quản lý mã nguồn theo quy chuẩn Git Flow:}
+    Em được Mentor Phan Bá Đủ hướng dẫn từ bỏ thói quen đẩy code trực tiếp lên nhánh chính (master/main) như khi làm bài tập lớn trên trường. Thay vào đó, em được đào tạo bài bản về Git Flow: từ quy tắc đặt tên nhánh tính năng (feature branches), quy định viết nội dung Commit Message chuẩn hóa (theo Convention Commits), thực hiện Pull Request (PR) và quy trình Code Review nghiêm ngặt. Mentor cũng hướng dẫn cách giải quyết xung đột mã nguồn (Merge Conflict) một cách an toàn để tránh ảnh hưởng đến các thành viên khác.
     
-    \item \textbf{3. Kiến trúc tối ưu giao diện cơ bản:}
-    Được dự các buổi Tech-sync (trao đổi kỹ thuật nội bộ) của team để hiểu cách các thao tác đồ hoạ tiêu thụ bộ nhớ RAM, học được kinh nghiệm là phải tính toán độ nặng của layout trước khi thực sự vẽ nó ra khối lệnh.
+    \item \textbf{3. Phương pháp lập trình kết hợp AI (Vibe Coding):}
+    Em được trang bị công cụ soạn thảo hiện đại Cursor IDE kết hợp với các mô hình ngôn ngữ lớn (LLM). Dưới sự định hướng của Mentor, em không lạm dụng copy-paste mù quáng mà học cách cấu trúc bối cảnh (context positioning) cho AI để nó nắm được kiến trúc thư mục dự án. Điều này giúp tận dụng tối đa AI để sinh mã nguồn khung (boilerplate code) nhanh chóng, viết các kịch bản kiểm thử tự động (Unit Test), và phân tích các module mã nguồn cũ trong codebase của công ty một cách hiệu quả.
+    
+    \item \textbf{4. Nghiên cứu cấu trúc dự án và tối ưu hóa giao diện:}
+    Em dành thời gian đọc hiểu codebase của hai dự án chính: Cleaner Guru và PDF Converter \& Scanner. Được tham gia các buổi Tech-sync kỹ thuật hàng tuần của nhóm để học hỏi kinh nghiệm tối ưu hóa giao diện (UI Rendering performance) và cơ chế quản lý vòng đời Widget trong Flutter.
 \end{itemize}
 
-\subsubsection{Kết quả hoàn thiện}
+\subsubsection{Kết quả đạt được và kiến thức tích lũy}
 \begin{itemize}
-    \item Làm quen thành công với nhịp điệu của team, thao tác kiểm soát Git khá mượt mà, không còn lo gây vỡ dự án chung.
-    \item Tốc độ viết code khung tăng lên đáng kể, giảm thời gian gõ hàm lặp đi lặp lại nhờ biết kiểm soát AI đúng cách.
+    \item \textbf{Về mặt quy trình:} Thích nghi tốt với nhịp độ làm việc của dự án, biết cách làm việc nhóm chuyên nghiệp, tự tin sử dụng Git Flow và các công cụ quản lý công việc mà không gây ảnh hưởng đến tiến độ chung.
+    \item \textbf{Về mặt kỹ thuật:} Hiểu sâu sắc cách tổ chức một dự án Flutter thực tế theo mô hình phân lớp (Clean Architecture), nắm vững kỹ năng sử dụng Cursor AI để nâng cao hiệu suất làm việc mà vẫn đảm bảo tính an toàn của mã nguồn.
 \end{itemize}
 
 \subsection[Giai đoạn 2: Trực tiếp xây dựng module dự án Cleaner Guru (Từ 06/04/2026 đến 04/05/2026)]{Giai đoạn 2: Trực tiếp xây dựng module dự án Cleaner Guru \\(Từ 06/04/2026 $\rightarrow$ 04/05/2026)}
@@ -393,23 +398,34 @@ Giai đoạn đầu tiên của đợt thực tập là quá trình Onboarding (
 
 
 \section{TỰ ĐÁNH GIÁ VÀ BÀI HỌC KINH NGHIỆM}
-\subsection{Điểm mạnh đạt được}
+
+\subsection{Điểm mạnh đạt được và Kỹ năng tích lũy}
+Trải qua quá trình thực tập đầy thử thách tại FAA Việt Nam dưới sự chỉ bảo tận tình của Mentor Phan Bá Đủ, em tự nhận thấy bản thân đã đạt được những bước tiến bộ vượt bậc:
 \begin{itemize}
-    \item Khả năng tự nghiên cứu và làm chủ các kỹ thuật lập trình Mobile nâng cao như xử lý luồng ngầm (Isolate), giao tiếp nền tảng Native Core.
-    \item Chủ động nghiên cứu cấu trúc định dạng tài liệu Office Open XML (OOXML) phức tạp để xây dựng thành công giải pháp chuyển đổi tệp ngoại tuyến.
-    \item Làm quen và thích nghi nhanh chóng với quy trình làm việc chuẩn nghiệp vụ của doanh nghiệp (Agile/Scrum, Git Flow) và Cursor AI.
-    \item Thiết kế và lập trình thành công hệ thống chữ ký tay và tương tác kéo thả, xoay chữ ký có độ phức tạp cao hoàn toàn mượt mà.
+    \item \textbf{Khả năng tự nghiên cứu và giải quyết bài toán khó:} Em đã tự tin làm chủ được các kỹ thuật lập trình nâng cao trong Flutter như: tối ưu hiệu năng đồ họa, xử lý đa luồng bất đồng bộ với Isolate, và sử dụng Method Channel để giao tiếp và gọi trực tiếp các thư viện Native Core (iOS).
+    \item \textbf{Tư duy tối ưu hóa hiệu năng:} Việc giải quyết thành công lỗi tràn RAM (Out of Memory) khi xử lý hàng vạn ảnh chụp trong thiết bị của dự án Cleaner Guru đã rèn luyện cho em thói quen luôn chú trọng đến hiệu suất phần cứng và tài nguyên hệ thống (RAM/CPU/Pin) thay vì chỉ quan tâm đến tính đúng đắn của tính năng.
+    \item \textbf{Năng lực nghiên cứu tài liệu đặc tả sâu:} Xây dựng thành công bộ khung chuyển đổi định dạng Office Open XML (OOXML) offline giúp em nâng cao khả năng phân tích cấu trúc nhị phân và tài liệu kỹ thuật dài bằng tiếng Anh.
+    \item \textbf{Kỹ năng làm việc chuyên nghiệp:} Thích nghi tốt với môi trường doanh nghiệp năng động, sử dụng thành thạo Cursor AI kết hợp với quy trình Agile/Scrum giúp tối ưu hiệu suất viết code của bản thân.
 \end{itemize}
-\subsection{Hạn chế cần cải thiện}
+
+\subsection{Những hạn chế cần khắc phục}
+Bên cạnh những kết quả đạt được, em cũng nhận ra những điểm còn thiếu sót để tiếp tục cải thiện trong thời gian tới:
 \begin{itemize}
-    \item Lõi trích xuất văn bản offline viết bằng Dart thuần chưa có độ chính xác tuyệt đối như OCR học máy, mới chỉ hỗ trợ văn bản gốc.
-    \item Khả năng thiết kế hệ thống sơ đồ kiến trúc ứng dụng ban đầu vẫn cần được mài giũa thêm để trao đổi tốt hơn với các Mentor.
+    \item \textbf{Hạn chế kỹ thuật:} Thuật toán trích xuất nội dung văn bản offline viết bằng Dart thuần tuy chạy tốt cho các file văn bản gốc cơ bản nhưng chưa thể thay thế được các thư viện OCR trí tuệ nhân tạo chuyên sâu cho các file tài liệu quét phức tạp hoặc chữ viết tay.
+    \item \textbf{Kỹ năng biểu diễn sơ đồ hệ thống:} Trong giai đoạn đầu thiết kế luồng xử lý và vẽ sơ đồ UML, em còn gặp khó khăn trong việc chuẩn hóa các ký hiệu theo chuẩn mực quốc tế, cần dành thời gian nghiên cứu sâu hơn về System Design.
+\end{itemize}
+
+\subsection{Bài học kinh nghiệm rút ra}
+Kỳ thực tập tốt nghiệp này đã mang lại cho em những bài học xương máu:
+\begin{itemize}
+    \item \textbf{Sự khác biệt giữa lý thuyết và thực tiễn:} Một sản phẩm thương mại đòi hỏi tính ổn định và tính bảo mật cực kỳ cao trên nhiều dòng máy khác nhau, khác xa với các bài tập lớn trên trường vốn chỉ cần chạy được trên máy cá nhân của sinh viên.
+    \item \textbf{Tầm quan trọng của Clean Code:} Viết code không chỉ để máy chạy, mà là để cho đồng nghiệp đọc và dễ bảo trì. Việc tuân thủ kiến trúc Clean Architecture giúp dự án dễ dàng mở rộng và nâng cấp sau này.
 \end{itemize}
 
 \section{KẾT QUẢ TỔNG THỂ VÀ KẾT LUẬN}
 \begin{itemize}
     \item \textbf{Kết quả thực tập:} Hoàn thành xuất sắc nhiệm vụ phát triển module dọn dẹp ảnh cho ứng dụng \textit{Cleaner Guru} và xây dựng bộ công cụ chuyển đổi tài liệu đa năng ngoại tuyến cho ứng dụng \textit{PDF Converter \& Scanner} chạy mượt mà trên thiết bị di động iOS.
-    \item \textbf{Ý nghĩa học kỳ thực tập:} Kỳ thực tập tốt nghiệp tại FAA Việt Nam đã giúp em thay đổi hoàn toàn tư duy phát triển phần mềm, hiểu rõ quy chuẩn phát triển một sản phẩm thương mại thực tế.
+    \item \textbf{Ý nghĩa học kỳ thực tập:} Kỳ thực tập tốt nghiệp tại FAA Việt Nam đã giúp em thay đổi hoàn toàn tư duy phát triển phần mềm, hiểu rõ quy chuẩn phát triển một sản phẩm thương mại thực tế dưới sự hỗ trợ đắc lực của Mentor Phan Bá Đủ.
     \item \textbf{Định hướng nghề nghiệp:} Tiếp tục nghiên cứu sâu về lập trình ứng dụng di động Flutter chuyên sâu, tích hợp thêm các công nghệ xử lý hình ảnh và học máy ngay trên thiết bị di động để tối ưu hóa bảo mật và hiệu suất ứng dụng.
 \end{itemize}
 
