@@ -1,4 +1,4 @@
-This is XeTeX, Version 3.141592653-2.6-0.999998 (TeX Live 2026) (preloaded format=xelatex 2026.6.6)  7 JUN 2026 01:53
+This is XeTeX, Version 3.141592653-2.6-0.999998 (TeX Live 2026) (preloaded format=xelatex 2026.6.6)  7 JUN 2026 02:05
 entering extended mode
  restricted \write18 enabled.
  %&-line parsing enabled.
@@ -811,11 +811,21 @@ File: cleanerguru/IMG_6851.PNG Graphic file (type bmp)
 <cleanerguru/IMG_6851.PNG>
 File: cleanerguru/IMG_6850.PNG Graphic file (type bmp)
 <cleanerguru/IMG_6850.PNG>
+
+Underfull \hbox (badness 4429) in paragraph at lines 497--497
+[]\TU/TimesNewRoman(0)/m/n/12 Hình 8: []Màn hình Remove Duplicate
+ []
+
 File: cleanerguru/IMG_6854.PNG Graphic file (type bmp)
 <cleanerguru/IMG_6854.PNG>
+
+Underfull \hbox (badness 1496) in paragraph at lines 507--507
+[]\TU/TimesNewRoman(0)/m/n/12 Hình 9: []Màn hình Memory Boost: mô
+ []
+
 File: cleanerguru/IMG_6853.PNG Graphic file (type bmp)
 <cleanerguru/IMG_6853.PNG>
- [17]
+[17]
 File: cleanerguru/IMG_6863.PNG Graphic file (type bmp)
 <cleanerguru/IMG_6863.PNG>
 File: cleanerguru/IMG_6868.PNG Graphic file (type bmp)
@@ -837,116 +847,99 @@ Underfull \hbox (badness 1019) in paragraph at lines 565--565
 \TU/TimesNewRoman(0)/m/n/12 5 nguồn nhập liệu: iCloud, Other App,
  []
 
-File: features/IMG_7592.PNG Graphic file (type bmp)
-<features/IMG_7592.PNG>
 File: features/IMG_7593.PNG Graphic file (type bmp)
 <features/IMG_7593.PNG>
-File: features/IMG_7584.PNG Graphic file (type bmp)
-<features/IMG_7584.PNG>
+File: features/IMG_7594.PNG Graphic file (type bmp)
+<features/IMG_7594.PNG>
+File: features/IMG_7585.PNG Graphic file (type bmp)
+<features/IMG_7585.PNG>
 [20]
 File: features/IMG_7580.PNG Graphic file (type bmp)
 <features/IMG_7580.PNG>
-File: features/IMG_7581.PNG Graphic file (type bmp)
-<features/IMG_7581.PNG>
 File: features/IMG_7582.PNG Graphic file (type bmp)
 <features/IMG_7582.PNG>
 File: features/IMG_7583.PNG Graphic file (type bmp)
 <features/IMG_7583.PNG>
+File: features/IMG_7584.PNG Graphic file (type bmp)
+<features/IMG_7584.PNG>
  [21] [22]
-File: features/IMG_7591.PNG Graphic file (type bmp)
-<features/IMG_7591.PNG>
-File: features/IMG_7594.PNG Graphic file (type bmp)
-<features/IMG_7594.PNG>
+File: features/IMG_7592.PNG Graphic file (type bmp)
+<features/IMG_7592.PNG>
 File: features/IMG_7595.PNG Graphic file (type bmp)
 <features/IMG_7595.PNG>
-File: features/IMG_7585.PNG Graphic file (type bmp)
-<features/IMG_7585.PNG>
+File: features/IMG_7586.PNG Graphic file (type bmp)
+<features/IMG_7586.PNG>
+File: features/IMG_7587.PNG Graphic file (type bmp)
+<features/IMG_7587.PNG>
 
-Underfull \hbox (badness 6316) in paragraph at lines 661--661
-[]\TU/TimesNewRoman(0)/m/n/12 Hình 26: []Màn hình “Creating PDF”:
+Underfull \hbox (badness 10000) in paragraph at lines 661--661
+[]\TU/TimesNewRoman(0)/m/n/12 Hình 26: []Màn hình PDF Exported
  []
 
 [23]
-File: features/IMG_7586.PNG Graphic file (type bmp)
-<features/IMG_7586.PNG>
-
-Underfull \hbox (badness 10000) in paragraph at lines 673--673
-[]\TU/TimesNewRoman(0)/m/n/12 Hình 27: []Màn hình “PDF Exported
- []
-
-
-Underfull \hbox (badness 1077) in paragraph at lines 673--673
-\TU/TimesNewRoman(0)/m/n/12 Successfully” và iOS Share Sheet: chia
- []
-
-File: features/IMG_7587.PNG Graphic file (type bmp)
-<features/IMG_7587.PNG>
-[24]
 File: features/IMG_7588.PNG Graphic file (type bmp)
 <features/IMG_7588.PNG>
 File: features/IMG_7589.PNG Graphic file (type bmp)
 <features/IMG_7589.PNG>
-
-Underfull \hbox (badness 1009) in paragraph at lines 699--699
-[]\TU/TimesNewRoman(0)/m/n/12 Hình 30: []Canvas vẽ chữ ký tay (Draw
- []
-
+ [24]
 File: features/IMG_7590.PNG Graphic file (type bmp)
 <features/IMG_7590.PNG>
+File: features/IMG_7591.PNG Graphic file (type bmp)
+<features/IMG_7591.PNG>
+ [25]
 File: features/IMG_7577.PNG Graphic file (type bmp)
 <features/IMG_7577.PNG>
-[25] [26]
 File: features/IMG_7578.PNG Graphic file (type bmp)
 <features/IMG_7578.PNG>
 
-Underfull \hbox (badness 1448) in paragraph at lines 728--728
-\TU/TimesNewRoman(0)/m/n/12 Mode, Language, FAQ, Terms Of Use,
+Underfull \hbox (badness 10000) in paragraph at lines 718--718
+\TU/TimesNewRoman(0)/m/n/12 tùy chỉnh Dark Mode,
  []
 
 
-Underfull \hbox (badness 2547) in paragraph at lines 728--728
-\TU/TimesNewRoman(0)/m/n/12 Privacy Policy, Contact Support, Share
+Underfull \hbox (badness 4819) in paragraph at lines 718--718
+\TU/TimesNewRoman(0)/m/n/12 Language và các mục hỗ
  []
 
 File: features/IMG_7579.PNG Graphic file (type bmp)
 <features/IMG_7579.PNG>
 
-Underfull \hbox (badness 2961) in paragraph at lines 735--735
-[]\TU/TimesNewRoman(0)/m/n/12 Hình 34: []Màn hình Language: hỗ trợ
+Underfull \hbox (badness 10000) in paragraph at lines 725--725
+[]\TU/TimesNewRoman(0)/m/n/12 Hình 33: []Màn hình
  []
 
 
-Underfull \hbox (badness 2351) in paragraph at lines 735--735
-\TU/TimesNewRoman(0)/m/n/12 8 ngôn ngữ giao diện (English, Tiếng
+Underfull \hbox (badness 1694) in paragraph at lines 725--725
+\TU/TimesNewRoman(0)/m/n/12 Việt, Japanese, Français và
  []
 
-[27]
-Underfull \hbox (badness 2261) in paragraph at lines 748--749
+[26]
+Underfull \hbox (badness 2261) in paragraph at lines 738--739
 []\TU/TimesNewRoman(0)/b/n/12 Apple Developer Documentation - PhotoKit: []$[][]
 [][][] [] [] [] [][][][][][][][][] [] [][][][][] [] [][][] []
  []
 
 
-Underfull \hbox (badness 10000) in paragraph at lines 750--751
+Underfull \hbox (badness 10000) in paragraph at lines 740--741
 []\TU/TimesNewRoman(0)/b/n/12 Office Open XML (OOXML) File Formats Standard: []
 $[][][][][] [] [] []
  []
 
-[28] (./main.aux)
+[27] (./main.aux)
  ***********
 LaTeX2e <2025-11-01>
 L3 programming layer <2026-01-19>
  ***********
 Package rerunfilecheck Info: File `main.out' has not changed.
-(rerunfilecheck)             Checksum: 44BC3BB1B4A3FE049ABDE45D4C490E8C;9874.
+(rerunfilecheck)             Checksum: 3E08DED5985BBF20A9990F5E8667C71F;9898.
  ) 
 Here is how much of TeX's memory you used:
- 23218 strings out of 469709
- 490933 string characters out of 5466024
- 931862 words of memory out of 5000000
- 51452 multiletter control sequences out of 15000+600000
+ 23208 strings out of 469709
+ 490683 string characters out of 5466024
+ 931611 words of memory out of 5000000
+ 51443 multiletter control sequences out of 15000+600000
  631946 words of font info for 80 fonts, out of 8000000 for 9000
  319 hyphenation exceptions out of 8191
  89i,8n,97p,943b,853s stack positions out of 10000i,1000n,20000p,200000b,200000s
 
-Output written on main.pdf (29 pages).
+Output written on main.pdf (28 pages).

@@ -26,15 +26,15 @@
 \contentsline {section}{\numberline {6}KẾT LUẬN VÀ KIẾN NGHỊ}{16}{section.6}%
 \contentsline {subsection}{\numberline {6.1}Kết luận}{16}{subsection.6.1}%
 \contentsline {subsection}{\numberline {6.2}Kiến nghị và Hướng phát triển}{16}{subsection.6.2}%
-\contentsline {section}{\numberline {7}HÌNH ẢNH MINH HỌA GIAO DIỆN ỨNG DỤNG}{17}{section.7}%
+\contentsline {section}{\numberline {7}HÌNH ẢNH THỰC TẾ GIAO DIỆN ỨNG DỤNG}{17}{section.7}%
 \contentsline {subsection}{\numberline {7.1}Dự án Cleaner Guru}{17}{subsection.7.1}%
 \contentsline {subsubsection}{\numberline {7.1.1}Màn hình Onboarding}{17}{subsubsection.7.1.1}%
 \contentsline {subsubsection}{\numberline {7.1.2}Màn hình Tính năng Chính}{18}{subsubsection.7.1.2}%
 \contentsline {subsection}{\numberline {7.2}Dự án PDF Converter \& Scanner}{20}{subsection.7.2}%
 \contentsline {subsubsection}{\numberline {7.2.1}Màn hình Convert và luồng nhập liệu đa nguồn}{20}{subsubsection.7.2.1}%
 \contentsline {subsubsection}{\numberline {7.2.2}Quét tài liệu qua Camera và hiệu chỉnh phối cảnh}{21}{subsubsection.7.2.2}%
-\contentsline {subsubsection}{\numberline {7.2.3}Bộ chỉnh sửa ảnh nâng cao và chọn định dạng đích}{23}{subsubsection.7.2.3}%
-\contentsline {subsubsection}{\numberline {7.2.4}Xuất tệp PDF và xem trước tài liệu}{24}{subsubsection.7.2.4}%
+\contentsline {subsubsection}{\numberline {7.2.3}Bộ chỉnh sửa ảnh, chọn định dạng và tạo PDF}{23}{subsubsection.7.2.3}%
+\contentsline {subsubsection}{\numberline {7.2.4}Xem trước PDF và lựa chọn chữ ký}{24}{subsubsection.7.2.4}%
 \contentsline {subsubsection}{\numberline {7.2.5}Phân hệ Chữ ký tay số (Digital Signature)}{25}{subsubsection.7.2.5}%
-\contentsline {subsubsection}{\numberline {7.2.6}Cài đặt ứng dụng và Đa ngôn ngữ}{27}{subsubsection.7.2.6}%
-\contentsline {section}{\numberline {8}TÀI LIỆU THAM KHẢO}{28}{section.8}%
+\contentsline {subsubsection}{\numberline {7.2.6}Lịch sử chuyển đổi, cài đặt và đa ngôn ngữ}{26}{subsubsection.7.2.6}%
+\contentsline {section}{\numberline {8}TÀI LIỆU THAM KHẢO}{27}{section.8}%
