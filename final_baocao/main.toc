@@ -6,28 +6,35 @@
 \contentsline {subsection}{\numberline {2.1}Mục tiêu tổng quát}{5}{subsection.2.1}%
 \contentsline {subsection}{\numberline {2.2}Mục tiêu cụ thể}{5}{subsection.2.2}%
 \contentsline {section}{\numberline {3}TỔNG QUAN CÔNG VIỆC ĐƯỢC GIAO}{6}{section.3}%
-\contentsline {subsection}{\numberline {3.1}Sơ đồ UML Use Case các hệ thống phát triển}{6}{subsection.3.1}%
 \contentsline {section}{\numberline {4}BÁO CÁO TIẾN ĐỘ THEO TIMELINE}{6}{section.4}%
 \contentsline {subsection}{\numberline {4.1}Giai đoạn 1: Làm quen quy trình làm việc và công cụ (Từ 09/03/2026 đến 05/04/2026)}{6}{subsection.4.1}%
 \contentsline {subsubsection}{\numberline {4.1.1}Công việc đã thực hiện}{6}{subsubsection.4.1.1}%
-\contentsline {subsubsection}{\numberline {4.1.2}Kết quả đạt được và kiến thức tích lũy}{8}{subsubsection.4.1.2}%
-\contentsline {subsection}{\numberline {4.2}Giai đoạn 2: Trực tiếp xây dựng module dự án Cleaner Guru (Từ 06/04/2026 đến 04/05/2026)}{8}{subsection.4.2}%
+\contentsline {subsubsection}{\numberline {4.1.2}Kết quả đạt được và kiến thức tích lũy}{7}{subsubsection.4.1.2}%
+\contentsline {subsection}{\numberline {4.2}Giai đoạn 2: Trực tiếp xây dựng module dự án Cleaner Guru (Từ 06/04/2026 đến 04/05/2026)}{7}{subsection.4.2}%
 \contentsline {subsubsection}{\numberline {4.2.1}Công việc cụ thể}{8}{subsubsection.4.2.1}%
 \contentsline {subsubsection}{\numberline {4.2.2}Kết quả đạt được}{9}{subsubsection.4.2.2}%
-\contentsline {subsection}{\numberline {4.3}Giai đoạn 3: Nghiên cứu và phát triển ứng dụng PDF Converter \& Scanner (Từ 05/05/2026 đến 20/05/2026)}{9}{subsection.4.3}%
-\contentsline {subsubsection}{\numberline {4.3.1}Công việc cụ thể}{9}{subsubsection.4.3.1}%
-\contentsline {subsubsection}{\numberline {4.3.2}Kết quả đạt được}{11}{subsubsection.4.3.2}%
-\contentsline {subsection}{\numberline {4.4}Giai đoạn 4: Hoàn thiện, Kiểm thử và Tối ưu hóa hệ thống (Từ 21/05/2026 đến nay)}{12}{subsection.4.4}%
-\contentsline {subsubsection}{\numberline {4.4.1}Công việc cụ thể}{12}{subsubsection.4.4.1}%
+\contentsline {subsection}{\numberline {4.3}Giai đoạn 3: Nghiên cứu và phát triển ứng dụng PDF Converter \& Scanner (Từ 05/05/2026 đến 20/05/2026)}{10}{subsection.4.3}%
+\contentsline {subsubsection}{\numberline {4.3.1}Công việc cụ thể}{10}{subsubsection.4.3.1}%
+\contentsline {subsubsection}{\numberline {4.3.2}Kết quả đạt được}{12}{subsubsection.4.3.2}%
+\contentsline {subsection}{\numberline {4.4}Giai đoạn 4: Hoàn thiện, Kiểm thử và Tối ưu hóa hệ thống (Từ 21/05/2026 đến 07/06/2026)}{13}{subsection.4.4}%
+\contentsline {subsubsection}{\numberline {4.4.1}Công việc cụ thể}{13}{subsubsection.4.4.1}%
 \contentsline {subsubsection}{\numberline {4.4.2}Kết quả đạt được}{13}{subsubsection.4.4.2}%
 \contentsline {section}{\numberline {5}TỰ ĐÁNH GIÁ VÀ BÀI HỌC KINH NGHIỆM}{14}{section.5}%
 \contentsline {subsection}{\numberline {5.1}Điểm mạnh đạt được và Kỹ năng tích lũy}{14}{subsection.5.1}%
-\contentsline {subsection}{\numberline {5.2}Những hạn chế cần khắc phục}{14}{subsection.5.2}%
-\contentsline {subsection}{\numberline {5.3}Bài học kinh nghiệm rút ra}{14}{subsection.5.3}%
-\contentsline {section}{\numberline {6}KẾT LUẬN VÀ KIẾN NGHỊ}{15}{section.6}%
-\contentsline {subsection}{\numberline {6.1}Kết luận}{15}{subsection.6.1}%
-\contentsline {subsection}{\numberline {6.2}Kiến nghị và Hướng phát triển}{15}{subsection.6.2}%
-\contentsline {section}{\numberline {7}HÌNH ẢNH MINH HỌA GIAO DIỆN ỨNG DỤNG}{16}{section.7}%
-\contentsline {subsection}{\numberline {7.1}Dự án Cleaner Guru}{16}{subsection.7.1}%
-\contentsline {subsection}{\numberline {7.2}Dự án PDF Converter \& Scanner}{19}{subsection.7.2}%
-\contentsline {section}{\numberline {8}TÀI LIỆU THAM KHẢO}{27}{section.8}%
+\contentsline {subsection}{\numberline {5.2}Những hạn chế cần khắc phục}{15}{subsection.5.2}%
+\contentsline {subsection}{\numberline {5.3}Bài học kinh nghiệm rút ra}{15}{subsection.5.3}%
+\contentsline {section}{\numberline {6}KẾT LUẬN VÀ KIẾN NGHỊ}{16}{section.6}%
+\contentsline {subsection}{\numberline {6.1}Kết luận}{16}{subsection.6.1}%
+\contentsline {subsection}{\numberline {6.2}Kiến nghị và Hướng phát triển}{16}{subsection.6.2}%
+\contentsline {section}{\numberline {7}HÌNH ẢNH MINH HỌA GIAO DIỆN ỨNG DỤNG}{17}{section.7}%
+\contentsline {subsection}{\numberline {7.1}Dự án Cleaner Guru}{17}{subsection.7.1}%
+\contentsline {subsubsection}{\numberline {7.1.1}Màn hình Onboarding}{17}{subsubsection.7.1.1}%
+\contentsline {subsubsection}{\numberline {7.1.2}Màn hình Tính năng Chính}{18}{subsubsection.7.1.2}%
+\contentsline {subsection}{\numberline {7.2}Dự án PDF Converter \& Scanner}{20}{subsection.7.2}%
+\contentsline {subsubsection}{\numberline {7.2.1}Màn hình Convert và luồng nhập liệu đa nguồn}{20}{subsubsection.7.2.1}%
+\contentsline {subsubsection}{\numberline {7.2.2}Quét tài liệu qua Camera và hiệu chỉnh phối cảnh}{21}{subsubsection.7.2.2}%
+\contentsline {subsubsection}{\numberline {7.2.3}Bộ chỉnh sửa ảnh nâng cao và chọn định dạng đích}{23}{subsubsection.7.2.3}%
+\contentsline {subsubsection}{\numberline {7.2.4}Xuất tệp PDF và xem trước tài liệu}{24}{subsubsection.7.2.4}%
+\contentsline {subsubsection}{\numberline {7.2.5}Phân hệ Chữ ký tay số (Digital Signature)}{25}{subsubsection.7.2.5}%
+\contentsline {subsubsection}{\numberline {7.2.6}Cài đặt ứng dụng và Đa ngôn ngữ}{27}{subsubsection.7.2.6}%
+\contentsline {section}{\numberline {8}TÀI LIỆU THAM KHẢO}{28}{section.8}%
