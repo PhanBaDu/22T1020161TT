@@ -1,33 +1,41 @@
 \xpg@aux {}{vietnamese}
 \contentsline {section}{LỜI CẢM ƠN}{1}{section*.1}%
-\contentsline {section}{\numberline {1}THÔNG TIN CHUNG}{4}{section.1}%
-\contentsline {section}{\numberline {2}MỤC TIÊU THỰC TẬP}{4}{section.2}%
-\contentsline {subsection}{\numberline {2.1}Mục tiêu tổng quát}{4}{subsection.2.1}%
-\contentsline {subsection}{\numberline {2.2}Mục tiêu cụ thể}{4}{subsection.2.2}%
-\contentsline {section}{\numberline {3}TỔNG QUAN CÔNG VIỆC ĐƯỢC GIAO}{5}{section.3}%
-\contentsline {subsection}{\numberline {3.1}Sơ đồ UML Use Case phân hệ công việc}{5}{subsection.3.1}%
-\contentsline {section}{\numberline {4}BÁO CÁO TIẾN ĐỘ THEO TIMELINE}{7}{section.4}%
-\contentsline {subsection}{\numberline {4.1}Giai đoạn 1: Onboarding và Đào tạo quy trình (Từ 01/06/2025 đến 30/06/2025)}{7}{subsection.4.1}%
-\contentsline {subsubsection}{\numberline {4.1.1}Tiếp cận quy trình Agile/Scrum và Quản trị dự án}{7}{subsubsection.4.1.1}%
-\contentsline {subsubsection}{\numberline {4.1.2}Chuẩn hóa kỹ năng Version Control và Cộng tác nhóm}{7}{subsubsection.4.1.2}%
-\contentsline {subsubsection}{\numberline {4.1.3}Nghiên cứu kiến trúc dự án và Thiết lập môi trường}{7}{subsubsection.4.1.3}%
-\contentsline {subsection}{\numberline {4.2}Giai đoạn 2: Trực tiếp tham gia phát triển sản phẩm (Từ 01/07/2025 đến 28/02/2026)}{8}{subsection.4.2}%
-\contentsline {subsubsection}{\numberline {4.2.1}Dự án Blood Sugar (Nhóm phát triển: 6 thành viên)}{8}{subsubsection.4.2.1}%
-\contentsline {subsubsection}{\numberline {4.2.2}Dự án Blood Pressure (Nhóm phát triển: 3 thành viên)}{8}{subsubsection.4.2.2}%
-\contentsline {subsubsection}{\numberline {4.2.3}Dự án Blood Pressure (Dự án cá nhân - Độc lập phát triển)}{9}{subsubsection.4.2.3}%
-\contentsline {subsection}{\numberline {4.3}Giai đoạn 3: Tối ưu hóa và Phát triển các ứng dụng mới (Từ 01/03/2026 đến 30/04/2026)}{9}{subsection.4.3}%
-\contentsline {subsubsection}{\numberline {4.3.1}Dự án Cleaner Guru - Hệ thống dọn dẹp ảnh thông minh}{10}{subsubsection.4.3.1}%
-\contentsline {subsubsection}{\numberline {4.3.2}Dự án Push Up - Fitness Monitoring AI}{10}{subsubsection.4.3.2}%
-\contentsline {subsection}{\numberline {4.4}Giai đoạn 4: Phát triển ứng dụng PDF Converter, tối ưu Ads và phát hành sản phẩm (Từ 01/05/2026 đến 20/05/2026)}{11}{subsection.4.4}%
-\contentsline {subsubsection}{\numberline {4.4.1}Dự án PDF Converter \& Scanner (Nhóm phát triển: 3 thành viên)}{11}{subsubsection.4.4.1}%
-\contentsline {subsubsection}{\numberline {4.4.2}Dự án Cleaner Guru - Tối ưu hóa doanh thu quảng cáo (Ads Optimization)}{12}{subsubsection.4.4.2}%
-\contentsline {subsubsection}{\numberline {4.4.3}Dự án Ad-Free Blood Pressure App - Phát hành và tối ưu tăng trưởng}{13}{subsubsection.4.4.3}%
-\contentsline {subsection}{\numberline {4.5}Giai đoạn 5: Kiểm thử, Tối ưu hóa hệ thống và Báo cáo (Từ 21/05/2026 đến nay)}{13}{subsection.4.5}%
-\contentsline {subsubsection}{\numberline {4.5.1}Công việc cụ thể}{13}{subsubsection.4.5.1}%
-\contentsline {subsubsection}{\numberline {4.5.2}Kết quả đạt được}{15}{subsubsection.4.5.2}%
-\contentsline {section}{\numberline {5}TỰ ĐÁNH GIÁ VÀ BÀI HỌC KINH NGHIỆM}{15}{section.5}%
-\contentsline {subsection}{\numberline {5.1}Điểm mạnh đạt được và Sự trưởng thành về chuyên môn}{15}{subsection.5.1}%
-\contentsline {subsection}{\numberline {5.2}Hạn chế cần tiếp tục hoàn thiện}{15}{subsection.5.2}%
-\contentsline {subsection}{\numberline {5.3}Bài học kinh nghiệm rút ra}{16}{subsection.5.3}%
-\contentsline {section}{\numberline {6}KẾT QUẢ TỔNG THỂ VÀ KẾT LUẬN}{16}{section.6}%
-\contentsline {section}{PHỤ LỤC: HÌNH ẢNH MINH HỌA GIAO DIỆN ỨNG DỤNG}{17}{section*.3}%
+\contentsline {section}{LỜI MỞ ĐẦU}{2}{section*.2}%
+\contentsline {section}{\numberline {1}THÔNG TIN CHUNG}{5}{section.1}%
+\contentsline {section}{\numberline {2}MỤC TIÊU THỰC TẬP}{5}{section.2}%
+\contentsline {subsection}{\numberline {2.1}Mục tiêu tổng quát}{5}{subsection.2.1}%
+\contentsline {subsection}{\numberline {2.2}Mục tiêu cụ thể}{5}{subsection.2.2}%
+\contentsline {section}{\numberline {3}TỔNG QUAN CÔNG VIỆC ĐƯỢC GIAO}{6}{section.3}%
+\contentsline {subsection}{\numberline {3.1}Sơ đồ UML Use Case phân hệ công việc}{6}{subsection.3.1}%
+\contentsline {section}{\numberline {4}BÁO CÁO TIẾN ĐỘ THEO TIMELINE}{8}{section.4}%
+\contentsline {subsection}{\numberline {4.1}Giai đoạn 1: Onboarding và Đào tạo quy trình (Từ 01/06/2025 đến 30/06/2025)}{8}{subsection.4.1}%
+\contentsline {subsubsection}{\numberline {4.1.1}Tiếp cận quy trình Agile/Scrum và Quản trị dự án}{8}{subsubsection.4.1.1}%
+\contentsline {subsubsection}{\numberline {4.1.2}Chuẩn hóa kỹ năng Version Control và Cộng tác nhóm}{8}{subsubsection.4.1.2}%
+\contentsline {subsubsection}{\numberline {4.1.3}Nghiên cứu kiến trúc dự án và Thiết lập môi trường}{8}{subsubsection.4.1.3}%
+\contentsline {subsection}{\numberline {4.2}Giai đoạn 2: Trực tiếp tham gia phát triển sản phẩm (Từ 01/07/2025 đến 28/02/2026)}{9}{subsection.4.2}%
+\contentsline {subsubsection}{\numberline {4.2.1}Dự án Blood Sugar (Nhóm phát triển: 6 thành viên)}{9}{subsubsection.4.2.1}%
+\contentsline {subsubsection}{\numberline {4.2.2}Dự án Blood Pressure (Nhóm phát triển: 3 thành viên)}{9}{subsubsection.4.2.2}%
+\contentsline {subsubsection}{\numberline {4.2.3}Dự án Blood Pressure (Dự án cá nhân - Độc lập phát triển)}{10}{subsubsection.4.2.3}%
+\contentsline {subsection}{\numberline {4.3}Giai đoạn 3: Tối ưu hóa và Phát triển các ứng dụng mới (Từ 01/03/2026 đến 30/04/2026)}{10}{subsection.4.3}%
+\contentsline {subsubsection}{\numberline {4.3.1}Dự án Cleaner Guru - Hệ thống dọn dẹp ảnh thông minh}{11}{subsubsection.4.3.1}%
+\contentsline {subsubsection}{\numberline {4.3.2}Dự án Push Up - Fitness Monitoring AI}{11}{subsubsection.4.3.2}%
+\contentsline {subsection}{\numberline {4.4}Giai đoạn 4: Phát triển ứng dụng PDF Converter, tối ưu Ads và phát hành sản phẩm (Từ 01/05/2026 đến 20/05/2026)}{12}{subsection.4.4}%
+\contentsline {subsubsection}{\numberline {4.4.1}Dự án PDF Converter \& Scanner (Nhóm phát triển: 3 thành viên)}{12}{subsubsection.4.4.1}%
+\contentsline {subsubsection}{\numberline {4.4.2}Dự án Cleaner Guru - Tối ưu hóa doanh thu quảng cáo (Ads Optimization)}{13}{subsubsection.4.4.2}%
+\contentsline {subsubsection}{\numberline {4.4.3}Dự án Ad-Free Blood Pressure App - Phát hành và tối ưu tăng trưởng}{14}{subsubsection.4.4.3}%
+\contentsline {subsection}{\numberline {4.5}Giai đoạn 5: Kiểm thử, Tối ưu hóa hệ thống và Báo cáo (Từ 21/05/2026 đến nay)}{14}{subsection.4.5}%
+\contentsline {subsubsection}{\numberline {4.5.1}Công việc cụ thể}{14}{subsubsection.4.5.1}%
+\contentsline {subsubsection}{\numberline {4.5.2}Kết quả đạt được}{16}{subsubsection.4.5.2}%
+\contentsline {section}{\numberline {5}TỰ ĐÁNH GIÁ VÀ BÀI HỌC KINH NGHIỆM}{16}{section.5}%
+\contentsline {subsection}{\numberline {5.1}Điểm mạnh đạt được và Sự trưởng thành về chuyên môn}{16}{subsection.5.1}%
+\contentsline {subsection}{\numberline {5.2}Hạn chế cần tiếp tục hoàn thiện}{16}{subsection.5.2}%
+\contentsline {subsection}{\numberline {5.3}Bài học kinh nghiệm rút ra}{17}{subsection.5.3}%
+\contentsline {section}{\numberline {6}KẾT LUẬN VÀ KIẾN NGHỊ}{17}{section.6}%
+\contentsline {subsection}{\numberline {6.1}Kết luận}{17}{subsection.6.1}%
+\contentsline {subsection}{\numberline {6.2}Kiến nghị và Hướng phát triển}{18}{subsection.6.2}%
+\contentsline {section}{\numberline {7}HÌNH ẢNH MINH HỌA GIAO DIỆN ỨNG DỤNG}{19}{section.7}%
+\contentsline {subsection}{\numberline {7.1}Dự án Cleaner Guru}{19}{subsection.7.1}%
+\contentsline {subsection}{\numberline {7.2}Dự án Push Up}{22}{subsection.7.2}%
+\contentsline {subsection}{\numberline {7.3}Dự án PDF Converter \& Scanner}{25}{subsection.7.3}%
+\contentsline {subsection}{\numberline {7.4}Dự án Ad-Free Blood Pressure App}{33}{subsection.7.4}%
+\contentsline {section}{\numberline {8}TÀI LIỆU THAM KHẢO}{34}{section.8}%
